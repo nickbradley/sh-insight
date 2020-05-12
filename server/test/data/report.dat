@@ -1,0 +1,2542 @@
+#% Variables
+
+#% Aliases
+
+#% History
+    1  2020-05-02 14:18  pacman -Syu git
+    2  2020-05-02 14:18  logout
+    3  2020-05-02 14:18  clear
+    4  2020-05-02 14:18  mkdir -p .zsh
+    5  2020-05-02 14:18  git clone https://github.com/sindresorhus/pure.git .zsh/pure
+    6  2020-05-02 14:18  edit .zshrc
+    7  2020-05-02 14:18  vim .zshrc
+    8  2020-05-02 14:18  logout
+    9  2020-05-02 14:18  vim .zshrc
+   10  2020-05-02 14:18  ..zshrc
+   11  2020-05-02 14:18  ./.zshrc
+   12  2020-05-02 14:18  logout
+   13  2020-05-02 14:18  ls
+   14  2020-05-02 14:18  ls -a
+   15  2020-05-02 14:18  mkdir -p .config/sway
+   16  2020-05-02 14:18  cp /etc/sway/config .config/sway/
+   17  2020-05-02 14:18  vim .config/sway/config
+   18  2020-05-02 14:18  swaymsg -t get_outputs
+   19  2020-05-02 14:18  swaymsg -t get_outputs
+   20  2020-05-02 14:18  exit
+   21  2020-05-02 14:18  j4-dmenu-desktop --dmenu='bemenu -i qute'
+   22  2020-05-02 14:18  /bin/zsh -c '"QT_QPA_PLATFORM=wayland qutebrowser"'
+   23  2020-05-02 14:18  /bin/zsh -c 'QT_QPA_PLATFORM=wayland qutebrowser'
+   24  2020-05-02 14:18  exit
+   25  2020-05-02 14:18  swaymsg -t get_outputs
+   26  2020-05-02 14:18  swaymsg output HDMI-A-1 transform 270
+   27  2020-05-02 14:18  swaymsg output HDMI-A-1 transform 90
+   28  2020-05-02 14:18  sudo pacman -Syu qutebrowser
+   29  2020-05-02 14:18  qute
+   30  2020-05-02 14:18  qutebrowser
+   31  2020-05-02 14:18  QT_QPA_PLATFORM=wayland
+   32  2020-05-02 14:18  QT_QPA_PLATFORM=wayland qutebrowser
+   33  2020-05-02 14:18  sudo pacman -Syu qt5-wayland
+   34  2020-05-02 14:18  QT_QPA_PLATFORM=wayland qutebrowser
+   35  2020-05-02 14:18  QT_QPA_PLATFORM=wayland qutebrowser
+   36  2020-05-02 14:18  exit
+   37  2020-05-02 14:18  sudo pacman -Syu bemenu
+   38  2020-05-02 14:18  mkdir aur
+   39  2020-05-02 14:18  git clone https://aur.archlinux.org/j4-dmenu-desktop.git aur/j4-dmenu-desktop
+   40  2020-05-02 14:18  cd aur/j4-dmenu-desktop
+   41  2020-05-02 14:18  makepkg -s
+   42  2020-05-02 14:18  pacman install base-devel
+   43  2020-05-02 14:18  pacman -Syu base-devel
+   44  2020-05-02 14:18  sudo pacman -Syu base-devel
+   45  2020-05-02 14:18  makepkg -s
+   46  2020-05-02 14:18  pacman-key -a 9B8450B91D1362C1
+   47  2020-05-02 14:18  sudo pacman-key -a 9B8450B91D1362C1
+   48  2020-05-02 14:18  ls
+   49  2020-05-02 14:18  sudo pacman-key -a j4-dmenu-desktop-r2.17.tar.gz.sig
+   50  2020-05-02 14:18  makepkg -s
+   51  2020-05-02 14:18  sudo pacman-key -r
+   52  2020-05-02 14:18  pacman-key -r 9B8450B91D1362C1
+   53  2020-05-02 14:18  sudo pacman-key -r 9B8450B91D1362C1
+   54  2020-05-02 14:18  makepkg -s
+   55  2020-05-02 14:18  sudo pacman-key -u
+   56  2020-05-02 14:18  makepkg -s
+   57  2020-05-02 14:18  gpg --recv-keys 9B8450B91D1362C1
+   58  2020-05-02 14:18  makepkg -s
+   59  2020-05-02 14:18  makepkg -i
+   60  2020-05-02 14:18  makepkg -c
+   61  2020-05-02 14:18  cd ~
+   62  2020-05-02 14:18  mkdir -p .local/share/applications
+   63  2020-05-02 14:18  vim .local/share/applications/qutebrowser.desktop
+   64  2020-05-02 14:18  ls /usr/share/applications
+   65  2020-05-02 14:18  cat /usr/share/applications/org.qutebrowser.qutebrowser.desktop
+   66  2020-05-02 14:18  cp /usr/share/applications/org.qutebrowser.qutebrowser.desktop .local/share/applications
+   67  2020-05-02 14:18  vim .local/share/applications/org.qutebrowser.qutebrowser.desktop
+   68  2020-05-02 14:18  vim .local/share/applications/qutebrowser.desktop
+   69  2020-05-02 14:18  vim .local/share/applications/org.qutebrowser.qutebrowser.desktop
+   70  2020-05-02 14:18  mv .local/share/applications/qutebrowser.desktop .
+   71  2020-05-02 14:18  rm qutebrowser.desktop
+   72  2020-05-02 14:18  exit
+   73  2020-05-02 14:18  vim .config/sway/config
+   74  2020-05-02 14:18  cp /usr/share/doc/alacritty/example/alacritty.yml .config/
+   75  2020-05-02 14:18  mkdir -p .config/alacritty
+   76  2020-05-02 14:18  mv .config/alacritty.yml .config/alacritty/
+   77  2020-05-02 14:18  ls .config
+   78  2020-05-02 14:18  vim .config/alacritty/alacritty.yml
+   79  2020-05-02 14:18  exit
+   80  2020-05-02 14:18  vim .config/alacritty/alacritty.yml
+   81  2020-05-02 14:18  git clone https://aur.archlinux.org/ttf-input.git aur/ttf-input
+   82  2020-05-02 14:18  cd aur/ttf-input
+   83  2020-05-02 14:18  makepkg -s
+   84  2020-05-02 14:18  makepkg -i
+   85  2020-05-02 14:18  fc-list
+   86  2020-05-02 14:18  vim .config/alacritty/alacritty.yml
+   87  2020-05-02 14:18  cd ~
+   88  2020-05-02 14:18  vim .config/alacritty/alacritty.yml
+   89  2020-05-02 14:18  exit
+   90  2020-05-02 14:18  exit
+   91  2020-05-02 14:18  fc-match "Input"
+   92  2020-05-02 14:18  fc-list | grep -i Input
+   93  2020-05-02 14:18  fc-list | grep -i InputMono
+   94  2020-05-02 14:18  echo -e '\033[1mText here\033[0m'
+   95  2020-05-02 14:18  exit
+   96  2020-05-02 14:18  vim .config/alacritty/alacritty.yml
+   97  2020-05-02 14:18  exit
+   98  2020-05-02 14:18  vim .config/alacritty/alacritty.yml
+   99  2020-05-02 14:18  exit
+  100  2020-05-02 14:18  exit
+  101  2020-05-02 14:18  exit
+  102  2020-05-02 14:18  exit
+  103  2020-05-02 14:18  echo -e '\033[1mText here\033[0m'
+  104  2020-05-02 14:18  echo -e '\033[2mText here\033[0m'
+  105  2020-05-02 14:18  echo -e '\033[3mText here\033[0m'
+  106  2020-05-02 14:18  echo -e '\033[4mText here\033[0m'
+  107  2020-05-02 14:18  echo -e '\033[5mText here\033[0m'
+  108  2020-05-02 14:18  echo -e '\033[6mText here\033[0m'
+  109  2020-05-02 14:18  echo -e '\033[7mText here\033[0m'
+  110  2020-05-02 14:18  echo -e '\033[8mText here\033[0m'
+  111  2020-05-02 14:18  echo -e '\033[1mText here\033[0m'
+  112  2020-05-02 14:18  echo -e '\033[2mText here\033[0m'
+  113  2020-05-02 14:18  echo -e '\033[3mText here\033[0m'
+  114  2020-05-02 14:18  echo -e '\033[4mText here\033[0m'
+  115  2020-05-02 14:18  echo -e '\033[5mText here\033[0m'
+  116  2020-05-02 14:18  cd aur
+  117  2020-05-02 14:18  git clone https://aur.archlinux.org/i3status-rust.git
+  118  2020-05-02 14:18  cd i3status-rust
+  119  2020-05-02 14:18  makepkg -s
+  120  2020-05-02 14:18  makepkg -i
+  121  2020-05-02 14:18  cd ~
+  122  2020-05-02 14:18  vim .config/sway/status.toml
+  123  2020-05-02 14:18  vim .config/sway/config
+  124  2020-05-02 14:18  vim .config/sway/config
+  125  2020-05-02 14:18  vim .config/sway/config
+  126  2020-05-02 14:18  which pip
+  127  2020-05-02 14:18  pip
+  128  2020-05-02 14:18  pip3
+  129  2020-05-02 14:18  sudo pacman -Syu pykeepass
+  130  2020-05-02 14:18  sudo pacman -Syu python-pykeepass
+  131  2020-05-02 14:18  ls KeePass
+  132  2020-05-02 14:18  cd aur
+  133  2020-05-02 14:18  git clone https://aur.archlinux.org/wofi.git
+  134  2020-05-02 14:18  cd wofi
+  135  2020-05-02 14:18  makepkg -s
+  136  2020-05-02 14:18  exit
+  137  2020-05-02 14:18  vim .config/alacritty/alacritty.yml
+  138  2020-05-02 14:18  man 5 sway-bar
+  139  2020-05-02 14:18  vim .config/sway/status.toml
+  140  2020-05-02 14:18  cd aur
+  141  2020-05-02 14:18  sudo pacman -Syu pdfjs
+  142  2020-05-02 14:18  sudo pacman -Syu
+  143  2020-05-02 14:18  sudo pacman -Syu syncthing
+  144  2020-05-02 14:18  sudo loginctl enable-linger ncbradley
+  145  2020-05-02 14:18  systemctl --user enable syncthing
+  146  2020-05-02 14:18  systemctl --user start syncthing
+  147  2020-05-02 14:18  ls
+  148  2020-05-02 14:18  cd ..
+  149  2020-05-02 14:18  ls
+  150  2020-05-02 14:18  ls KeePass
+  151  2020-05-02 14:18  ls -a KeePass
+  152  2020-05-02 14:18  ls -a Notes
+  153  2020-05-02 14:18  ls -a KeePass
+  154  2020-05-02 14:18  sudo pacman -Syu keepassxc
+  155  2020-05-02 14:18  keepassxc
+  156  2020-05-02 14:18  QT_QPA_PLATFORM=wayland keepassxc
+  157  2020-05-02 14:18  QT_QPA_PLATFORM=wayland keepassxc
+  158  2020-05-02 14:18  QT_QPA_PLATFORM=wayland keepassxc
+  159  2020-05-02 14:18  exit
+  160  2020-05-02 14:18  sudo pacman -Syu alsa-utils
+  161  2020-05-02 14:18  alsamixer
+  162  2020-05-02 14:18  alsamixer
+  163  2020-05-02 14:18  cat /proc/cpuinfo
+  164  2020-05-02 14:18  ssh 192.168.0.10
+  165  2020-05-02 14:18  pacman -Syu openssh
+  166  2020-05-02 14:18  sudo pacman -Syu openssh
+  167  2020-05-02 14:18  ssh root@192.168.0.10
+  168  2020-05-02 14:18  vim .ssh/config
+  169  2020-05-02 14:18  ssh nan
+  170  2020-05-02 14:18  ssh nas
+  171  2020-05-02 14:18  exit
+  172  2020-05-02 14:18  sway
+  173  2020-05-02 14:18  sway
+  174  2020-05-02 14:18  shutdown
+  175  2020-05-02 14:18  fidsk -l
+  176  2020-05-02 14:18  fdisk -l
+  177  2020-05-02 14:18  sudo fdisk -l
+  178  2020-05-02 14:18  exit
+  179  2020-05-02 14:18  sway
+  180  2020-05-02 14:18  logout
+  181  2020-05-02 14:18  sway
+  182  2020-05-02 14:18  alsa
+  183  2020-05-02 14:18  amixer
+  184  2020-05-02 14:18  reboot
+  185  2020-05-02 14:18  lspci
+  186  2020-05-02 14:18  alsamixer
+  187  2020-05-02 14:18  cat /proc/asound/cards
+  188  2020-05-02 14:18  cat /etc/asound.cnf
+  189  2020-05-02 14:18  vim /etc/asound.cnf
+  190  2020-05-02 14:18  sudo vim /etc/asound.cnf
+  191  2020-05-02 14:18  exit
+  192  2020-05-02 14:18  sway
+  193  2020-05-02 14:18  sway
+  194  2020-05-02 14:18  reboot
+  195  2020-05-02 14:18  exit
+  196  2020-05-02 14:18  vim
+  197  2020-05-02 14:18  exit
+  198  2020-05-02 14:18  swaymsg -t exit
+  199  2020-05-02 14:18  swaymsg help
+  200  2020-05-02 14:18  swaymsg -help
+  201  2020-05-02 14:18  vim .config/sway/config
+  202  2020-05-02 14:18  pacman -Syu neovim
+  203  2020-05-02 14:18  sudo pacman -Syu neovim
+  204  2020-05-02 14:18  nvim
+  205  2020-05-02 14:18  nvim .pam_environment
+  206  2020-05-02 14:18  nvim .zshenv
+  207  2020-05-02 14:18  rm .pam_environment
+  208  2020-05-02 14:18  exit
+  209  2020-05-02 14:18  sway
+  210  2020-05-02 14:18  sway
+  211  2020-05-02 14:18  logout
+  212  2020-05-02 14:18  rm .local/share/applications/org.qutebrowser.qutebrowser.desktop
+  213  2020-05-02 14:18  exit
+  214  2020-05-02 14:18  sudo mkdir -p /etc/pacman.d/hooks
+  215  2020-05-02 14:18  exit
+  216  2020-05-02 14:18  sudo -i
+  217  2020-05-02 14:18  ls -lh .config/sway
+  218  2020-05-02 14:18  exit
+  219  2020-05-02 14:18  which swayidle
+  220  2020-05-02 14:18  sudo pacman -Syu swayidle
+  221  2020-05-02 14:18  bootctl update
+  222  2020-05-02 14:18  sudo bootctl update
+  223  2020-05-02 14:18  sudo nvim /etc/pacman.d/hooks/100-systemd-boot.hook
+  224  2020-05-02 14:18  which swayidle
+  225  2020-05-02 14:18  exit
+  226  2020-05-02 14:18  nvim .config/sway/config
+  227  2020-05-02 14:18  nvim .config/sway/config
+  228  2020-05-02 14:18  exit
+  229  2020-05-02 14:18  nvim .config/sway/config
+  230  2020-05-02 14:18  nvim .config/sway/config
+  231  2020-05-02 14:18  nvim .config/sway/config
+  232  2020-05-02 14:18  exit
+  233  2020-05-02 14:18  sudo pacman -Syu nnn
+  234  2020-05-02 14:18  nn
+  235  2020-05-02 14:18  nnn
+  236  2020-05-02 14:18  nnn
+  237  2020-05-02 14:18  echo $EDITOR
+  238  2020-05-02 14:18  echo $EDITOR
+  239  2020-05-02 14:18  echo $VISUAL
+  240  2020-05-02 14:18  exit
+  241  2020-05-02 14:18  which nvim
+  242  2020-05-02 14:18  nvim .zshrc
+  243  2020-05-02 14:18  exit
+  244  2020-05-02 14:18  echo $VISUAL
+  245  2020-05-02 14:18  nnn
+  246  2020-05-02 14:18  exit
+  247  2020-05-02 14:18  echo $EDITOR
+  248  2020-05-02 14:18  echo $VISUAL
+  249  2020-05-02 14:18  nnn
+  250  2020-05-02 14:18  .zshrc
+  251  2020-05-02 14:18  . .zshrc
+  252  2020-05-02 14:18  ./.zshrc
+  253  2020-05-02 14:18  nvim .zshrc
+  254  2020-05-02 14:18  source .zshrc
+  255  2020-05-02 14:18  echo $EDITOR
+  256  2020-05-02 14:18  nnn
+  257  2020-05-02 14:18  cd aur
+  258  2020-05-02 14:18  git clone https://aur.archlinux.org/fuse-overlay.git
+  259  2020-05-02 14:18  git clone https://aur.archlinux.org/fuse-overlayfs.git
+  260  2020-05-02 14:18  rmdir fuse-overlay
+  261  2020-05-02 14:18  rm -f fuse-overlay
+  262  2020-05-02 14:18  rm -rf fuse-overlay
+  263  2020-05-02 14:18  ls
+  264  2020-05-02 14:18  cd fuse-overlayfs
+  265  2020-05-02 14:18  makepkg -S
+  266  2020-05-02 14:18  makepkg -i
+  267  2020-05-02 14:18  sudo pacman -Syu fuse3
+  268  2020-05-02 14:18  makepkg -i
+  269  2020-05-02 14:18  sudo pacman -Syu buildah podman
+  270  2020-05-02 14:18  podman info --debug | grep -i cgroupversion
+  271  2020-05-02 14:18  sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 ncbradley
+  272  2020-05-02 14:18  sudo touch /etc/subuid
+  273  2020-05-02 14:18  sudo touch /etc/subgid
+  274  2020-05-02 14:18  sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 ncbradley
+  275  2020-05-02 14:18  sudo nvim /boot/loader/entries/arch.conf
+  276  2020-05-02 14:18  sudo bootctl update
+  277  2020-05-02 14:18  reboot
+  278  2020-05-02 14:18  make proposal
+  279  2020-05-02 14:18  make proposal
+  280  2020-05-02 14:18  ls
+  281  2020-05-02 14:18  ls -lh
+  282  2020-05-02 14:18  exit
+  283  2020-05-02 14:18  exit
+  284  2020-05-02 14:18  ls /sys/fs/cgroup
+  285  2020-05-02 14:18  sudo sysctl kernel.unprivileged_userns_clone=1
+  286  2020-05-02 14:18  podman info --debug
+  287  2020-05-02 14:18  sudo pacman -Syu crun
+  288  2020-05-02 14:18  podman info --debug
+  289  2020-05-02 14:18  nnn
+  290  2020-05-02 14:18  nvim
+  291  2020-05-02 14:18  exit
+  292  2020-05-02 14:18  nnn
+  293  2020-05-02 14:18  exit
+  294  2020-05-02 14:18  sudo pacman -Syu llpp
+  295  2020-05-02 14:18  sudo pacman -S llpp
+  296  2020-05-02 14:18  sudo pacman -S mupdf
+  297  2020-05-02 14:18  sudo pacman -S okular
+  298  2020-05-02 14:18  sudo pacman -S evince
+  299  2020-05-02 14:18  sudo pacman -S qpdfview
+  300  2020-05-02 14:18  qpdfview
+  301  2020-05-02 14:18  qpdfview
+  302  2020-05-02 14:18  qpdfview
+  303  2020-05-02 14:18  exit
+  304  2020-05-02 14:18  nvim .latexmkrc
+  305  2020-05-02 14:18  exit
+  306  2020-05-02 14:18  sudo dmesg | tail
+  307  2020-05-02 14:18  sudo mount /dev/sda2 /mnt
+  308  2020-05-02 14:18  sudo umount /mnt
+  309  2020-05-02 14:18  exit
+  310  2020-05-02 14:18  nvim do/fava/proposal/proposal.tex
+  311  2020-05-02 14:18  nnn
+  312  2020-05-02 14:18  nnn
+  313  2020-05-02 14:18  nnn
+  314  2020-05-02 14:18  cd do/fava-study
+  315  2020-05-02 14:18  git --init
+  316  2020-05-02 14:18  git init
+  317  2020-05-02 14:18  ls
+  318  2020-05-02 14:18  git status
+  319  2020-05-02 14:18  git add .dockerignore .gitignore Dockerfile Makefile proposal
+  320  2020-05-02 14:18  git status
+  321  2020-05-02 14:18  nvim .gitignore
+  322  2020-05-02 14:18  nvim .gitignore
+  323  2020-05-02 14:18  nvim .gitignore
+  324  2020-05-02 14:18  git status
+  325  2020-05-02 14:18  git reset
+  326  2020-05-02 14:18  git status
+  327  2020-05-02 14:18  git add proposal/
+  328  2020-05-02 14:18  git status
+  329  2020-05-02 14:18  git reset
+  330  2020-05-02 14:18  git add .gitignore .dockerignore Dockerfile Makefile proposal/
+  331  2020-05-02 14:18  git status
+  332  2020-05-02 14:18  git commit -m "Initial commit" -m "Make latex documents in container"
+  333  2020-05-02 14:18  git config --global user.name "Nick Bradley"
+  334  2020-05-02 14:18  git config --global user.email=nick@ncbradley.com
+  335  2020-05-02 14:18  git config --global core.editor=nvim
+  336  2020-05-02 14:18  git config --global core.editor nvim
+  337  2020-05-02 14:18  git config --global push.followtags true
+  338  2020-05-02 14:18  git init
+  339  2020-05-02 14:18  git commit -m "Initial commit" -m "Make latex documents in container"
+  340  2020-05-02 14:18  git commit --ammend --reset-author
+  341  2020-05-02 14:18  git commit --amend --reset-author
+  342  2020-05-02 14:18  git log
+  343  2020-05-02 14:18  git config --list
+  344  2020-05-02 14:18  git config --global user.email nick@ncbradley.com
+  345  2020-05-02 14:18  git config --list
+  346  2020-05-02 14:18  git commit --amend --reset-author
+  347  2020-05-02 14:18  git log
+  348  2020-05-02 14:18  git remote add origin git@github.com:nickbradley/fava-study.git
+  349  2020-05-02 14:18  which gpg
+  350  2020-05-02 14:18  cd ~/.gnupg
+  351  2020-05-02 14:18  which wget
+  352  2020-05-02 14:18  sudo pacman -S wget
+  353  2020-05-02 14:18  wget https://raw.githubusercontent.com/drduh/config/master/gpg.conf
+  354  2020-05-02 14:18  chmod 600 gpg.conf
+  355  2020-05-02 14:18  gpg --import /mnt/0xD414419F8D3DDFEE-2020-03-25.txt
+  356  2020-05-02 14:18  export KEYID=0xD414419F8D3DDFEE
+  357  2020-05-02 14:18  gpg --edit-key $KEYID
+  358  2020-05-02 14:18  gpg --card-status
+  359  2020-05-02 14:18  wget https://raw.githubusercontent.com/drduh/config/master/gpg-agent.conf
+  360  2020-05-02 14:18  pinentry-curses
+  361  2020-05-02 14:18  cd ..
+  362  2020-05-02 14:18  nvim .zshrc
+  363  2020-05-02 14:18  nvim .zshenv
+  364  2020-05-02 14:18  mv .zshenv .zprofile
+  365  2020-05-02 14:18  nvim .zprofile
+  366  2020-05-02 14:18  export GPG_TTY="$(tty)"
+  367  2020-05-02 14:18  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+  368  2020-05-02 14:18  echo $GPG_TTY
+  369  2020-05-02 14:18  echo $SSH_AUTH_SOCK
+  370  2020-05-02 14:18  gpgconf --launch gpg-agent
+  371  2020-05-02 14:18  ssh-add -L
+  372  2020-05-02 14:18  ssh-add -L | grep "cardno:000605633164" > ~/.ssh/id_rsa_yubikey.pub
+  373  2020-05-02 14:18  cat << EOF >> ~/.ssh/config\nHost github.com\n    IdentitiesOnly yes\n    IdentityFile ~/.ssh/id_rsa_yubikey.pub\nEOF
+  374  2020-05-02 14:18  ssh git@github.com -vvv
+  375  2020-05-02 14:18  ssh-add -L
+  376  2020-05-02 14:18  ssh git@github.com -vvv
+  377  2020-05-02 14:18  ssh git@github.com -vvv
+  378  2020-05-02 14:18  cd .gnupg
+  379  2020-05-02 14:18  grep -ve "^#" gpg-agent.conf
+  380  2020-05-02 14:18  exit
+  381  2020-05-02 14:18  ssh git@github.com -vvv
+  382  2020-05-02 14:18  chmod 600 .ssh/id_rsa_yubikey.pub
+  383  2020-05-02 14:18  ssh git@github.com -vvv
+  384  2020-05-02 14:18  nvim .ssh/id_rsa_yubikey.pub
+  385  2020-05-02 14:18  ssh git@github.com -vvv
+  386  2020-05-02 14:18  pgrep ssh-agent
+  387  2020-05-02 14:18  ssh-add -L
+  388  2020-05-02 14:18  echo $tty
+  389  2020-05-02 14:18  echo $(tty)
+  390  2020-05-02 14:18  export GPG_TTY="$(tty)"
+  391  2020-05-02 14:18  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+  392  2020-05-02 14:18  echo $SSH_AUTH_SOCK
+  393  2020-05-02 14:18  gpgconf --launch gpg-agent
+  394  2020-05-02 14:18  ssh-add -L
+  395  2020-05-02 14:18  nvim .ssh/id_rsa_yubikey.pub
+  396  2020-05-02 14:18  ssh git@github.com -vvv
+  397  2020-05-02 14:18  echo "test message string" | gpg --armor --clearsign > signed.txt
+  398  2020-05-02 14:18  gpg --verify signed.txt
+  399  2020-05-02 14:18  sudo pacman -Q gnupg2 gnupg-agent gnupg-curl scdaemon pcscd
+  400  2020-05-02 14:18  exit
+  401  2020-05-02 14:18  echo $SSH_AGENT_PID
+  402  2020-05-02 14:18  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+  403  2020-05-02 14:18  export GPG_TTY=$(tty)
+  404  2020-05-02 14:18  gpg-connect-agent updatestartuptty /bye >/dev/null
+  405  2020-05-02 14:18  echo $SSH_AGENT_PID
+  406  2020-05-02 14:18  gpg-connect-agent reloadagent /bye
+  407  2020-05-02 14:18  systemctl status gpg-agent
+  408  2020-05-02 14:18  systemctl status gpg-agent.socket
+  409  2020-05-02 14:18  sudo systemctl status gpg-agent.socket
+  410  2020-05-02 14:18  sudo pacman -Syu gnupg
+  411  2020-05-02 14:18  systemctl status gpg-agent.socket
+  412  2020-05-02 14:18  gpg-connect-agent updatestartuptty /bye >/dev/null
+  413  2020-05-02 14:18  ssh git@github.com
+  414  2020-05-02 14:18  nvim .zshprofile
+  415  2020-05-02 14:18  nvim .zshrc
+  416  2020-05-02 14:18  ls -a
+  417  2020-05-02 14:18  nvim .zprofile
+  418  2020-05-02 14:18  exit
+  419  2020-05-02 14:18  pgrep nvim
+  420  2020-05-02 14:18  nvim do/fava/Makefile
+  421  2020-05-02 14:18  jobs
+  422  2020-05-02 14:18  nvim do/fava/Makefile
+  423  2020-05-02 14:18  pkill 8691
+  424  2020-05-02 14:18  nvim do/fava/Makefile
+  425  2020-05-02 14:18  nvim do/fava/Makefile
+  426  2020-05-02 14:18  exit
+  427  2020-05-02 14:18  cd /home/ncbradley/do/fava
+  428  2020-05-02 14:18  make
+  429  2020-05-02 14:18  make clean
+  430  2020-05-02 14:18  make all
+  431  2020-05-02 14:18  make all
+  432  2020-05-02 14:18  make env
+  433  2020-05-02 14:18  docker
+  434  2020-05-02 14:18  which podman
+  435  2020-05-02 14:18  ln -s /usr/bin/podman /usr/bin/docker
+  436  2020-05-02 14:18  sudo ln -s /usr/bin/podman /usr/bin/docker
+  437  2020-05-02 14:18  docker info
+  438  2020-05-02 14:18  make
+  439  2020-05-02 14:18  make env
+  440  2020-05-02 14:18  make env
+  441  2020-05-02 14:18  make proposal
+  442  2020-05-02 14:18  make proposal
+  443  2020-05-02 14:18  make proposal
+  444  2020-05-02 14:18  echo $(id -u)
+  445  2020-05-02 14:18  ls -lh
+  446  2020-05-02 14:18  make proposal
+  447  2020-05-02 14:18  make proposal
+  448  2020-05-02 14:18  make proposal
+  449  2020-05-02 14:18  make proposal
+  450  2020-05-02 14:18  make proposal
+  451  2020-05-02 14:18  make proposal
+  452  2020-05-02 14:18  make proposal
+  453  2020-05-02 14:18  docker run --rm --user 1000 --volume /home/ncbradley/do/fava:/project fava-pub touch /project/myfile
+  454  2020-05-02 14:18  docker run --rm --user 1000 --mount type=bind,src=/home/ncbradley/do/fava,dst=/project fava-pub touch /project/myfile
+  455  2020-05-02 14:18  id -u
+  456  2020-05-02 14:18  docker run --rm --user 1000 --mount type=bind,src=/home/ncbradley/do/fava,dst=/project fava-pub ls /project
+  457  2020-05-02 14:18  docker run --rm --user 1000 --mount type=bind,src=/home/ncbradley/do/fava,dst=/project fava-pub ls -lh /project
+  458  2020-05-02 14:18  sysctl kernel.unprivileged_userns_clone=1
+  459  2020-05-02 14:18  sudo sysctl kernel.unprivileged_userns_clone=1
+  460  2020-05-02 14:18  docker run --rm --user 1000 --mount type=bind,src=/home/ncbradley/do/fava,dst=/project fava-pub ls -lh /project
+  461  2020-05-02 14:18  docker run --rm --user 1000 --mount type=bind,src=/home/ncbradley/do/fava,dst=/project fava-pub touch /project/myfile
+  462  2020-05-02 14:18  podman unshare
+  463  2020-05-02 14:18  ls -lh
+  464  2020-05-02 14:18  make proposal
+  465  2020-05-02 14:18  make proposal
+  466  2020-05-02 14:18  make proposal
+  467  2020-05-02 14:18  make proposal
+  468  2020-05-02 14:18  make proposal
+  469  2020-05-02 14:18  echo $USER
+  470  2020-05-02 14:18  echo $UID
+  471  2020-05-02 14:18  make proposal
+  472  2020-05-02 14:18  make proposal
+  473  2020-05-02 14:18  make proposal
+  474  2020-05-02 14:18  make proposal
+  475  2020-05-02 14:18  make proposal
+  476  2020-05-02 14:18  cd proposal
+  477  2020-05-02 14:18  ls
+  478  2020-05-02 14:18  rmdir cache
+  479  2020-05-02 14:18  rm -rf cache proposal.aux proposal.fdb_latexmk proposal.fls proposal.log proposal.pdf
+  480  2020-05-02 14:18  ls
+  481  2020-05-02 14:18  make proposal
+  482  2020-05-02 14:18  cd ..
+  483  2020-05-02 14:18  make proposal
+  484  2020-05-02 14:18  ls proposal
+  485  2020-05-02 14:18  ls proposal/cache
+  486  2020-05-02 14:18  cd proposal
+  487  2020-05-02 14:18  rm -rf cache proposal.aux proposal.fdb_latexmk proposal.fls proposal.log proposal.pdf
+  488  2020-05-02 14:18  cd ..
+  489  2020-05-02 14:18  make proposal
+  490  2020-05-02 14:18  make proposal
+  491  2020-05-02 14:18  ls proposal
+  492  2020-05-02 14:18  ls proposal/build
+  493  2020-05-02 14:18  rm -rf proposal/build
+  494  2020-05-02 14:18  make proposal
+  495  2020-05-02 14:18  make proposal
+  496  2020-05-02 14:18  make proposal
+  497  2020-05-02 14:18  ls proposal
+  498  2020-05-02 14:18  rm proposal/proposal.pdf
+  499  2020-05-02 14:18  make proposal
+  500  2020-05-02 14:18  ls
+  501  2020-05-02 14:18  ls proposal
+  502  2020-05-02 14:18  ls -a proposal
+  503  2020-05-02 14:18  rm -rf proposal/.cache
+  504  2020-05-02 14:18  alsamixer
+  505  2020-05-02 14:18  alsamixer\n
+  506  2020-05-02 14:18  make proposal
+  507  2020-05-02 14:18  make Rtex-env
+  508  2020-05-02 14:18  make Rtex-env
+  509  2020-05-02 14:18  make rtex-env
+  510  2020-05-02 14:18  make proposal
+  511  2020-05-02 14:18  make proposal
+  512  2020-05-02 14:18  make proposal
+  513  2020-05-02 14:18  make proposal
+  514  2020-05-02 14:18  make proposal
+  515  2020-05-02 14:18  make proposal
+  516  2020-05-02 14:18  ls
+  517  2020-05-02 14:18  make proposal
+  518  2020-05-02 14:18  make proposal
+  519  2020-05-02 14:18  make proposal
+  520  2020-05-02 14:18  make proposal
+  521  2020-05-02 14:18  make proposal
+  522  2020-05-02 14:18  make proposal
+  523  2020-05-02 14:18  make proposal
+  524  2020-05-02 14:18  make proposal
+  525  2020-05-02 14:18  make proposal
+  526  2020-05-02 14:18  make proposal opts="-g"
+  527  2020-05-02 14:18  make proposal opts="-g"
+  528  2020-05-02 14:18  make proposal
+  529  2020-05-02 14:18  make proposal
+  530  2020-05-02 14:18  make proposal
+  531  2020-05-02 14:18  make proposal
+  532  2020-05-02 14:18  make proposal
+  533  2020-05-02 14:18  make proposal
+  534  2020-05-02 14:18  make proposal
+  535  2020-05-02 14:18  make proposal
+  536  2020-05-02 14:18  make proposal
+  537  2020-05-02 14:18  make proposal
+  538  2020-05-02 14:18  make proposal
+  539  2020-05-02 14:18  make proposal
+  540  2020-05-02 14:18  make proposal
+  541  2020-05-02 14:18  exit
+  542  2020-05-02 14:18  echo $SSH_AUTH_SOCK
+  543  2020-05-02 14:18  ls -a
+  544  2020-05-02 14:18  nvim .zshenv
+  545  2020-05-02 14:18  nvim .zprofile
+  546  2020-05-02 14:18  exit
+  547  2020-05-02 14:18  echo $SSH_AUTH_SOCK
+  548  2020-05-02 14:18  echo $GPG_TTY
+  549  2020-05-02 14:18  ssh git@github.com
+  550  2020-05-02 14:18  reboot
+  551  2020-05-02 14:18  ssh git@github.com
+  552  2020-05-02 14:18  systemctl status gpg-agent.socket
+  553  2020-05-02 14:18  echo $SSH_AUTH_SOCK
+  554  2020-05-02 14:18  echo $GPG_TTY
+  555  2020-05-02 14:18  $(tty)
+  556  2020-05-02 14:18  gpg-connect-agent updatestartuptty /bye >/dev/null
+  557  2020-05-02 14:18  ssh git@github.com
+  558  2020-05-02 14:18  gpg-connect-agent reloadagent /bye
+  559  2020-05-02 14:18  ssh git@github.com
+  560  2020-05-02 14:18  ssh-add -L
+  561  2020-05-02 14:18  gpgconf --launch gpg-agent
+  562  2020-05-02 14:18  ssh-add -L
+  563  2020-05-02 14:18  gpg --card-status
+  564  2020-05-02 14:18  systemctl status scdaemon
+  565  2020-05-02 14:18  systemctl status pcscd
+  566  2020-05-02 14:18  systemctl status pcscd.socket
+  567  2020-05-02 14:18  gpg --card-status
+  568  2020-05-02 14:18  ssh-add -L
+  569  2020-05-02 14:18  ssh git@github.com
+  570  2020-05-02 14:18  reboot
+  571  2020-05-02 14:18  echo "msg" | gpg --armor --clearsign > out.txt
+  572  2020-05-02 14:18  ssh git@github.com
+  573  2020-05-02 14:18  gpg-connect-agent updatestartuptty /bye >/dev/null
+  574  2020-05-02 14:18  ssh git@github.com
+  575  2020-05-02 14:18  nvim .zprofile
+  576  2020-05-02 14:18  nvim .zshenv
+  577  2020-05-02 14:18  exit
+  578  2020-05-02 14:18  ssh git@github.com
+  579  2020-05-02 14:18  gpgconf --launch gpg-agent
+  580  2020-05-02 14:18  ssh git@github.com
+  581  2020-05-02 14:18  ssh-add -L
+  582  2020-05-02 14:18  ssh git@github.com
+  583  2020-05-02 14:18  gpg --key-card
+  584  2020-05-02 14:18  gpg --card-status
+  585  2020-05-02 14:18  ssh git@github.com
+  586  2020-05-02 14:18  history | tail -n 100
+  587  2020-05-02 14:18  nvim $HISTFILE
+  588  2020-05-02 14:18  reboot
+  589  2020-05-02 14:18  exit
+  590  2020-05-02 14:18  ssh git@github.com
+  591  2020-05-02 14:18  echo $QT_QPA_PLATFORM
+  592  2020-05-02 14:18  ssh-add -L
+  593  2020-05-02 14:18  ssh-add -L
+  594  2020-05-02 14:18  ssh git@github.com
+  595  2020-05-02 14:18  exit
+  596  2020-05-02 14:18  ssh git@github.com
+  597  2020-05-02 14:18  nvim .zshenv
+  598  2020-05-02 14:18  nvim .zshenv
+  599  2020-05-02 14:18  ssh git@github.com
+  600  2020-05-02 14:18  ssh git@github.com -vvv
+  601  2020-05-02 14:18  exit
+  602  2020-05-02 14:18  ssh-add -L
+  603  2020-05-02 14:18  nvim .zshenv
+  604  2020-05-02 14:18  exit
+  605  2020-05-02 14:18  ssh-add -L
+  606  2020-05-02 14:18  ssh-add -L
+  607  2020-05-02 14:18  exit
+  608  2020-05-02 14:18  ssh-add -L
+  609  2020-05-02 14:18  ssh git@github.com
+  610  2020-05-02 14:18  exit
+  611  2020-05-02 14:18  qutebrowser
+  612  2020-05-02 14:18  exit
+  613  2020-05-02 14:18  nvim .zshenv
+  614  2020-05-02 14:18  reboot
+  615  2020-05-02 14:18  e /usr/local/bin/ewrap
+  616  2020-05-02 14:18  source .zshrc
+  617  2020-05-02 14:18  e /usr/local/bin/ewrap
+  618  2020-05-02 14:18  sudo e /usr/local/bin/ewrap
+  619  2020-05-02 14:18  sudo nvim /usr/local/bin/ewrap
+  620  2020-05-02 14:18  sudo rm /usr/local/bin/ewrap
+  621  2020-05-02 14:18  sudo nvim /usr/local/bin/ewrap
+  622  2020-05-02 14:18  exit
+  623  2020-05-02 14:18  nnn
+  624  2020-05-02 14:18  source .zshrc
+  625  2020-05-02 14:18  nnn
+  626  2020-05-02 14:18  nnn -e
+  627  2020-05-02 14:18  source .zshrc
+  628  2020-05-02 14:18  nnn -e
+  629  2020-05-02 14:18  alacritty -e /usr/bin/nvim .zshrc
+  630  2020-05-02 14:18  source .zshrc
+  631  2020-05-02 14:18  echo $VISUAL
+  632  2020-05-02 14:18  echo $VISUAL hello
+  633  2020-05-02 14:18  nnn -e
+  634  2020-05-02 14:18  cat /tmp/Alacritty-3171.log
+  635  2020-05-02 14:18  source .zshrc
+  636  2020-05-02 14:18  nnn -e
+  637  2020-05-02 14:18  nnn -E
+  638  2020-05-02 14:18  source .zshrc
+  639  2020-05-02 14:18  nnn -E
+  640  2020-05-02 14:18  source .zshrc
+  641  2020-05-02 14:18  nnn -E
+  642  2020-05-02 14:18  source .zshrc
+  643  2020-05-02 14:18  echo ewarp
+  644  2020-05-02 14:18  echo ewarp()
+  645  2020-05-02 14:18  source .zshrc
+  646  2020-05-02 14:18  echo ewrap
+  647  2020-05-02 14:18  nnn -E
+  648  2020-05-02 14:18  echo ewrap
+  649  2020-05-02 14:18  source .zshrc
+  650  2020-05-02 14:18  nnn -E
+  651  2020-05-02 14:18  echo $PATH
+  652  2020-05-02 14:18  ls /usr/local/bin
+  653  2020-05-02 14:18  ls /usr/bin
+  654  2020-05-02 14:18  source .zshrc
+  655  2020-05-02 14:18  nnn -E
+  656  2020-05-02 14:18  ewrap do/fava-study.wiki/Home.md
+  657  2020-05-02 14:18  which ewrap
+  658  2020-05-02 14:18  which $VISUAL
+  659  2020-05-02 14:18  ewrap ~/do/fava-study.wiki/Home.md
+  660  2020-05-02 14:18  source .zshrc
+  661  2020-05-02 14:18  which ewrap
+  662  2020-05-02 14:18  ewrap ~/do/fava-study.wiki/Home.md
+  663  2020-05-02 14:18  e ~/do/fava-study.wiki/Home.md
+  664  2020-05-02 14:18  ewrap ~/do/fava-study.wiki/Home.md
+  665  2020-05-02 14:18  source .zshrc
+  666  2020-05-02 14:18  ewrap ~/do/fava-study.wiki/Home.md
+  667  2020-05-02 14:18  alacritty --help
+  668  2020-05-02 14:18  /usr/bin/nvim /home/ncbradley/do/fava-study.wiki/Home.md
+  669  2020-05-02 14:18  source .zshrc
+  670  2020-05-02 14:18  nnn -e
+  671  2020-05-02 14:18  nnn -E
+  672  2020-05-02 14:18  echo $VISUAL
+  673  2020-05-02 14:18  source .zshrc
+  674  2020-05-02 14:18  echo $VISUAL
+  675  2020-05-02 14:18  echo $VISUAL sdfj
+  676  2020-05-02 14:18  nnn -e
+  677  2020-05-02 14:18  source .zshrc
+  678  2020-05-02 14:18  nnn -e
+  679  2020-05-02 14:18  nnn -E
+  680  2020-05-02 14:18  source .zshrc
+  681  2020-05-02 14:18  nnn -E
+  682  2020-05-02 14:18  source .zshrc
+  683  2020-05-02 14:18  which ewrap
+  684  2020-05-02 14:18  exit
+  685  2020-05-02 14:18  which ewrap
+  686  2020-05-02 14:18  unset ewrap
+  687  2020-05-02 14:18  which ewrap
+  688  2020-05-02 14:18  ewrap
+  689  2020-05-02 14:18  exit
+  690  2020-05-02 14:18  ssh git@github.com
+  691  2020-05-02 14:18  ssh git@github.com
+  692  2020-05-02 14:18  cd do/fava-study
+  693  2020-05-02 14:18  git status
+  694  2020-05-02 14:18  git push
+  695  2020-05-02 14:18  git push --set-upstream origin master
+  696  2020-05-02 14:18  history|grep KEYID
+  697  2020-05-02 14:18  nvim $HISTFILE
+  698  2020-05-02 14:18  export KEYID=0xD414419F8D3DDFEE
+  699  2020-05-02 14:18  git config --global user.signkey $KEYID
+  700  2020-05-02 14:18  cd ..
+  701  2020-05-02 14:18  git clone git@github.com:nickbradley/fava-study.wiki.git
+  702  2020-05-02 14:18  git clone git@github.com:nickbradley/fava-study.wiki.git
+  703  2020-05-02 14:18  which e
+  704  2020-05-02 14:18  which edit
+  705  2020-05-02 14:18  vnim ~/.zshrc
+  706  2020-05-02 14:18  nvim ~/.zshrc
+  707  2020-05-02 14:18  source ~/.zshrc
+  708  2020-05-02 14:18  e ~/.zshrc
+  709  2020-05-02 14:18  e ~/.zshrc
+  710  2020-05-02 14:18  exit
+  711  2020-05-02 14:18  nnn -E
+  712  2020-05-02 14:18  nnn -e
+  713  2020-05-02 14:18  nnn -e -E
+  714  2020-05-02 14:18  nnn  -E
+  715  2020-05-02 14:18  nnn -E
+  716  2020-05-02 14:18  nnn -E
+  717  2020-05-02 14:18  nnn -e -E
+  718  2020-05-02 14:18  nnn
+  719  2020-05-02 14:18  NNN_USE_EDITOR=1 nnn -e -E
+  720  2020-05-02 14:18  exit
+  721  2020-05-02 14:18  e .histfile
+  722  2020-05-02 14:18  ls -a
+  723  2020-05-02 14:18  echo $HISTFILE
+  724  2020-05-02 14:18  exit
+  725  2020-05-02 14:18  history
+  726  2020-05-02 14:18  echo "do I show"
+  727  2020-05-02 14:18  history
+  728  2020-05-02 14:18  e .histfile
+  729  2020-05-02 14:18  exit
+  730  2020-05-02 14:18  cd Sync/fava-study.wiki
+  731  2020-05-02 14:18  exit
+  732  2020-05-02 14:18  exit
+  733  2020-05-02 14:18  nnn
+  734  2020-05-02 14:18  e
+  735  2020-05-02 14:18  cd do/fava-study.wiki
+  736  2020-05-02 14:18  nvim Proposal.md
+  737  2020-05-02 14:18  cd ~
+  738  2020-05-02 14:18  mv do/fava-study.wiki Sync
+  739  2020-05-02 14:18  ls Sync
+  740  2020-05-02 14:18  cd Sync
+  741  2020-05-02 14:18  ls -lh
+  742  2020-05-02 14:18  e fava-study.wiki/Proposal.md
+  743  2020-05-02 14:18  git status
+  744  2020-05-02 14:18  cd fava-study.wiki
+  745  2020-05-02 14:18  git status
+  746  2020-05-02 14:18  git add --all
+  747  2020-05-02 14:18  git commit -m "Add draft project proposal"
+  748  2020-05-02 14:18  git push
+  749  2020-05-02 14:18  git push
+  750  2020-05-02 14:18  git push
+  751  2020-05-02 14:18  git push
+  752  2020-05-02 14:18  git push
+  753  2020-05-02 14:18  cd ../..
+  754  2020-05-02 14:18  cd do/fava-study
+  755  2020-05-02 14:18  mkdir resources
+  756  2020-05-02 14:18  mkdir analysis
+  757  2020-05-02 14:18  mv ~/Sync/fava-study.wiki/t.md ./resources
+  758  2020-05-02 14:18  ls
+  759  2020-05-02 14:18  cd resources
+  760  2020-05-02 14:18  ls
+  761  2020-05-02 14:18  mv t.md survey.md
+  762  2020-05-02 14:18  e survey.md
+  763  2020-05-02 14:18  git add survey.md
+  764  2020-05-02 14:18  git commit -m "Add initial survey design"
+  765  2020-05-02 14:18  git push
+  766  2020-05-02 14:18  git push
+  767  2020-05-02 14:18  ccccccggvfjrfnkcldengbvldrucbfntlgcgrleeghjk
+  768  2020-05-02 14:18  vvcerckcrdbgrtttgfdvnhbcbgtkiurdubcgievnkfvc
+  769  2020-05-02 14:18  git push
+  770  2020-05-02 14:18  git push
+  771  2020-05-02 14:18  exit
+  772  2020-05-02 14:18  cd do/fava-study
+  773  2020-05-02 14:18  git push
+  774  2020-05-02 14:18  exit
+  775  2020-05-02 14:18  exit
+  776  2020-05-02 14:18  cd do/fava-study
+  777  2020-05-02 14:18  git status
+  778  2020-05-02 14:18  git push
+  779  2020-05-02 14:18  gpg-connect-agent reloadagent /bye
+  780  2020-05-02 14:18  git push
+  781  2020-05-02 14:18  exit
+  782  2020-05-02 14:18  which ewrap
+  783  2020-05-02 14:18  sudo chmod +x /usr/local/bin/ewrap
+  784  2020-05-02 14:18  which ewrap
+  785  2020-05-02 14:18  ewrap /home/ncbradley/do/fava-study.wiki/Home.md
+  786  2020-05-02 14:18  alacritty --help
+  787  2020-05-02 14:18  $(ewrap /home/ncbradley/do/fava-study.wiki/Home.md)
+  788  2020-05-02 14:18  ewrap /home/ncbradley/do/fava-study.wiki/Home.md </dev/null &>/dev/null &
+  789  2020-05-02 14:18  e ~/.zshrc
+  790  2020-05-02 14:18  exit
+  791  2020-05-02 14:18  cd Sync/fava-study
+  792  2020-05-02 14:18  e proposal/proposal.tex
+  793  2020-05-02 14:18  exit
+  794  2020-05-02 14:18  pgrep gpg
+  795  2020-05-02 14:18  ps aux | grep 523
+  796  2020-05-02 14:18  mv do/fava-study Sync
+  797  2020-05-02 14:18  alsamixer
+  798  2020-05-02 14:18  e .gnupg/gpg-agent.conf
+  799  2020-05-02 14:18  pacman -Ql pinentry | grep /usr/bin
+  800  2020-05-02 14:18  e .gnupg/gpg-agent.conf
+  801  2020-05-02 14:18  gpg-connect-agent reloadagent /bye
+  802  2020-05-02 14:18  cd Sync/fava-study.wiki
+  803  2020-05-02 14:18  git pull
+  804  2020-05-02 14:18  gpg --card-status
+  805  2020-05-02 14:18  reboot
+  806  2020-05-02 14:18  gpg --card-status
+  807  2020-05-02 14:18  gpg --card-status
+  808  2020-05-02 14:18  cd Sync/fava-study.wiki
+  809  2020-05-02 14:18  git pull
+  810  2020-05-02 14:18  exit
+  811  2020-05-02 14:18  .zshenv
+  812  2020-05-02 14:18  e.zshenv
+  813  2020-05-02 14:18  e .zshenv
+  814  2020-05-02 14:18  e .zprofile
+  815  2020-05-02 14:18  e .zprofile
+  816  2020-05-02 14:18  e .zshenv
+  817  2020-05-02 14:18  e .zshrc
+  818  2020-05-02 14:18  exit
+  819  2020-05-02 14:18  echo $SSH_AGENT_PID
+  820  2020-05-02 14:18  reboot
+  821  2020-05-02 14:18  cd Sync/fava-study.wiki
+  822  2020-05-02 14:18  git pull
+  823  2020-05-02 14:18  git pull
+  824  2020-05-02 14:18  alsamixer
+  825  2020-05-02 14:18  alsamixer
+  826  2020-05-02 14:18  sudo nvim /etc/asound.conf
+  827  2020-05-02 14:18  e ~/.asoundrc
+  828  2020-05-02 14:18  ls /proc/asound/cards
+  829  2020-05-02 14:18  ls /proc/asound/
+  830  2020-05-02 14:18  ls /proc/asound/PCH
+  831  2020-05-02 14:18  ls /proc/asound/PCH/pcm0c
+  832  2020-05-02 14:18  aplay
+  833  2020-05-02 14:18  aplay -l
+  834  2020-05-02 14:18  e ~/.asoundrc
+  835  2020-05-02 14:18  reboot
+  836  2020-05-02 14:18  reboot
+  837  2020-05-02 14:18  cd Sync/fava-study.wiki
+  838  2020-05-02 14:18  git pull
+  839  2020-05-02 14:18  git pull
+  840  2020-05-02 14:18  shutdown -h now
+  841  2020-05-02 14:18  nvim
+  842  2020-05-02 14:18  exit
+  843  2020-05-02 14:18  e .config/sway/config
+  844  2020-05-02 14:18  logout
+  845  2020-05-02 14:18  reboot
+  846  2020-05-02 14:18  sudo pacman -Syu
+  847  2020-05-02 14:18  exit
+  848  2020-05-02 14:18  e .asoundrc
+  849  2020-05-02 14:18  reboot
+  850  2020-05-02 14:18  cd Sync/fa
+  851  2020-05-02 14:18  cd Sync/fava-study.wiki
+  852  2020-05-02 14:18  e Proposal.md
+  853  2020-05-02 14:18  arecord -L
+  854  2020-05-02 14:18  arecord -L
+  855  2020-05-02 14:18  arecord -L
+  856  2020-05-02 14:18  reboot
+  857  2020-05-02 14:18  speaker-test -c 2
+  858  2020-05-02 14:18  speaker-test -c 2
+  859  2020-05-02 14:18  speaker-test -c 2
+  860  2020-05-02 14:18  speaker-test -c 2
+  861  2020-05-02 14:18  speaker-test -c 2
+  862  2020-05-02 14:18  speaker-test -c 2
+  863  2020-05-02 14:18  aplay -l
+  864  2020-05-02 14:18  arecord -l
+  865  2020-05-02 14:18  amixer
+  866  2020-05-02 14:18  alsamixer
+  867  2020-05-02 14:18  aplay -l
+  868  2020-05-02 14:18  cat .asoundrc
+  869  2020-05-02 14:18  e .asoundrc
+  870  2020-05-02 14:18  reboot
+  871  2020-05-02 14:18  speaker-test -c 2
+  872  2020-05-02 14:18  e .asoundrc
+  873  2020-05-02 14:18  aplay -l | awk -F \: '/,/{print $2}' | awk '{print $1}' | uniq
+  874  2020-05-02 14:18  aplay -L
+  875  2020-05-02 14:18  e .asoundrc
+  876  2020-05-02 14:18  arecord -L
+  877  2020-05-02 14:18  e .asoundrc
+  878  2020-05-02 14:18  reboot
+  879  2020-05-02 14:18  speaker-test -c 2
+  880  2020-05-02 14:18  e .asoundrc
+  881  2020-05-02 14:18  reboot
+  882  2020-05-02 14:18  speaker-test -c 2
+  883  2020-05-02 14:18  speaker-test -c 2
+  884  2020-05-02 14:18  speaker-test -c 2
+  885  2020-05-02 14:18  sudo lspci -v
+  886  2020-05-02 14:18  ssh root@192.168.0.10
+  887  2020-05-02 14:18  TERM=xterm-256color ssh root@192.168.0.10
+  888  2020-05-02 14:18  shutdown -h now
+  889  2020-05-02 14:18  speaker-test -c 2
+  890  2020-05-02 14:18  sudo pacman -Syu pulseaudio
+  891  2020-05-02 14:18  mv .asoundrc .asoundrc.old
+  892  2020-05-02 14:18  reboot
+  893  2020-05-02 14:18  speaker-test -c 2
+  894  2020-05-02 14:18  sudo nvim /etc/modprobe.d/default.conf
+  895  2020-05-02 14:18  reboot
+  896  2020-05-02 14:18  exit
+  897  2020-05-02 14:18  speaker-test -c 2
+  898  2020-05-02 14:18  cat /proc/asound/modules
+  899  2020-05-02 14:18  sudo mv /etc/modprobe.d/default.conf /etc/modprobe.d/alsa-base.conf
+  900  2020-05-02 14:18  sudo nvim /etc/modprobe.d/alsa-base.conf
+  901  2020-05-02 14:18  reboot
+  902  2020-05-02 14:18  speaker-test -c 2
+  903  2020-05-02 14:18  speaker-test -c 2
+  904  2020-05-02 14:18  sudo nvim /etc/modprobe.d/alsa-base.conf
+  905  2020-05-02 14:18  exit
+  906  2020-05-02 14:18  speaker-test -c 2
+  907  2020-05-02 14:18  sudo pacman -Syu qt5-webengine-widevine
+  908  2020-05-02 14:18  pacman -S widevine
+  909  2020-05-02 14:18  sudo pacman -S widevine
+  910  2020-05-02 14:18  cd aur
+  911  2020-05-02 14:18  git clone https://aur.archlinux.org/chromium-widevine.git
+  912  2020-05-02 14:18  cd chromium-widevine
+  913  2020-05-02 14:18  makepkg -S
+  914  2020-05-02 14:18  makepkg -i
+  915  2020-05-02 14:18  alsamixer
+  916  2020-05-02 14:18  cd ..
+  917  2020-05-02 14:18  git clone https://aur.archlinux.org/ddcutil.git
+  918  2020-05-02 14:18  cd ddcutil
+  919  2020-05-02 14:18  makepkg -S
+  920  2020-05-02 14:18  makepkg -i
+  921  2020-05-02 14:18  ddcutil capabilities
+  922  2020-05-02 14:18  modprobe i2c-dev
+  923  2020-05-02 14:18  sudo modprobe i2c-dev
+  924  2020-05-02 14:18  ddcutil capabilities
+  925  2020-05-02 14:18  sudo ddcutil capabilities
+  926  2020-05-02 14:18  sudo ddcutil getvcp 10
+  927  2020-05-02 14:18  sudo ddcutil setvcp 10 70
+  928  2020-05-02 14:18  sudo ddcutil detect
+  929  2020-05-02 14:18  sudo ddcutil --mfg DEL --sn YMYH14BH85AS setvcp 10 70
+  930  2020-05-02 14:18  sudo ddcutil --mfg DEL --sn YMYH136R056L setvcp 10 70
+  931  2020-05-02 14:18  cat /usr/share/ddcutil/data/45-ddcutil-i2c.rules
+  932  2020-05-02 14:18  sudo nvim /etc/modprobe.d/i2c.conf
+  933  2020-05-02 14:18  sudo groupadd i2c
+  934  2020-05-02 14:18  sudo usermod -a -G i2c ncbradley
+  935  2020-05-02 14:18  xev
+  936  2020-05-02 14:18  sudo cp /usr/share/ddcutil/data/etc/udev/rules.d/45-ddcutils-i2c.rules /etc/udev/rules.d
+  937  2020-05-02 14:18  sudo cp /usr/share/ddcutil/data/45-ddcutils-i2c.rules /etc/udev/rules.d
+  938  2020-05-02 14:18  sudo cp /usr/share/ddcutil/data/45-ddcutil-i2c.rules /etc/udev/rules.d
+  939  2020-05-02 14:18   sudo libinput debug-events --show-keycodes
+  940  2020-05-02 14:18  cd ~
+  941  2020-05-02 14:18  nvim .config/sway/config
+  942  2020-05-02 14:18  cd aur
+  943  2020-05-02 14:18  git clone https://aur.archlinux.org/ddcci-driver-linux-dkms.git
+  944  2020-05-02 14:18  cd ddc
+  945  2020-05-02 14:18  cd ddcci-driver-linux-dkms
+  946  2020-05-02 14:18  makepkg -S
+  947  2020-05-02 14:18  makepkg -i
+  948  2020-05-02 14:18  sudo pacman -Syu dkms
+  949  2020-05-02 14:18  modprobe ddcci
+  950  2020-05-02 14:18  makepkg -i
+  951  2020-05-02 14:18  modprobe ddcci
+  952  2020-05-02 14:18  sudo rm /etc/modprobe.d/i2c.conf
+  953  2020-05-02 14:18  modprobe ddcci
+  954  2020-05-02 14:18  sudo mv /etc/udev/rules.d/45-ddcutil-i2c.rules.disabled
+  955  2020-05-02 14:18  sudo mv /etc/udev/rules.d/45-ddcutil-i2c.rules /etc/udev/rules.d/45-ddcutil-i2c.rules.disabled
+  956  2020-05-02 14:18  reboot
+  957  2020-05-02 14:18   sudo libinput debug-events --show-keycodes
+  958  2020-05-02 14:18  cd aur/ddcci-driver-linux-dkms
+  959  2020-05-02 14:18  makepkg -i
+  960  2020-05-02 14:18  sudo pacman -S linux-headers
+  961  2020-05-02 14:18  modprobe ddcci
+  962  2020-05-02 14:18  sudo modprobe ddcci
+  963  2020-05-02 14:18  sudo pacman -S xbacklight
+  964  2020-05-02 14:18  sudo pacman -S light
+  965  2020-05-02 14:18  light -G
+  966  2020-05-02 14:18  light -L
+  967  2020-05-02 14:18  light -s /sysfs/backlight/ddcci4 -S 20
+  968  2020-05-02 14:18  light -s sysfs/backlight/ddcci4 -S 20
+  969  2020-05-02 14:18  light -s sysfs/backlight/ddcci4 -S 0
+  970  2020-05-02 14:18  sudo light -s sysfs/backlight/ddcci4 -S 0
+  971  2020-05-02 14:18  sudo light -s sysfs/backlight/ddcci4 -S 70
+  972  2020-05-02 14:18  sudo nvim /etc/modprobe.d/ddcci.conf
+  973  2020-05-02 14:18  sudo pacman -Rs ddcutil
+  974  2020-05-02 14:18  cd ..
+  975  2020-05-02 14:18  rm -rf ddcutil
+  976  2020-05-02 14:18  sudo gpasswd -d ncbradley i2c
+  977  2020-05-02 14:18  usermod -a -G video ncbradley
+  978  2020-05-02 14:18  sudo usermod -a -G video ncbradley
+  979  2020-05-02 14:18  sudo groupdel i2c
+  980  2020-05-02 14:18  sudo nvim /etc/udev/rules.d/90-backlight.rules
+  981  2020-05-02 14:18  reboot
+  982  2020-05-02 14:18  light -s sysfs/backlight/ddcci4 -S 0
+  983  2020-05-02 14:18  light -L
+  984  2020-05-02 14:18  cat /etc/modprobe.d
+  985  2020-05-02 14:18  cat /etc/modprobe.d/ddcci.conf
+  986  2020-05-02 14:18  modprobe ddcci
+  987  2020-05-02 14:18  sudo modprobe ddcci
+  988  2020-05-02 14:18  cat /etc/modprobe.d/alsa-base.conf
+  989  2020-05-02 14:18  sudo mv /etc/modprobe.d/ddcci.conf /etc/modules-load.d
+  990  2020-05-02 14:18  ls
+  991  2020-05-02 14:18  reboot
+  992  2020-05-02 14:18  light -L
+  993  2020-05-02 14:18  sudo modprobe ddcci
+  994  2020-05-02 14:18  light -L
+  995  2020-05-02 14:18  ls /etc/udev/rules.d
+  996  2020-05-02 14:18  cat /etc/udev/rules.d/90-backlight.rules
+  997  2020-05-02 14:18  sudo lsmod
+  998  2020-05-02 14:18  sudo lsmod | grep "ddc"
+  999  2020-05-02 14:18  modprobe i2c-dev
+ 1000  2020-05-02 14:18  sudo modprobe i2c-dev
+ 1001  2020-05-02 14:18  light -L
+ 1002  2020-05-02 14:18  sudo light -L
+ 1003  2020-05-02 14:18  sudo nvim /etc/modules-load.d/ddcci.conf
+ 1004  2020-05-02 14:18  reboot
+ 1005  2020-05-02 14:18  light -L
+ 1006  2020-05-02 14:18  ls /dev
+ 1007  2020-05-02 14:18  sudo light -L
+ 1008  2020-05-02 14:18  cd aur
+ 1009  2020-05-02 14:18  cd ddcci-driver-linux-dkms
+ 1010  2020-05-02 14:18  makepkg -i
+ 1011  2020-05-02 14:18  light -L
+ 1012  2020-05-02 14:18  sudo light -L
+ 1013  2020-05-02 14:18  cd ..
+ 1014  2020-05-02 14:18  sudo pacman -S ddcutil
+ 1015  2020-05-02 14:18  git clone https://aur.archlinux.org/ddcutil.git
+ 1016  2020-05-02 14:18  cd ddc
+ 1017  2020-05-02 14:18  cd ddcutil
+ 1018  2020-05-02 14:18  makepkg -S
+ 1019  2020-05-02 14:18  makepkg -i
+ 1020  2020-05-02 14:18  reboot
+ 1021  2020-05-02 14:18  light -L
+ 1022  2020-05-02 14:18  sudo light -L
+ 1023  2020-05-02 14:18  sudo modprobe ddcci
+ 1024  2020-05-02 14:18  sudo light -L
+ 1025  2020-05-02 14:18  ddcutil capabilities
+ 1026  2020-05-02 14:18  sudo ddcutil capabilities
+ 1027  2020-05-02 14:18  sudo ddcutil getvcp 10
+ 1028  2020-05-02 14:18  light -L
+ 1029  2020-05-02 14:18  cd /etc/udev/rules.d
+ 1030  2020-05-02 14:18  ls
+ 1031  2020-05-02 14:18  sudo mv 90-backlight.rules 90-backlight.rules.disabled
+ 1032  2020-05-02 14:18  reboot
+ 1033  2020-05-02 14:18  light -L
+ 1034  2020-05-02 14:18  dmesg
+ 1035  2020-05-02 14:18  ls /sys/bus/ddcci/devices
+ 1036  2020-05-02 14:18  sudo modprobe ddcci
+ 1037  2020-05-02 14:18  ls /sys/bus/ddcci/devices
+ 1038  2020-05-02 14:18  sudo pacman -R ddcci-driver-linux-dkms
+ 1039  2020-05-02 14:18  sudo pacman -S ddcci-driver-linux-dkms
+ 1040  2020-05-02 14:18  cd aur
+ 1041  2020-05-02 14:18  cd ddcci-driver-linux-dkms
+ 1042  2020-05-02 14:18  makepkg -i
+ 1043  2020-05-02 14:18  light -L
+ 1044  2020-05-02 14:18  ls /sys/class/backlight
+ 1045  2020-05-02 14:18  sudo dkms status
+ 1046  2020-05-02 14:18  sudo journalctl -b
+ 1047  2020-05-02 14:18  cd ~
+ 1048  2020-05-02 14:18  sudo /etc/udev/rules.d/45-ddcutil-i2c.rules.disabled .
+ 1049  2020-05-02 14:18  sudo mv /etc/udev/rules.d/45-ddcutil-i2c.rules.disabled .
+ 1050  2020-05-02 14:18  sudo mv /etc/udev/rules.d/90-backlight.rules.disabled .
+ 1051  2020-05-02 14:18  reboot
+ 1052  2020-05-02 14:18  sudo journalctl -b
+ 1053  2020-05-02 14:18  ls /etc/udev/rules.d
+ 1054  2020-05-02 14:18  grep i2c-dev.ko  /lib/modules/`uname -r`/modules.builtin
+ 1055  2020-05-02 14:18  ls /dev/i2c-4
+ 1056  2020-05-02 14:18  cat /dev/i2c-4
+ 1057  2020-05-02 14:18  sudo cat /dev/i2c-4
+ 1058  2020-05-02 14:18  sudo cat /dev/i2c-0
+ 1059  2020-05-02 14:18  sudo cat /dev/i2c-1
+ 1060  2020-05-02 14:18  sudo cat /dev/i2c-2
+ 1061  2020-05-02 14:18  ls /usr/lib/udev/rules.d
+ 1062  2020-05-02 14:18  cd /usr/lib/udev/rules.d
+ 1063  2020-05-02 14:18  sudo mv 90-backlight.rules 90-backlight.rules.disabled
+ 1064  2020-05-02 14:18  reboot
+ 1065  2020-05-02 14:18  ls
+ 1066  2020-05-02 14:18  alsamixer
+ 1067  2020-05-02 14:18  reboot
+ 1068  2020-05-02 14:18  alsamixer
+ 1069  2020-05-02 14:18  light -L
+ 1070  2020-05-02 14:18  sudo journctl -b
+ 1071  2020-05-02 14:18  sudo journalctl -b
+ 1072  2020-05-02 14:18  sudo nvim /etc/modprobe.d/alsa-base.conf
+ 1073  2020-05-02 14:18  reboot
+ 1074  2020-05-02 14:18  alsamixer
+ 1075  2020-05-02 14:18  sudo journalctl -b
+ 1076  2020-05-02 14:18  light -L
+ 1077  2020-05-02 14:18  sudo light -L
+ 1078  2020-05-02 14:18  sudo journalctl -b
+ 1079  2020-05-02 14:18  e .config/sway/config
+ 1080  2020-05-02 14:18  reboot
+ 1081  2020-05-02 14:18  e .config/sway/config
+ 1082  2020-05-02 14:18  e .config/sway/config
+ 1083  2020-05-02 14:18  e .config/sway/config
+ 1084  2020-05-02 14:18  light -L
+ 1085  2020-05-02 14:18  tail /var/log/messages
+ 1086  2020-05-02 14:18  sudo modprobe ddcci-backlight
+ 1087  2020-05-02 14:18  light -L
+ 1088  2020-05-02 14:18  journalctl -n 100
+ 1089  2020-05-02 14:18  sudo nvim /etc/modprobe.d/ddcci.conf
+ 1090  2020-05-02 14:18  sudo nvim /etc/modules-load.d/ddcci.conf
+ 1091  2020-05-02 14:18  reboot
+ 1092  2020-05-02 14:18  light -L
+ 1093  2020-05-02 14:18  journalctl -b
+ 1094  2020-05-02 14:18  echo 'ddcci 0x37' | sudo tee /sys/bus/i2c/devices/i2c-2/new_device
+ 1095  2020-05-02 14:18  light -L
+ 1096  2020-05-02 14:18  cat /sys/bus/i2c/devices/i2c-2/name
+ 1097  2020-05-02 14:18  sudo ddcutil detect
+ 1098  2020-05-02 14:18  echo 'ddcci 0x37' | sudo tee /sys/bus/i2c/devices/i2c-4/new_device
+ 1099  2020-05-02 14:18  sudo ddcutil detect
+ 1100  2020-05-02 14:18  reboot
+ 1101  2020-05-02 14:18  exit
+ 1102  2020-05-02 14:18  sudo ddcutil detect
+ 1103  2020-05-02 14:18  light -L
+ 1104  2020-05-02 14:18  sudo journalctl -b
+ 1105  2020-05-02 14:18  modprobe ddcci dyndbg delay=120
+ 1106  2020-05-02 14:18  journalctl -r
+ 1107  2020-05-02 14:18  sudo modprobe ddcci dyndbg delay=120
+ 1108  2020-05-02 14:18  light -L
+ 1109  2020-05-02 14:18  sudo nvim /etc/modprobe.d/ddcci.conf
+ 1110  2020-05-02 14:18  reboot
+ 1111  2020-05-02 14:18  light -L
+ 1112  2020-05-02 14:18  sudo journalctl -b
+ 1113  2020-05-02 14:18  sudo pacman -Rs ddcci-driver-linux-dkms dkms linux-headers
+ 1114  2020-05-02 14:18  rm /usr/lib/udev/rules.d/90-backlight.rules.disabled
+ 1115  2020-05-02 14:18  sudo rm /usr/lib/udev/rules.d/90-backlight.rules.disabled
+ 1116  2020-05-02 14:18  ls /usr/lib/udev/rules.d/
+ 1117  2020-05-02 14:18  ls /etc/udev/rules.d
+ 1118  2020-05-02 14:18  sudo pacman -Rs light
+ 1119  2020-05-02 14:18  sudo cp /usr/share/ddcutil/data/45-ddcutil-i2c.rules /etc/udev/rules.d
+ 1120  2020-05-02 14:18  sudo nvim /etc/udev/rules.d/45-ddcutil-i2c.rules
+ 1121  2020-05-02 14:18  sudo nvim /etc/modprobe.d/ddcci.conf
+ 1122  2020-05-02 14:18  sudo nvim /etc/modules-load.d/ddcci.conf
+ 1123  2020-05-02 14:18  reboot
+ 1124  2020-05-02 14:18  ddcutil --display 1 setvcp 10 10 &; ddcutil --display 2 setvcp 10 10
+ 1125  2020-05-02 14:18  ddcutil detect
+ 1126  2020-05-02 14:18  ddcutil getvcp 10
+ 1127  2020-05-02 14:18  ddcutil setvcp 10 70
+ 1128  2020-05-02 14:18  ddcutil setvcp 10 50
+ 1129  2020-05-02 14:18  ddcutil --display 2 setvcp 10 70
+ 1130  2020-05-02 14:18  ddcutil --display 1 --display 2 setvcp 10 70
+ 1131  2020-05-02 14:18  ddcutil --display 1 --display 2 setvcp 10 0
+ 1132  2020-05-02 14:18  ddcutil --display 1 --display 2 setvcp 10 70
+ 1133  2020-05-02 14:18  e .config/sway/config
+ 1134  2020-05-02 14:18  e .config/sway/config
+ 1135  2020-05-02 14:18  reboot
+ 1136  2020-05-02 14:18  e .config/sway/config
+ 1137  2020-05-02 14:18  cd Sync
+ 1138  2020-05-02 14:18  cd fava-study
+ 1139  2020-05-02 14:18  cd ../fava-study.wiki
+ 1140  2020-05-02 14:18  git push
+ 1141  2020-05-02 14:18  git push
+ 1142  2020-05-02 14:18  ssh-add -L
+ 1143  2020-05-02 14:18  exit
+ 1144  2020-05-02 14:18  ssh-add -L
+ 1145  2020-05-02 14:18  gpgconf --kill gpg-agent
+ 1146  2020-05-02 14:18  cd Sync/fava-study.wiki
+ 1147  2020-05-02 14:18  git pull
+ 1148  2020-05-02 14:18  gpg --card-status
+ 1149  2020-05-02 14:18  gpg-connect-agent reloadagent /bye
+ 1150  2020-05-02 14:18  echo $GPG_TTY
+ 1151  2020-05-02 14:18  echo $(tty)
+ 1152  2020-05-02 14:18  git push
+ 1153  2020-05-02 14:18  ssh-add -L
+ 1154  2020-05-02 14:18  exit
+ 1155  2020-05-02 14:18  cd Sync/fava-study.wiki
+ 1156  2020-05-02 14:18  git commit -am "Formatting"
+ 1157  2020-05-02 14:18  git push
+ 1158  2020-05-02 14:18  git status
+ 1159  2020-05-02 14:18  git add Proposal.md
+ 1160  2020-05-02 14:18  git commit -m "Refine project design"
+ 1161  2020-05-02 14:18  mv Proposal.md Design.md
+ 1162  2020-05-02 14:18  git add Design.md
+ 1163  2020-05-02 14:18  git commit -m "Rename proposal to design"
+ 1164  2020-05-02 14:18  cd ..
+ 1165  2020-05-02 14:18  cd fava-study
+ 1166  2020-05-02 14:18  cd resources
+ 1167  2020-05-02 14:18  mv survey.md pre-survey.md
+ 1168  2020-05-02 14:18  touch post-survey.md
+ 1169  2020-05-02 14:18  git status
+ 1170  2020-05-02 14:18  git add --all
+ 1171  2020-05-02 14:18  git reset ../proposal/proposal.tex
+ 1172  2020-05-02 14:18  git status
+ 1173  2020-05-02 14:18  git commit -m "Update survey file names to match links in the wiki design.md doc"
+ 1174  2020-05-02 14:18  git push
+ 1175  2020-05-02 14:18  cd ../../fava-study.wiki
+ 1176  2020-05-02 14:18  git push
+ 1177  2020-05-02 14:18  rm Home.md
+ 1178  2020-05-02 14:18  git add --all
+ 1179  2020-05-02 14:18  git status
+ 1180  2020-05-02 14:18  git pull
+ 1181  2020-05-02 14:18  git status
+ 1182  2020-05-02 14:18  git reset
+ 1183  2020-05-02 14:18  git reset --hard HEAD
+ 1184  2020-05-02 14:18  git add Home.md
+ 1185  2020-05-02 14:18  git commit -m "Add link to design doc in home doc"
+ 1186  2020-05-02 14:18  git push
+ 1187  2020-05-02 14:18  git add Home.md
+ 1188  2020-05-02 14:18  git commit -m "Fix link to design doc"
+ 1189  2020-05-02 14:18  git push
+ 1190  2020-05-02 14:18  sudo pacman -Syu openconnect
+ 1191  2020-05-02 14:18  openconnect --authenticate myvpn.ubc.ca
+ 1192  2020-05-02 14:18  ip addr
+ 1193  2020-05-02 14:18  openconnect myvpn.ubc.ca
+ 1194  2020-05-02 14:18  sudo openconnect myvpn.ubc.ca
+ 1195  2020-05-02 14:18  reboot
+ 1196  2020-05-02 14:18  cd Sync
+ 1197  2020-05-02 14:18  mkdir journal
+ 1198  2020-05-02 14:18  cd journal
+ 1199  2020-05-02 14:18  nvim 20200330.md
+ 1200  2020-05-02 14:18  nvim 20200331.md
+ 1201  2020-05-02 14:18  cd Sync/fava-study.wiki
+ 1202  2020-05-02 14:18  git push
+ 1203  2020-05-02 14:18  git status
+ 1204  2020-05-02 14:18  git diff
+ 1205  2020-05-02 14:18  git add Proposal.md
+ 1206  2020-05-02 14:18  git commit -m "Add pitch, experiment, and eval ideas"
+ 1207  2020-05-02 14:18  git push
+ 1208  2020-05-02 14:18  e Proposal.md
+ 1209  2020-05-02 14:18  e Proposal.md
+ 1210  2020-05-02 14:18  e Proposal.md
+ 1211  2020-05-02 14:18  e Proposal.md
+ 1212  2020-05-02 14:18  e Proposal.md
+ 1213  2020-05-02 14:18  ls
+ 1214  2020-05-02 14:18  e Home.md
+ 1215  2020-05-02 14:18  e Home.md
+ 1216  2020-05-02 14:18  e Home.md
+ 1217  2020-05-02 14:18  ip addr
+ 1218  2020-05-02 14:18  ip addr
+ 1219  2020-05-02 14:18  exit
+ 1220  2020-05-02 14:18  sudo openconnect myvpn.ubc.ca
+ 1221  2020-05-02 14:18  sudo openconnect myvpn.ubc.ca
+ 1222  2020-05-02 14:18  exit
+ 1223  2020-05-02 14:18  exit
+ 1224  2020-05-02 14:18  what
+ 1225  2020-05-02 14:18  exit
+ 1226  2020-05-02 14:18  git status
+ 1227  2020-05-02 14:18  cd Sync/fava-study.wiki
+ 1228  2020-05-02 14:18  git status
+ 1229  2020-05-02 14:18  git diff
+ 1230  2020-05-02 14:18  git commit -m "Refine approach"
+ 1231  2020-05-02 14:18  git add Design.md
+ 1232  2020-05-02 14:18  git commit -m "Refine approach"
+ 1233  2020-05-02 14:18  git push
+ 1234  2020-05-02 14:18  git pull
+ 1235  2020-05-02 14:18  git push
+ 1236  2020-05-02 14:18  cp Design.md ../fava-study
+ 1237  2020-05-02 14:18  cd ..
+ 1238  2020-05-02 14:18  cd fava-study
+ 1239  2020-05-02 14:18  git status
+ 1240  2020-05-02 14:18  git add Desi
+ 1241  2020-05-02 14:18  git add Design.md
+ 1242  2020-05-02 14:18  git commit -m "Move Design doc from wiki"
+ 1243  2020-05-02 14:18  git push
+ 1244  2020-05-02 14:18  git remote -v
+ 1245  2020-05-02 14:18  git remote set-ul origin git@github.com:nickbradley/shellac-study.git
+ 1246  2020-05-02 14:18  git remote set-url origin git@github.com:nickbradley/shellac-study.git
+ 1247  2020-05-02 14:18  git fetch
+ 1248  2020-05-02 14:18  cd ..
+ 1249  2020-05-02 14:18  mv fava-study shellac-study
+ 1250  2020-05-02 14:18  ls
+ 1251  2020-05-02 14:18  cd shellac-study
+ 1252  2020-05-02 14:18  git remote -v
+ 1253  2020-05-02 14:18  ssh-add -L
+ 1254  2020-05-02 14:18  38
+ 1255  2020-05-02 14:18  cd ~
+ 1256  2020-05-02 14:18  e .zshrc
+ 1257  2020-05-02 14:18  exit
+ 1258  2020-05-02 14:18  sudo pacman -Syu
+ 1259  2020-05-02 14:18  sudo pacman -Syu darktable
+ 1260  2020-05-02 14:18  darktable
+ 1261  2020-05-02 14:18  exit
+ 1262  2020-05-02 14:18  curl -vvv http://localhost:8787
+ 1263  2020-05-02 14:18  exit
+ 1264  2020-05-02 14:18  docker run -d -p 8787:8787 -e USER= -e PASSWORD= rocker/rstudio
+ 1265  2020-05-02 14:18  docker logs -f c6d2
+ 1266  2020-05-02 14:18  docker kill c6d2
+ 1267  2020-05-02 14:18  docker rm c6d2
+ 1268  2020-05-02 14:18  docker run -d --rm -p 8787:8787 -e PASSWORD=rstudio rocker/rstudio
+ 1269  2020-05-02 14:18  docker logs -f a042
+ 1270  2020-05-02 14:18  docker ps
+ 1271  2020-05-02 14:18  docker run -d --name rstudio -p 8787:8787 -e PASSWORD=rstudio rocker/rstudio
+ 1272  2020-05-02 14:18  docker ps
+ 1273  2020-05-02 14:18  docker logs rstudio
+ 1274  2020-05-02 14:18  curl -vvv http://127.0.0.1:8787
+ 1275  2020-05-02 14:18  curl -vvv https://127.0.0.1:8787
+ 1276  2020-05-02 14:18  curl -vvv http://0.0.0.0:8787
+ 1277  2020-05-02 14:18  curl -vvv http://localhost:8787
+ 1278  2020-05-02 14:18  docker ps
+ 1279  2020-05-02 14:18  docker logs rstudio
+ 1280  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=rstudio rocker/rstudio
+ 1281  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=r rocker/rstudio
+ 1282  2020-05-02 14:18  docker ps
+ 1283  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio
+ 1284  2020-05-02 14:18  docker ps --all
+ 1285  2020-05-02 14:18  docker rm fd87 8b10 e930 e618
+ 1286  2020-05-02 14:18  docker ps --all
+ 1287  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio
+ 1288  2020-05-02 14:18  sudo docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio
+ 1289  2020-05-02 14:18  docker images ls
+ 1290  2020-05-02 14:18  docker images ls --all
+ 1291  2020-05-02 14:18  sudo docker images ls
+ 1292  2020-05-02 14:18  sudo docker images
+ 1293  2020-05-02 14:18  sudo docker images --all
+ 1294  2020-05-02 14:18  docker images --all
+ 1295  2020-05-02 14:18  docker images rm d43211
+ 1296  2020-05-02 14:18  docker rmi d43211
+ 1297  2020-05-02 14:18  docker ps
+ 1298  2020-05-02 14:18  docker ps --all
+ 1299  2020-05-02 14:18  docker rm 909
+ 1300  2020-05-02 14:18  docker rmi d43211
+ 1301  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio
+ 1302  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio R
+ 1303  2020-05-02 14:18  docker os
+ 1304  2020-05-02 14:18  docker ps
+ 1305  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre --cap-add=ALL rocker/rstudio
+ 1306  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre --init=s6 rocker/rstudio
+ 1307  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre --init s6 rocker/rstudio
+ 1308  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre --init rocker/rstudio
+ 1309  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio rstudio-server
+ 1310  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio rstudio-server start
+ 1311  2020-05-02 14:18  docker ps
+ 1312  2020-05-02 14:18  docker ps --all
+ 1313  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio /bin/ba -c rstudio-server start
+ 1314  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio /bin/sh -c rstudio-server start
+ 1315  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio /bin/sh -c "rstudio-server start"
+ 1316  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio /bin/sh
+ 1317  2020-05-02 14:18  docker ps
+ 1318  2020-05-02 14:18  docker ps --all
+ 1319  2020-05-02 14:18  docker logs a7eb
+ 1320  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio /etc/services.d/rstudio/run
+ 1321  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre --cap-add=ALL rocker/rstudio /etc/services.d/rstudio/run
+ 1322  2020-05-02 14:18  docker run -p 8787:8787 -e PASSWORD=234sdre --user=0 rocker/rstudio /etc/services.d/rstudio/run
+ 1323  2020-05-02 14:18  docker images --all
+ 1324  2020-05-02 14:18  docker rmi docker.io/rocker/rstudio localhost/fava-rtex localhost/fava-pub e5a 8cc
+ 1325  2020-05-02 14:18  docker images --all
+ 1326  2020-05-02 14:18  docker ps --all
+ 1327  2020-05-02 14:18  docker start admirin
+ 1328  2020-05-02 14:18  docker start 305
+ 1329  2020-05-02 14:18  docker system prune
+ 1330  2020-05-02 14:18  docker ps --all
+ 1331  2020-05-02 14:18  docker rm 305
+ 1332  2020-05-02 14:18  docker rm 89b
+ 1333  2020-05-02 14:18  docker rm c1a dfc
+ 1334  2020-05-02 14:18  docker ps --all
+ 1335  2020-05-02 14:18  exit
+ 1336  2020-05-02 14:18  e .config/sway/con
+ 1337  2020-05-02 14:18  e .config/sway/config
+ 1338  2020-05-02 14:18  exit
+ 1339  2020-05-02 14:18  sudo pacman -Syu firefox
+ 1340  2020-05-02 14:18  firefox
+ 1341  2020-05-02 14:18  MOZ_ENABLE_WAYLAND=1 firefox
+ 1342  2020-05-02 14:18  exit
+ 1343  2020-05-02 14:18  cd Sync/shellac-study
+ 1344  2020-05-02 14:18  git pullccccccggvfjrtkcutehutcjtdddhhluvurdcibvcnnue
+ 1345  2020-05-02 14:18  git pull
+ 1346  2020-05-02 14:18  e ~/.zshrc
+ 1347  2020-05-02 14:18  e README.md
+ 1348  2020-05-02 14:18  git status
+ 1349  2020-05-02 14:18  ls
+ 1350  2020-05-02 14:18  ls ~
+ 1351  2020-05-02 14:18  ls
+ 1352  2020-05-02 14:18  git status
+ 1353  2020-05-02 14:18  git add README.md
+ 1354  2020-05-02 14:18  git commit -m "Add readme with initial list of milestones"
+ 1355  2020-05-02 14:18  git status
+ 1356  2020-05-02 14:18  git push
+ 1357  2020-05-02 14:18  git status
+ 1358  2020-05-02 14:18  git status
+ 1359  2020-05-02 14:18  \tgit add design.md
+ 1360  2020-05-02 14:18  git commit -m "Use lowercase for doc names"
+ 1361  2020-05-02 14:18  git push
+ 1362  2020-05-02 14:18  ls
+ 1363  2020-05-02 14:18  git status
+ 1364  2020-05-02 14:18  git add --all
+ 1365  2020-05-02 14:18  git reset proposal/proposal.tex
+ 1366  2020-05-02 14:18  git status
+ 1367  2020-05-02 14:18  git reset HEAD^
+ 1368  2020-05-02 14:18  git status
+ 1369  2020-05-02 14:18  git add --all
+ 1370  2020-05-02 14:18  git reset proposal/proposal.tex
+ 1371  2020-05-02 14:18  git status
+ 1372  2020-05-02 14:18  git commit -m "Use lowercase for doc names"
+ 1373  2020-05-02 14:18  git push -f
+ 1374  2020-05-02 14:18  git add README.md
+ 1375  2020-05-02 14:18  git commit -m "Add abstract placeholder in README"
+ 1376  2020-05-02 14:18  git push
+ 1377  2020-05-02 14:18  git add README.md
+ 1378  2020-05-02 14:18  git commit -m "Add project mgmt section to README"
+ 1379  2020-05-02 14:18  git push
+ 1380  2020-05-02 14:18  make start-editor
+ 1381  2020-05-02 14:18  sudo docker ps
+ 1382  2020-05-02 14:18  sudo docker ps --all
+ 1383  2020-05-02 14:18  make editor-start
+ 1384  2020-05-02 14:18  make editor-start
+ 1385  2020-05-02 14:18  make editor-stop
+ 1386  2020-05-02 14:18  sudo docker ps --all
+ 1387  2020-05-02 14:18  sudo docker rm cc37
+ 1388  2020-05-02 14:18  make editor-start
+ 1389  2020-05-02 14:18  sudo docker logs 35a
+ 1390  2020-05-02 14:18  sudo docker logs 35a
+ 1391  2020-05-02 14:18  git status
+ 1392  2020-05-02 14:18  git diff design.md
+ 1393  2020-05-02 14:18  git diff design.md
+ 1394  2020-05-02 14:18  git add design.md
+ 1395  2020-05-02 14:18  git commit -m "Add aspirational abstract and research questions"
+ 1396  2020-05-02 14:18  git push
+ 1397  2020-05-02 14:18  git push
+ 1398  2020-05-02 14:18  git psuh
+ 1399  2020-05-02 14:18  exit
+ 1400  2020-05-02 14:18  cd aur
+ 1401  2020-05-02 14:18  git clone https://aur.archlinux.org/zotero.git
+ 1402  2020-05-02 14:18  cd zotero
+ 1403  2020-05-02 14:18  makepkg -S
+ 1404  2020-05-02 14:18  makepkg -i
+ 1405  2020-05-02 14:18  sudo pacman -Syu dbus-glib gtk2 gtk3
+ 1406  2020-05-02 14:18  sudo pacman -Syu dbus-glib gtk2 gtk3
+ 1407  2020-05-02 14:18  makepkg -i
+ 1408  2020-05-02 14:18  zotero
+ 1409  2020-05-02 14:18  sudo pacman -Rs zotero
+ 1410  2020-05-02 14:18  sudo pacman -Rs dbus-glib gtk2 gtk3
+ 1411  2020-05-02 14:18  cd ../..
+ 1412  2020-05-02 14:18  cd Sync/fava-study.wiki
+ 1413  2020-05-02 14:18  e Design.md
+ 1414  2020-05-02 14:18  e Design.md
+ 1415  2020-05-02 14:18  mv Design.md design.md
+ 1416  2020-05-02 14:18  git status
+ 1417  2020-05-02 14:18  cd ..
+ 1418  2020-05-02 14:18  ls
+ 1419  2020-05-02 14:18  cd fava-study.wiki
+ 1420  2020-05-02 14:18  mv design.md Design.md
+ 1421  2020-05-02 14:18  ls
+ 1422  2020-05-02 14:18  rm README.md
+ 1423  2020-05-02 14:18  cd ..
+ 1424  2020-05-02 14:18  cd shellac-study
+ 1425  2020-05-02 14:18  mv Design.md design.md
+ 1426  2020-05-02 14:18  e README.md
+ 1427  2020-05-02 14:18  fg
+ 1428  2020-05-02 14:18  exit
+ 1429  2020-05-02 14:18  cd sy
+ 1430  2020-05-02 14:18  cd Sync/shellac-study
+ 1431  2020-05-02 14:18  git push
+ 1432  2020-05-02 14:18  exit
+ 1433  2020-05-02 14:18  cd Sync/shellac-study
+ 1434  2020-05-02 14:18  git push
+ 1435  2020-05-02 14:18  ssh-add -L
+ 1436  2020-05-02 14:18  reboot
+ 1437  2020-05-02 14:18  nvim Sync/journal/20200331.md
+ 1438  2020-05-02 14:18  nvim Sync/journal/20200331.md
+ 1439  2020-05-02 14:18  e Sync/journal/20200401.md
+ 1440  2020-05-02 14:18  e .zshrc
+ 1441  2020-05-02 14:18  exit
+ 1442  2020-05-02 14:18  cd Sync/shellac-study
+ 1443  2020-05-02 14:18  git push
+ 1444  2020-05-02 14:18  ssh git@github.com:nickbradley
+ 1445  2020-05-02 14:18  ssh git@github.com
+ 1446  2020-05-02 14:18  gpg-connect-agent updatestartuptty /bye
+ 1447  2020-05-02 14:18  git push
+ 1448  2020-05-02 14:18  git push
+ 1449  2020-05-02 14:18  git push
+ 1450  2020-05-02 14:18  cp /usr/share/applications/firefox.desktop ~/.local/share/applications
+ 1451  2020-05-02 14:18  e ~/.local/share/applications
+ 1452  2020-05-02 14:18  rm ~/.local/share/applications/firefox.desktop
+ 1453  2020-05-02 14:18  e ~/.zprofile
+ 1454  2020-05-02 14:18  reboot
+ 1455  2020-05-02 14:18  sudo pacman -Syu
+ 1456  2020-05-02 14:18  exit
+ 1457  2020-05-02 14:18  exit
+ 1458  2020-05-02 14:18  cd Sync/shellac-study
+ 1459  2020-05-02 14:18  make editor-start
+ 1460  2020-05-02 14:18  make editor-stop
+ 1461  2020-05-02 14:18  make editor-start
+ 1462  2020-05-02 14:18  sudo docker stop rstudio
+ 1463  2020-05-02 14:18  sudo docker rm rstudio
+ 1464  2020-05-02 14:18  make editor-start
+ 1465  2020-05-02 14:18  make editor-stop
+ 1466  2020-05-02 14:18  make editor-start
+ 1467  2020-05-02 14:18  make editor-stop
+ 1468  2020-05-02 14:18  make editor-start
+ 1469  2020-05-02 14:18  make editor-stop
+ 1470  2020-05-02 14:18  make editor-start
+ 1471  2020-05-02 14:18  make editor-stop
+ 1472  2020-05-02 14:18  make editor-start
+ 1473  2020-05-02 14:18  make editor-stop
+ 1474  2020-05-02 14:18  make editor-start
+ 1475  2020-05-02 14:18  ls -l
+ 1476  2020-05-02 14:18  make editor-stop
+ 1477  2020-05-02 14:18  make editor-start
+ 1478  2020-05-02 14:18  make editor-stop
+ 1479  2020-05-02 14:18  ls
+ 1480  2020-05-02 14:18  cd resources
+ 1481  2020-05-02 14:18  mv pre-survey.md pre-questionnaire.md
+ 1482  2020-05-02 14:18  mv post-survey.md post-questionnaire.md
+ 1483  2020-05-02 14:18  git status
+ 1484  2020-05-02 14:18  git add post-survey.md post-questionnaire.md pre-questionnaire.md pre-survey.md
+ 1485  2020-05-02 14:18  git status
+ 1486  2020-05-02 14:18  cd ..
+ 1487  2020-05-02 14:18  git add README.md
+ 1488  2020-05-02 14:18  git commit -m "Rename survey to questionnaire"
+ 1489  2020-05-02 14:18  git status
+ 1490  2020-05-02 14:18  git add resources/
+ 1491  2020-05-02 14:18  git status
+ 1492  2020-05-02 14:18  git commit -m "Update pre-experiment questionnaire to align better with aspirational abstract"
+ 1493  2020-05-02 14:18  git add .rstudio/
+ 1494  2020-05-02 14:18  git reset
+ 1495  2020-05-02 14:18  git add resources/
+ 1496  2020-05-02 14:18  git status
+ 1497  2020-05-02 14:18  git commit -am
+ 1498  2020-05-02 14:18  git commit -a
+ 1499  2020-05-02 14:18  git status
+ 1500  2020-05-02 14:18  git commit --amend
+ 1501  2020-05-02 14:18  git log
+ 1502  2020-05-02 14:18  echo -e "\e[9mstrikethrough\e[0m"
+ 1503  2020-05-02 14:18  git status
+ 1504  2020-05-02 14:18  git diff resources/pre-questionnaire.md
+ 1505  2020-05-02 14:18  git diff design.md
+ 1506  2020-05-02 14:18  git diff design.md
+ 1507  2020-05-02 14:18  git status
+ 1508  2020-05-02 14:18  git add design.md resources/
+ 1509  2020-05-02 14:18  git status
+ 1510  2020-05-02 14:18  git commit -m "Reorganize PreEQ and describe RQ1 evaluation based responses to PreEQ"
+ 1511  2020-05-02 14:18  git push
+ 1512  2020-05-02 14:18  git push
+ 1513  2020-05-02 14:18  exit
+ 1514  2020-05-02 14:18  cd Sync/shellac-study
+ 1515  2020-05-02 14:18  git push
+ 1516  2020-05-02 14:18  sudo pacman -Syu
+ 1517  2020-05-02 14:18  make editor-start
+ 1518  2020-05-02 14:18  e Makefile
+ 1519  2020-05-02 14:18  e Makefile
+ 1520  2020-05-02 14:18  e design.md
+ 1521  2020-05-02 14:18  exit
+ 1522  2020-05-02 14:18  reboot
+ 1523  2020-05-02 14:18  e Sync/journal
+ 1524  2020-05-02 14:18  cd Sync/journal
+ 1525  2020-05-02 14:18  e 20200404.md
+ 1526  2020-05-02 14:18  dmesg
+ 1527  2020-05-02 14:18  dmesg
+ 1528  2020-05-02 14:18  dmesg
+ 1529  2020-05-02 14:18  cd Sync/shellac-study
+ 1530  2020-05-02 14:18  git push
+ 1531  2020-05-02 14:18  git push
+ 1532  2020-05-02 14:18  cd Sync/shellac-study
+ 1533  2020-05-02 14:18  e design.md
+ 1534  2020-05-02 14:18  sudo pacman -Syu
+ 1535  2020-05-02 14:18  reboot
+ 1536  2020-05-02 14:18  dmesg
+ 1537  2020-05-02 14:18  exit
+ 1538  2020-05-02 14:18  cd Sync/shellac-study
+ 1539  2020-05-02 14:18  git status
+ 1540  2020-05-02 14:18  git diff design.md
+ 1541  2020-05-02 14:18  git status
+ 1542  2020-05-02 14:18  git add design.md
+ 1543  2020-05-02 14:18  git commit -m "Update design based on initial literature review"
+ 1544  2020-05-02 14:18  git push
+ 1545  2020-05-02 14:18  git push
+ 1546  2020-05-02 14:18  exit
+ 1547  2020-05-02 14:18  ls -a
+ 1548  2020-05-02 14:18  e .config/nvim/init.vim
+ 1549  2020-05-02 14:18  exit
+ 1550  2020-05-02 14:18  ssh root@192.168.0.10
+ 1551  2020-05-02 14:18  e .ssh/config
+ 1552  2020-05-02 14:18  ssh nas
+ 1553  2020-05-02 14:18  ssh-copy-id -i .ssh/id_rsa_yubikey.pub nas
+ 1554  2020-05-02 14:18  ssh-copy-id -i ~/.ssh/id_rsa_yubikey.pub nas
+ 1555  2020-05-02 14:18  ssh-copy-id -f -i ~/.ssh/id_rsa_yubikey.pub nas
+ 1556  2020-05-02 14:18  ssh nas
+ 1557  2020-05-02 14:18  e .zshrc
+ 1558  2020-05-02 14:18  exit
+ 1559  2020-05-02 14:18  sudo pacman -Syu nfs-utils
+ 1560  2020-05-02 14:18  sudo showmount --exports 192.168.0.10
+ 1561  2020-05-02 14:18  rcpinfo -p 192.168.0.10
+ 1562  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1563  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1564  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1565  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1566  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1567  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1568  2020-05-02 14:18  sudo showmount --exports 192.168.0.10
+ 1569  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1570  2020-05-02 14:18  sudo showmount --exports 192.168.0.10
+ 1571  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1572  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1573  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1574  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1575  2020-05-02 14:18  rpcinfo -p 192.168.0.10
+ 1576  2020-05-02 14:18  sudo showmount --exports 192.168.0.10
+ 1577  2020-05-02 14:18  sudo showmount --exports 192.168.0.10
+ 1578  2020-05-02 14:18  exit
+ 1579  2020-05-02 14:18  nas
+ 1580  2020-05-02 14:18  exit
+ 1581  2020-05-02 14:18  cd Sync/shellac-study
+ 1582  2020-05-02 14:18  e design.md
+ 1583  2020-05-02 14:18  e design.md README.md
+ 1584  2020-05-02 14:18  e design.md
+ 1585  2020-05-02 14:18  shutdown
+ 1586  2020-05-02 14:18  exit
+ 1587  2020-05-02 14:18  sudo showmount --exports 192.168.0.10
+ 1588  2020-05-02 14:18  sudo showmount --exports 192.168.0.10
+ 1589  2020-05-02 14:18  sudo showmount --e 192.168.0.10
+ 1590  2020-05-02 14:18  sudo showmount --e 192.168.0.10
+ 1591  2020-05-02 14:18  shutdown -h now
+ 1592  2020-05-02 14:18  sudo showmount --e 192.168.0.10
+ 1593  2020-05-02 14:18  ls /mnt
+ 1594  2020-05-02 14:18  ls
+ 1595  2020-05-02 14:18  ls /
+ 1596  2020-05-02 14:18  ls
+ 1597  2020-05-02 14:18  mkdir photos
+ 1598  2020-05-02 14:18  sudo mount nas:/photos photos
+ 1599  2020-05-02 14:18  sudo nvim /etc/hosts
+ 1600  2020-05-02 14:18  sudo mount nas:/photos photos
+ 1601  2020-05-02 14:18  sudo mount nas:/photos photos
+ 1602  2020-05-02 14:18  sudo mount -t nfs4 nas:/photos photos
+ 1603  2020-05-02 14:18  sudo mount -t nfs4 nas:/photos photos
+ 1604  2020-05-02 14:18  reboot
+ 1605  2020-05-02 14:18  ip addr
+ 1606  2020-05-02 14:18  ping google.ca
+ 1607  2020-05-02 14:18  ip addr
+ 1608  2020-05-02 14:18  sudo dhclient -r
+ 1609  2020-05-02 14:18  reboot
+ 1610  2020-05-02 14:18  ip addr
+ 1611  2020-05-02 14:18  shutdown -h now
+ 1612  2020-05-02 14:18  ip addr
+ 1613  2020-05-02 14:18  ping google.ca
+ 1614  2020-05-02 14:18  sudo mount -t nfs4 nas:/photos photos
+ 1615  2020-05-02 14:18  ls photos
+ 1616  2020-05-02 14:18  ls -l photos
+ 1617  2020-05-02 14:18  sudo /etc/fstab
+ 1618  2020-05-02 14:18  sudo nvim /etc/fstab
+ 1619  2020-05-02 14:18  reboot
+ 1620  2020-05-02 14:18  ls
+ 1621  2020-05-02 14:18  ls photos
+ 1622  2020-05-02 14:18  ls -a photos
+ 1623  2020-05-02 14:18  mount nas:/photos photos
+ 1624  2020-05-02 14:18  sudo mount nas:/photos photos
+ 1625  2020-05-02 14:18  ls -a photos
+ 1626  2020-05-02 14:18  sudo nvim /etc/fstab
+ 1627  2020-05-02 14:18  sudo nvim /etc/fstab
+ 1628  2020-05-02 14:18  journalctl -b
+ 1629  2020-05-02 14:18  sudo nvim /etc/fstab
+ 1630  2020-05-02 14:18  reboot
+ 1631  2020-05-02 14:18  ls photos
+ 1632  2020-05-02 14:18  sudo nvim /etc/fstab
+ 1633  2020-05-02 14:18  nvim .zshrc
+ 1634  2020-05-02 14:18  nvim .zshenv
+ 1635  2020-05-02 14:18  nvim .zprofile
+ 1636  2020-05-02 14:18  ls photos
+ 1637  2020-05-02 14:18  ls photos
+ 1638  2020-05-02 14:18  mount photos
+ 1639  2020-05-02 14:18  sudo mount photos
+ 1640  2020-05-02 14:18  ls photos
+ 1641  2020-05-02 14:18  sudo umount photos
+ 1642  2020-05-02 14:18  sudo nvim /etc/fstab
+ 1643  2020-05-02 14:18  mount photots
+ 1644  2020-05-02 14:18  mount photos
+ 1645  2020-05-02 14:18  ls photos
+ 1646  2020-05-02 14:18  umount photos
+ 1647  2020-05-02 14:18  ls
+ 1648  2020-05-02 14:18  ls photos
+ 1649  2020-05-02 14:18  ls photos
+ 1650  2020-05-02 14:18  exit
+ 1651  2020-05-02 14:18  less .config/sway/config
+ 1652  2020-05-02 14:18  e .config/sway/config
+ 1653  2020-05-02 14:18  e .config/sway/config
+ 1654  2020-05-02 14:18  exit
+ 1655  2020-05-02 14:18  wshowkeys
+ 1656  2020-05-02 14:18  exit
+ 1657  2020-05-02 14:18  sudo pacman -S sqlstudio
+ 1658  2020-05-02 14:18  sudo pacman -S sqlitestudio
+ 1659  2020-05-02 14:18  cd aur
+ 1660  2020-05-02 14:18  git clone https://aur.archlinux.org/sqlitestudio.git
+ 1661  2020-05-02 14:18  cd sqlitestudio
+ 1662  2020-05-02 14:18  makepkg -S
+ 1663  2020-05-02 14:18  makepkg -i
+ 1664  2020-05-02 14:18  cd ..
+ 1665  2020-05-02 14:18  rm -rf sqlitestudio
+ 1666  2020-05-02 14:18  git clone https://aur.archlinux.org/snapd.git
+ 1667  2020-05-02 14:18  cd snapd
+ 1668  2020-05-02 14:18  makepkg -si
+ 1669  2020-05-02 14:18  makepkg -S
+ 1670  2020-05-02 14:18  makepkg -i
+ 1671  2020-05-02 14:18  makepkg -si
+ 1672  2020-05-02 14:18  sudo nvim /etc/pacman.d/mirrorlist
+ 1673  2020-05-02 14:18  makepkg -si
+ 1674  2020-05-02 14:18  systemctl enable --now snapd.socket
+ 1675  2020-05-02 14:18  sudo snap installintellij-idea-ultimate --classic
+ 1676  2020-05-02 14:18  sudo snap install intellij-idea-ultimate --classic
+ 1677  2020-05-02 14:18  exit
+ 1678  2020-05-02 14:18  cd Sync/fava-study.wiki
+ 1679  2020-05-02 14:18  cd ../shellac-study
+ 1680  2020-05-02 14:18  cd ..
+ 1681  2020-05-02 14:18  ls
+ 1682  2020-05-02 14:18  gzip
+ 1683  2020-05-02 14:18  gzip -h
+ 1684  2020-05-02 14:18  gzip -l CompleteStudy-Raphael.zip
+ 1685  2020-05-02 14:18  unzip -l CompleteStudy-Raphael.zip
+ 1686  2020-05-02 14:18  sudo pacman -S unzip
+ 1687  2020-05-02 14:18  unzip -l CompleteStudy-Raphael.zip
+ 1688  2020-05-02 14:18  mkdir tmp
+ 1689  2020-05-02 14:18  unzip -d /tmp CompleteStudy-Raphael.zip Data/Merged/Clean/All.zip
+ 1690  2020-05-02 14:18  ls tmp
+ 1691  2020-05-02 14:18  rmdir tmp
+ 1692  2020-05-02 14:18  ls /tmp
+ 1693  2020-05-02 14:18  cd /tmp/Data/Merged/Clean
+ 1694  2020-05-02 14:18  unzip -l All.zip
+ 1695  2020-05-02 14:18  unzip All.zip
+ 1696  2020-05-02 14:18  sudo pacman -S sqlite3
+ 1697  2020-05-02 14:18  sqlite3 All.sqlite3
+ 1698  2020-05-02 14:18  exit
+ 1699  2020-05-02 14:18  cat Downloads/export-data.bib
+ 1700  2020-05-02 14:18  docker ps
+ 1701  2020-05-02 14:18  cd Sync/shellac-study/
+ 1702  2020-05-02 14:18  make editor-start
+ 1703  2020-05-02 14:18  ls
+ 1704  2020-05-02 14:18  mkdir data
+ 1705  2020-05-02 14:18  cat Makefile
+ 1706  2020-05-02 14:18  e Makefile
+ 1707  2020-05-02 14:18  exit
+ 1708  2020-05-02 14:18  nas
+ 1709  2020-05-02 14:18  nas
+ 1710  2020-05-02 14:18  exit
+ 1711  2020-05-02 14:18  sudo pacman -S rapid-photo-downloader
+ 1712  2020-05-02 14:18  sudo pacman -S geeqie
+ 1713  2020-05-02 14:18  zotero-bin --version
+ 1714  2020-05-02 14:18  /usr/lib/zotero/zotero-bin --version
+ 1715  2020-05-02 14:18  which zotero
+ 1716  2020-05-02 14:18  pacman -S zotero
+ 1717  2020-05-02 14:18  sudo pacman -S zotero
+ 1718  2020-05-02 14:18  cd aur
+ 1719  2020-05-02 14:18  cd zo
+ 1720  2020-05-02 14:18  cd zotero
+ 1721  2020-05-02 14:18  git pull
+ 1722  2020-05-02 14:18  makepkg -i
+ 1723  2020-05-02 14:18  which zotero
+ 1724  2020-05-02 14:18  /usr/bin/zotero --version
+ 1725  2020-05-02 14:18  zotero
+ 1726  2020-05-02 14:18  which zotero-bin
+ 1727  2020-05-02 14:18  cd /usr/lib/zotero
+ 1728  2020-05-02 14:18  ls
+ 1729  2020-05-02 14:18  zotero-bin --version
+ 1730  2020-05-02 14:18  ./zotero-bin --version
+ 1731  2020-05-02 14:18  cd ~
+ 1732  2020-05-02 14:18  cd Sync/shellac-study
+ 1733  2020-05-02 14:18  cd pr
+ 1734  2020-05-02 14:18  cd proposal
+ 1735  2020-05-02 14:18  e background.Rmd
+ 1736  2020-05-02 14:18  reboot
+ 1737  2020-05-02 14:18  cd Downloads
+ 1738  2020-05-02 14:18  ls
+ 1739  2020-05-02 14:18  rm ideaIU-2020.1.tar.gz
+ 1740  2020-05-02 14:18  exit
+ 1741  2020-05-02 14:18  sudo snap install intellij-idea-ultimate --classic
+ 1742  2020-05-02 14:18  sudo ln -s /var/lib/snapd/snap /snap
+ 1743  2020-05-02 14:18  sudo snap install intellij-idea-ultimate --classic
+ 1744  2020-05-02 14:18  intellij-idea-ultimate
+ 1745  2020-05-02 14:18  export _JAVA_AWT_WM_NONREPARENTING=1
+ 1746  2020-05-02 14:18  intellij-idea-ultimate
+ 1747  2020-05-02 14:18  snap run --shell
+ 1748  2020-05-02 14:18  snap run --shell <snap>.<command>
+ 1749  2020-05-02 14:18  snap run --shell <snap>.<command>
+ 1750  2020-05-02 14:18  snap run --shell intellij-idea-ultimate
+ 1751  2020-05-02 14:18  cd Downloads
+ 1752  2020-05-02 14:18  sudo tar -xzf ideaIU-2020.1.tar.gz -C /opt
+ 1753  2020-05-02 14:18  cd /opt/idea-IU-201.6668.121
+ 1754  2020-05-02 14:18  ls
+ 1755  2020-05-02 14:18  cd bin
+ 1756  2020-05-02 14:18  ls
+ 1757  2020-05-02 14:18  ./idea.sh
+ 1758  2020-05-02 14:18  sudo pacman -S xwayland
+ 1759  2020-05-02 14:18  sudo pacman -S xorg-server-xwayland
+ 1760  2020-05-02 14:18  ./idea.sh
+ 1761  2020-05-02 14:18  reboot
+ 1762  2020-05-02 14:18  e .zprofile
+ 1763  2020-05-02 14:18  exit
+ 1764  2020-05-02 14:18  cd /opt/idea-IU-201.6668.121/bin
+ 1765  2020-05-02 14:18  ./idea.sh
+ 1766  2020-05-02 14:18  sudo pacman -Rs snap
+ 1767  2020-05-02 14:18  sudo pacman -Rs snapd
+ 1768  2020-05-02 14:18  sudo pacman -Rs go-tools
+ 1769  2020-05-02 14:18  sudo pacman -Qet
+ 1770  2020-05-02 14:18  cd ~/aur/snapd
+ 1771  2020-05-02 14:18  makepkg -r
+ 1772  2020-05-02 14:18  pacman -Qtdp
+ 1773  2020-05-02 14:18  pacman -Qtdq
+ 1774  2020-05-02 14:18  sudo pacman -Rs go go-tools xfsprogs
+ 1775  2020-05-02 14:18  ls -la /
+ 1776  2020-05-02 14:18  ls /var/lib/snapd
+ 1777  2020-05-02 14:18  ls /var/lib/snapd/sequence
+ 1778  2020-05-02 14:18  ls /var/lib/snapd/desktop
+ 1779  2020-05-02 14:18  sudo rm /snap
+ 1780  2020-05-02 14:18  ls /
+ 1781  2020-05-02 14:18  cd ..
+ 1782  2020-05-02 14:18  ls
+ 1783  2020-05-02 14:18  rm -rf snapd
+ 1784  2020-05-02 14:18  sudo pacman -Syu
+ 1785  2020-05-02 14:18  e /etc/pacman.d/mirrorlist.pacnew
+ 1786  2020-05-02 14:18  sudo nvim /etc/pacman.d/mirrorlist.pacneW
+ 1787  2020-05-02 14:18  sudo nvim /etc/pacman.d/mirrorlist.pacnew
+ 1788  2020-05-02 14:18  mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.old
+ 1789  2020-05-02 14:18  sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.old
+ 1790  2020-05-02 14:18  sudo mv /etc/pacman.d/mirrorlist.pacnew /etc/pacman.d/mirrorlist
+ 1791  2020-05-02 14:18  sudo pacman -Syu
+ 1792  2020-05-02 14:18  sudo nvim /etc/pacman.d/mirrorlist
+ 1793  2020-05-02 14:18  sudo pacman -Syu
+ 1794  2020-05-02 14:18  reboot
+ 1795  2020-05-02 14:18  cd /opt/idea-IU-201.6668.121/bin
+ 1796  2020-05-02 14:18  ./idea.sh
+ 1797  2020-05-02 14:18  exit
+ 1798  2020-05-02 14:18  sudo pacman -S rapid-photo-downloads
+ 1799  2020-05-02 14:18  sudo pacman -S rapid-photo-downloader
+ 1800  2020-05-02 14:18  exit
+ 1801  2020-05-02 14:18  cat /usr/share/applications/darktable.desktop
+ 1802  2020-05-02 14:18  nas
+ 1803  2020-05-02 14:18  nas
+ 1804  2020-05-02 14:18  exit
+ 1805  2020-05-02 14:18  ls
+ 1806  2020-05-02 14:18  ls Pictures
+ 1807  2020-05-02 14:18  ls Pictures/Darktable
+ 1808  2020-05-02 14:18  exit
+ 1809  2020-05-02 14:18  ls .config/darktable
+ 1810  2020-05-02 14:18  cat .config/darktable/darktablerc
+ 1811  2020-05-02 14:18  mv Pictures/Darktable photos
+ 1812  2020-05-02 14:18  mv Pictures/Darktable photos
+ 1813  2020-05-02 14:18  cd photos
+ 1814  2020-05-02 14:18  ls
+ 1815  2020-05-02 14:18  cd Darktable
+ 1816  2020-05-02 14:18  rm -rf 20200412_Iona\ Park
+ 1817  2020-05-02 14:18  cat .co
+ 1818  2020-05-02 14:18  cd ~
+ 1819  2020-05-02 14:18  cat .config/darktable/darktablerc
+ 1820  2020-05-02 14:18  ls Pictures
+ 1821  2020-05-02 14:18  ls Pictures/Darktable
+ 1822  2020-05-02 14:18  ls Pictures/Darktable/20200412_Iona\ Park
+ 1823  2020-05-02 14:18  exit
+ 1824  2020-05-02 14:18  cp /usr/share/applications/darktable.desktop ~/.local/share/applications
+ 1825  2020-05-02 14:18  e .local/share/applications/darktable.desktop
+ 1826  2020-05-02 14:18  e .local/share/applications/darktable.desktop
+ 1827  2020-05-02 14:18  darktable
+ 1828  2020-05-02 14:18  mv .local/share/applications/darktable.desktop .local/share/applications/o
+ 1829  2020-05-02 14:18  darktable
+ 1830  2020-05-02 14:18  darktable --help
+ 1831  2020-05-02 14:18  darktable -d all
+ 1832  2020-05-02 14:18  reboot
+ 1833  2020-05-02 14:18  ls Pictures/Darktable/20200412_Iona\ Park
+ 1834  2020-05-02 14:18  echo $XDG_PICTURES_DIR
+ 1835  2020-05-02 14:18  XDG_PICTURES_DIR="$HOME/Pics"
+ 1836  2020-05-02 14:18  ls
+ 1837  2020-05-02 14:18  ls
+ 1838  2020-05-02 14:18  echo $PICTURES_FOLDER
+ 1839  2020-05-02 14:18  export XDG_PICTURES_DIR="$HOME/Pics"
+ 1840  2020-05-02 14:18  env
+ 1841  2020-05-02 14:18  darktable
+ 1842  2020-05-02 14:18  darktable --help
+ 1843  2020-05-02 14:18  nvim .zprofile
+ 1844  2020-05-02 14:18  logout
+ 1845  2020-05-02 14:18  exit
+ 1846  2020-05-02 14:18  darktable --help
+ 1847  2020-05-02 14:18  cat .config/darktable/darktablerc
+ 1848  2020-05-02 14:18  nvim ~/.config/user-dirs.dirs
+ 1849  2020-05-02 14:18  reboot
+ 1850  2020-05-02 14:18  env
+ 1851  2020-05-02 14:18  nvim .zprofile
+ 1852  2020-05-02 14:18  env
+ 1853  2020-05-02 14:18  nvim .zprofile
+ 1854  2020-05-02 14:18  nvim .config/user-dirs.dirs
+ 1855  2020-05-02 14:18  nvim .zprofile
+ 1856  2020-05-02 14:18  ls
+ 1857  2020-05-02 14:18  rm Pics
+ 1858  2020-05-02 14:18  rmdir Pics
+ 1859  2020-05-02 14:18  rm -rf Pics
+ 1860  2020-05-02 14:18  rm -rf Pictures
+ 1861  2020-05-02 14:18  ls
+ 1862  2020-05-02 14:18  ls photos/Darktable
+ 1863  2020-05-02 14:18  ls photos/Darktable
+ 1864  2020-05-02 14:18  ls photos/Darktable/20200412_noname
+ 1865  2020-05-02 14:18  exit
+ 1866  2020-05-02 14:18  cd Sync/shellac-study
+ 1867  2020-05-02 14:18  make editor-start
+ 1868  2020-05-02 14:18  exit
+ 1869  2020-05-02 14:18  shutdown -h now
+ 1870  2020-05-02 14:18  cd Sync/shellac-study
+ 1871  2020-05-02 14:18  make editor-start
+ 1872  2020-05-02 14:18  exit
+ 1873  2020-05-02 14:18  exit
+ 1874  2020-05-02 14:18  cd Sync/shellac-study
+ 1875  2020-05-02 14:18  git status
+ 1876  2020-05-02 14:18  git add brief.Rmd
+ 1877  2020-05-02 14:18  git status
+ 1878  2020-05-02 14:18  git commit -m "Add design brief"
+ 1879  2020-05-02 14:18  git push
+ 1880  2020-05-02 14:18  exit
+ 1881  2020-05-02 14:18  shutdown -h now
+ 1882  2020-05-02 14:18  mount ~/photos
+ 1883  2020-05-02 14:18  ls photos
+ 1884  2020-05-02 14:18  exit
+ 1885  2020-05-02 14:18  cd Sync/shellac-study
+ 1886  2020-05-02 14:18  make editor-start
+ 1887  2020-05-02 14:18  exit
+ 1888  2020-05-02 14:18  openssl -apr1 -d $apr1$zpzxD8hp$7E9CKgBA5V5T3gwWi/tFC0
+ 1889  2020-05-02 14:18  openssl passwd -apr1 -d $apr1$zpzxD8hp$7E9CKgBA5V5T3gwWi/tFC0
+ 1890  2020-05-02 14:18  openssl passwd -help
+ 1891  2020-05-02 14:18  openssl passwd -stdin
+ 1892  2020-05-02 14:18  openssl passwd -apr1 -stdin
+ 1893  2020-05-02 14:18  exit
+ 1894  2020-05-02 14:18  nas
+ 1895  2020-05-02 14:18  exit
+ 1896  2020-05-02 14:18  ping github.com
+ 1897  2020-05-02 14:18  ls photos
+ 1898  2020-05-02 14:18  nas
+ 1899  2020-05-02 14:18  nas
+ 1900  2020-05-02 14:18  exit
+ 1901  2020-05-02 14:18  pacman -S remmina
+ 1902  2020-05-02 14:18  sudo pacman -S remmina
+ 1903  2020-05-02 14:18  sudo pacman -S virt-viewer
+ 1904  2020-05-02 14:18  sudo pacman -S remmina
+ 1905  2020-05-02 14:18  sudo pacman -S remmina
+ 1906  2020-05-02 14:18  sudo nvim /etc/pacman.d/mirrorlist
+ 1907  2020-05-02 14:18  sudo pacman -S remmina
+ 1908  2020-05-02 14:18  sudo nvim /etc/pacman.d/mirrorlist
+ 1909  2020-05-02 14:18  sudo pacman -S remmina
+ 1910  2020-05-02 14:18  sudo pacman -S spice-gtk
+ 1911  2020-05-02 14:18  exit
+ 1912  2020-05-02 14:18  ls /
+ 1913  2020-05-02 14:18  ls /boot
+ 1914  2020-05-02 14:18  ls /efi
+ 1915  2020-05-02 14:18  cat fstab
+ 1916  2020-05-02 14:18  cat /etc/fstab
+ 1917  2020-05-02 14:18  exit
+ 1918  2020-05-02 14:18  fdisk -l
+ 1919  2020-05-02 14:18  sudo fdisk -l
+ 1920  2020-05-02 14:18  exit
+ 1921  2020-05-02 14:18  cat /boot/loader/loader.conf
+ 1922  2020-05-02 14:18  cat /boot/loader/entries/arch.conf
+ 1923  2020-05-02 14:18  exit
+ 1924  2020-05-02 14:18  nas
+ 1925  2020-05-02 14:18  exit
+ 1926  2020-05-02 14:18  nas
+ 1927  2020-05-02 14:18  exit
+ 1928  2020-05-02 14:18  swaymsg -t get_outputs
+ 1929  2020-05-02 14:18  exit
+ 1930  2020-05-02 14:18  exit
+ 1931  2020-05-02 14:18  exit
+ 1932  2020-05-02 14:18  exit
+ 1933  2020-05-02 14:18  exit
+ 1934  2020-05-02 14:18  nas
+ 1935  2020-05-02 14:18  exit
+ 1936  2020-05-02 14:18  cd Downloads
+ 1937  2020-05-02 14:18  sudo pacman -U zoom_x86_64.pkg.tar.xz
+ 1938  2020-05-02 14:18  exit
+ 1939  2020-05-02 14:18  cd Sync/research/phd
+ 1940  2020-05-02 14:18  nnn
+ 1941  2020-05-02 14:18  git status
+ 1942  2020-05-02 14:18  exit
+ 1943  2020-05-02 14:18  docker ps
+ 1944  2020-05-02 14:18  docker images ls
+ 1945  2020-05-02 14:18  docker images
+ 1946  2020-05-02 14:18  docker images --all
+ 1947  2020-05-02 14:18  docker run shellac-study-rtex
+ 1948  2020-05-02 14:18  cd Sync/shellac-study
+ 1949  2020-05-02 14:18  make rtex-env
+ 1950  2020-05-02 14:18  cd ../research/phd
+ 1951  2020-05-02 14:18  docker run --rm --user 1000 -v ".:/project" shellac-study-rtex Rscript -e "library(rmarkdown); render('outline.Rmd', 'pdf_document')"
+ 1952  2020-05-02 14:18  docker run --rm --user 1000 -v ".:/project" shellac-study-rtex Rscript -e "getwd()"
+ 1953  2020-05-02 14:18  docker run --rm --user 1000 -v ".:/project" shellac-study-rtex Rscript -e "list.files()"
+ 1954  2020-05-02 14:18  docker run --rm --user 1000 -v ".:/project" shellac-study-rtex Rscript -e "library(rmarkdown); render('proposal/outline.Rmd', 'pdf_document')"
+ 1955  2020-05-02 14:18  id
+ 1956  2020-05-02 14:18  docker run --rm --user 1000 -v "./proposal:/project" shellac-study-rtex Rscript -e "library(rmarkdown); render('outline.Rmd', 'pdf_document')"
+ 1957  2020-05-02 14:18  ls -l
+ 1958  2020-05-02 14:18  ls -l proposal
+ 1959  2020-05-02 14:18  docker run --rm  -v "./proposal:/project" shellac-study-rtex Rscript -e "library(rmarkdown); render('outline.Rmd', 'pdf_document')"
+ 1960  2020-05-02 14:18  ls -l proposal
+ 1961  2020-05-02 14:18  xdg-open proposal/outline.pdf
+ 1962  2020-05-02 14:18  docker run --rm  -v "./proposal:/project" shellac-study-rtex Rscript -e "library(rmarkdown); render('outline.Rmd', 'pdf_document')"
+ 1963  2020-05-02 14:18  docker run --rm  -v "./proposal:/project" shellac-study-rtex Rscript -e "library(rmarkdown); render('outline.Rmd', 'pdf_document')"
+ 1964  2020-05-02 14:18  xdg-open proposal/outline.pdf
+ 1965  2020-05-02 14:18  docker run --rm  -v "./proposal:/project" shellac-study-rtex Rscript -e "library(rmarkdown); render('outline.Rmd', 'pdf_document')"
+ 1966  2020-05-02 14:18  xdg-open proposal/outline.pdf
+ 1967  2020-05-02 14:18  xdg-open proposal/outline.pdf &
+ 1968  2020-05-02 14:18  docker run --rm  -v "./proposal:/project" shellac-study-rtex Rscript -e "library(rmarkdown); render('outline.Rmd', 'pdf_document')"
+ 1969  2020-05-02 14:18  docker run --rm  -v "./proposal:/project" shellac-study-rtex Rscript -e "library(rmarkdown); render('outline.Rmd', 'pdf_document')"
+ 1970  2020-05-02 14:18  docker run --rm  -v "./proposal:/project" shellac-study-rtex Rscript -e "library(rmarkdown); render('outline.Rmd', 'pdf_document')"
+ 1971  2020-05-02 14:18  fzf
+ 1972  2020-05-02 14:18  shopt
+ 1973  2020-05-02 14:18  setopt
+ 1974  2020-05-02 14:18  set
+ 1975  2020-05-02 14:18  docker run --rm  -v "./proposal:/project" shellac-study-rtex Rscript -e "library(rmarkdown); render('outline.Rmd', 'pdf_document')"
+ 1976  2020-05-02 14:18  sudo pacman -Syu cups
+ 1977  2020-05-02 14:18  sudo pacman -Syu --overwrite cups
+ 1978  2020-05-02 14:18  sudo pacman -Syu --overwrite /usr/lib\*/p11-kit-trust.so
+ 1979  2020-05-02 14:18  sudo pacman -Syu cups
+ 1980  2020-05-02 14:18  sudo pacman -Syu cups
+ 1981  2020-05-02 14:18  cd Sync
+ 1982  2020-05-02 14:18  ls
+ 1983  2020-05-02 14:18  cd research/phd
+ 1984  2020-05-02 14:18  ls
+ 1985  2020-05-02 14:18  cd proposal
+ 1986  2020-05-02 14:18  ls
+ 1987  2020-05-02 14:18  cat master.tex
+ 1988  2020-05-02 14:18  nvim chapters/introduction.tex
+ 1989  2020-05-02 14:18  cp chapters/introduction.tex outline.Rmd
+ 1990  2020-05-02 14:18  nvim outline.Rmd
+ 1991  2020-05-02 14:18  cd ../../../shellac-study
+ 1992  2020-05-02 14:18  make stop-editor
+ 1993  2020-05-02 14:18  make editor-stop
+ 1994  2020-05-02 14:18  reboot
+ 1995  2020-05-02 14:18  sudo pacman -S cups
+ 1996  2020-05-02 14:18  systemctl enable --now org.cups.cupsd.socket
+ 1997  2020-05-02 14:18  systemctl start org.cups.cupsd.service
+ 1998  2020-05-02 14:18  cd Downloads
+ 1999  2020-05-02 14:18  tar -xvf linux-UFRII-drv-v510-usen-09.tar.gz
+ 2000  2020-05-02 14:18  ls
+ 2001  2020-05-02 14:18  cd linux-UFRII-drv-v510-usen
+ 2002  2020-05-02 14:18  ls
+ 2003  2020-05-02 14:18  cd PPD
+ 2004  2020-05-02 14:18  ls
+ 2005  2020-05-02 14:18  cd ~/aur
+ 2006  2020-05-02 14:18  git clone https://aur.archlinux.org/cnrdrvcups-lb
+ 2007  2020-05-02 14:18  cd cnrdrvcups-lb
+ 2008  2020-05-02 14:18  makepkg -S
+ 2009  2020-05-02 14:18  makepkg -i
+ 2010  2020-05-02 14:18  sudo pacman -S libglade jbigkit
+ 2011  2020-05-02 14:18  makepkg -i
+ 2012  2020-05-02 14:18  systemctl restart org.cups.cupsd.service
+ 2013  2020-05-02 14:18  sudo pacman -S gs
+ 2014  2020-05-02 14:18  sudo pacman -S ghostscript
+ 2015  2020-05-02 14:18  systemctl restart org.cups.cupsd.service
+ 2016  2020-05-02 14:18  systemctl stop org.cups.cupsd.service
+ 2017  2020-05-02 14:18  echo "Hello, world | lpr -p
+ 2018  2020-05-02 14:18  echo 'Hello, world' | lpr -p
+ 2019  2020-05-02 14:18  echo 'Hello, world' | lpr -p mf4700
+ 2020  2020-05-02 14:18  lpinfo
+ 2021  2020-05-02 14:18  lpinfo -v
+ 2022  2020-05-02 14:18  lpr --help
+ 2023  2020-05-02 14:18  echo 'Hello, world' | lpr -P mf4700
+ 2024  2020-05-02 14:18  systemctl start org.cups.cupsd.service
+ 2025  2020-05-02 14:18  echo 'Hello, world' | lpr -P mf4700
+ 2026  2020-05-02 14:18  systemctl status org.cups.cupsd.socket
+ 2027  2020-05-02 14:18  reboot
+ 2028  2020-05-02 14:18  echo 'Hello' | lpr -P mf4700
+ 2029  2020-05-02 14:18  exit
+ 2030  2020-05-02 14:18  e .config/sway/status.toml
+ 2031  2020-05-02 14:18  e .config/sway/status.toml
+ 2032  2020-05-02 14:18  cd aur/i3status-rust
+ 2033  2020-05-02 14:18  git pull
+ 2034  2020-05-02 14:18  exit
+ 2035  2020-05-02 14:18  ls .wallpapers
+ 2036  2020-05-02 14:18  exit
+ 2037  2020-05-02 14:18  cat /etc/subuid
+ 2038  2020-05-02 14:18  exit
+ 2039  2020-05-02 14:18  cd Sync/shellac-study
+ 2040  2020-05-02 14:18  make editor-start
+ 2041  2020-05-02 14:18  exit
+ 2042  2020-05-02 14:18  cd Sync/shellac-study
+ 2043  2020-05-02 14:18  nnn
+ 2044  2020-05-02 14:18  exit
+ 2045  2020-05-02 14:18  cd Sync/shellac-study
+ 2046  2020-05-02 14:18  git push
+ 2047  2020-05-02 14:18  exit
+ 2048  2020-05-02 14:18  cd Sync/shellac-study
+ 2049  2020-05-02 14:18  git status
+ 2050  2020-05-02 14:18  ls .rstudio
+ 2051  2020-05-02 14:18  ls .wget-hsts
+ 2052  2020-05-02 14:18  cat .wget-hsts
+ 2053  2020-05-02 14:18  rm .wget-hsts
+ 2054  2020-05-02 14:18  ls bin
+ 2055  2020-05-02 14:18  git status
+ 2056  2020-05-02 14:18  make editor-start
+ 2057  2020-05-02 14:18  git status
+ 2058  2020-05-02 14:18  make editor-stop
+ 2059  2020-05-02 14:18  e Makefile
+ 2060  2020-05-02 14:18  make editor-start
+ 2061  2020-05-02 14:18  make editor-stop
+ 2062  2020-05-02 14:18  make editor-start
+ 2063  2020-05-02 14:18  ls
+ 2064  2020-05-02 14:18  ls rstudio
+ 2065  2020-05-02 14:18  rm kitematic
+ 2066  2020-05-02 14:18  rmdir kitematic
+ 2067  2020-05-02 14:18  rmdir rstudio/kitematic
+ 2068  2020-05-02 14:18  ls -l
+ 2069  2020-05-02 14:18  sudo rm -rf rstudio
+ 2070  2020-05-02 14:18  ls
+ 2071  2020-05-02 14:18  ls bin
+ 2072  2020-05-02 14:18  ls -l
+ 2073  2020-05-02 14:18  mv bin bin.old
+ 2074  2020-05-02 14:18  e Makefile
+ 2075  2020-05-02 14:18  docker build --tag rstudio-test .
+ 2076  2020-05-02 14:18  docker build --tag rstudio-test .
+ 2077  2020-05-02 14:18  docker build --tag rstudio-test .
+ 2078  2020-05-02 14:18  docker build --tag rstudio-test .
+ 2079  2020-05-02 14:18  docker build --tag rstudio-test .
+ 2080  2020-05-02 14:18  nvim
+ 2081  2020-05-02 14:18  nvim Makefile
+ 2082  2020-05-02 14:18  make editor-start
+ 2083  2020-05-02 14:18  make editor-stop
+ 2084  2020-05-02 14:18  nvim Makefile
+ 2085  2020-05-02 14:18  make editor-start
+ 2086  2020-05-02 14:18  make editor-stop
+ 2087  2020-05-02 14:18  docker rm rstudio-test
+ 2088  2020-05-02 14:18  docker pas
+ 2089  2020-05-02 14:18  docker ps
+ 2090  2020-05-02 14:18  docker ps --all
+ 2091  2020-05-02 14:18  make editor-start
+ 2092  2020-05-02 14:18  docker rm 29bb
+ 2093  2020-05-02 14:18  nvim Makefile
+ 2094  2020-05-02 14:18  make editor-start
+ 2095  2020-05-02 14:18  docker images
+ 2096  2020-05-02 14:18  nvim Makefile
+ 2097  2020-05-02 14:18  nvim Makefile
+ 2098  2020-05-02 14:18  make editor-start
+ 2099  2020-05-02 14:18  docker run rstudio-test
+ 2100  2020-05-02 14:18  nvim Makefile
+ 2101  2020-05-02 14:18  docker run --rm --detach --publish 127.0.0.1:8787:8787 --env DISABLE_AUTH=true --env USERID= -v "/home/ncbradley/Sync/shellac-study:/home/rstudio/shellac-study" --name=rstudio rstudio-test
+ 2102  2020-05-02 14:18  docker stop f7323
+ 2103  2020-05-02 14:18  sudo docker run --rm --detach --publish 127.0.0.1:8787:8787 --env DISABLE_AUTH=true --env USERID=1000 -v "/home/ncbradley/Sync/shellac-study:/home/rstudio/shellac-study" --name=rstudio rstudio-test
+ 2104  2020-05-02 14:18  sudo docker build --tag rstudio-test .
+ 2105  2020-05-02 14:18  sudo docker run --rm --detach --publish 127.0.0.1:8787:8787 --env DISABLE_AUTH=true --env USERID=1000 -v "/home/ncbradley/Sync/shellac-study:/home/rstudio/shellac-study" --name=rstudio rstudio-test
+ 2106  2020-05-02 14:18  sudo docker build --tag rstudio-test .
+ 2107  2020-05-02 14:18  sudo docker build --tag rstudio-test .
+ 2108  2020-05-02 14:18  sudo docker build --tag rstudio-test .
+ 2109  2020-05-02 14:18  sudo docker ps
+ 2110  2020-05-02 14:18  sudo docker rm c8dd
+ 2111  2020-05-02 14:18  sudo docker stop c8dd
+ 2112  2020-05-02 14:18  sudo docker run --rm --detach --publish 127.0.0.1:8787:8787 --env DISABLE_AUTH=true --env USERID=1000 -v "/home/ncbradley/Sync/shellac-study:/home/rstudio/shellac-study" --name=rstudio rstudio-test
+ 2113  2020-05-02 14:18  nvim ~/.config/sway
+ 2114  2020-05-02 14:18  sudo docker stop d8fe
+ 2115  2020-05-02 14:18  sudo docker build --tag rstudio-test .
+ 2116  2020-05-02 14:18  sudo docker run --rm --detach --publish 127.0.0.1:8787:8787 --env DISABLE_AUTH=true --env USERID=1000 -v "/home/ncbradley/Sync/shellac-study:/home/rstudio/shellac-study" --name=rstudio rstudio-test
+ 2117  2020-05-02 14:18  make proposal
+ 2118  2020-05-02 14:18  sudo docker run --rm --env DISABLE_AUTH=true --env USERID=1000 -v "/home/ncbradley/Sync/shellac-study:/home/rstudio/shellac-study" --name=rstudio rstudio-test rmarkdown::render("~/shellac-study/brief.Rmd", "pdf_document")
+ 2119  2020-05-02 14:18  sudo docker run --rm --env DISABLE_AUTH=true --env USERID=1000 -v "/home/ncbradley/Sync/shellac-study:/home/rstudio/shellac-study" --name=rstudio rstudio-test Rscript -e 'rmarkdown::render("~/shellac-study/brief.Rmd", "pdf_document")'
+ 2120  2020-05-02 14:18  sudo docker run --rm --env DISABLE_AUTH=true --env USERID=1000 -v "/home/ncbradley/Sync/shellac-study:/home/rstudio/shellac-study"  rstudio-test Rscript -e 'rmarkdown::render("~/shellac-study/brief.Rmd", "pdf_document")'
+ 2121  2020-05-02 14:18  sudo docker run --rm --env DISABLE_AUTH=true --env USERID=1000 -v "/home/ncbradley/Sync/shellac-study:/home/rstudio/shellac-study"  rstudio-test Rscript -e 'rmarkdown::render("/home/rstudio/shellac-study/brief.Rmd", "pdf_document")'
+ 2122  2020-05-02 14:18  sudo docker run --rm --env USERID=1000 -v "/home/ncbradley/Sync/shellac-study:/home/rstudio/shellac-study" rstudio-test latexmk -pdf -cd --output-directory="build" -pvc -view=none "/home/rstudio/shellac-study/proposal/proposal.tex"
+ 2123  2020-05-02 14:18  ls
+ 2124  2020-05-02 14:18  ls /dev
+ 2125  2020-05-02 14:18  ls resources
+ 2126  2020-05-02 14:18  make pre-questionnaire.pdf
+ 2127  2020-05-02 14:18  mv resources/pre-questionnaire.md
+ 2128  2020-05-02 14:18  mv resources/pre-questionnaire.md resources/pre-questionnaire.Rmd
+ 2129  2020-05-02 14:18  make pre-questionnaire.pdf
+ 2130  2020-05-02 14:18  make pre-questionnaire.pdf
+ 2131  2020-05-02 14:18  git status
+ 2132  2020-05-02 14:18  nnn
+ 2133  2020-05-02 14:18  make pre-questionnaire.pdf
+ 2134  2020-05-02 14:18  ls design
+ 2135  2020-05-02 14:18  ls resources
+ 2136  2020-05-02 14:18  rm resources/pre-questionnaire.pdf
+ 2137  2020-05-02 14:18  make pre-questionnaire.pdf
+ 2138  2020-05-02 14:18  ls resources
+ 2139  2020-05-02 14:18  nn
+ 2140  2020-05-02 14:18  nnn
+ 2141  2020-05-02 14:18  make editor-stop
+ 2142  2020-05-02 14:18  make editor-start
+ 2143  2020-05-02 14:18  make editor-start
+ 2144  2020-05-02 14:18  make editor-start
+ 2145  2020-05-02 14:18  docker logs 3a244
+ 2146  2020-05-02 14:18  docker stop 3a244
+ 2147  2020-05-02 14:18  make editor-start
+ 2148  2020-05-02 14:18  make editor-start
+ 2149  2020-05-02 14:18  docker logs d0cd
+ 2150  2020-05-02 14:18  docker ps
+ 2151  2020-05-02 14:18  docker kill 5ff
+ 2152  2020-05-02 14:18  make editor-start
+ 2153  2020-05-02 14:18  docker ps
+ 2154  2020-05-02 14:18  docker ps --all
+ 2155  2020-05-02 14:18  docker rm 8a69
+ 2156  2020-05-02 14:18  docker ps --all
+ 2157  2020-05-02 14:18  sudo make editor-start
+ 2158  2020-05-02 14:18  sudo make editor-start
+ 2159  2020-05-02 14:18  make editor-start
+ 2160  2020-05-02 14:18  docker logs 016ea
+ 2161  2020-05-02 14:18  docker stop 016
+ 2162  2020-05-02 14:18  ls -l resources
+ 2163  2020-05-02 14:18  echo $SUDO_UID
+ 2164  2020-05-02 14:18  make editor-start
+ 2165  2020-05-02 14:18  make editor-start
+ 2166  2020-05-02 14:18  make editor-start
+ 2167  2020-05-02 14:18  make editor-start
+ 2168  2020-05-02 14:18  make editor-start
+ 2169  2020-05-02 14:18  make editor-start
+ 2170  2020-05-02 14:18  sudo make editor-start
+ 2171  2020-05-02 14:18  sudo make editor-start
+ 2172  2020-05-02 14:18  make editor-start
+ 2173  2020-05-02 14:18  DOCKER_USER=234 make editor-start
+ 2174  2020-05-02 14:18  sudo docker ps
+ 2175  2020-05-02 14:18  make editor-start
+ 2176  2020-05-02 14:18  make editor-start
+ 2177  2020-05-02 14:18  echo $USER
+ 2178  2020-05-02 14:18  echo $USERNAME
+ 2179  2020-05-02 14:18  make editor-start
+ 2180  2020-05-02 14:18  sudo make editor-start
+ 2181  2020-05-02 14:18  ls resources
+ 2182  2020-05-02 14:18  ll resources
+ 2183  2020-05-02 14:18  ls -l resources
+ 2184  2020-05-02 14:18  rm resources/pre-questionnaire.pdf
+ 2185  2020-05-02 14:18  ls -l resources
+ 2186  2020-05-02 14:18  rm resources/pre-questionnaire.tex
+ 2187  2020-05-02 14:18  sudo make pre-questionnaire.pdf
+ 2188  2020-05-02 14:18  ls -l resources
+ 2189  2020-05-02 14:18  rm resources/pre-questionnaire.tex
+ 2190  2020-05-02 14:18  sudo make pre-questionnaire.pdf
+ 2191  2020-05-02 14:18  rm resources/pre-questionnaire.tex
+ 2192  2020-05-02 14:18  rm resources/pre-questionnaire.pdf
+ 2193  2020-05-02 14:18  sudo make pre-questionnaire.pdf
+ 2194  2020-05-02 14:18  rm resources/pre-questionnaire.pdf
+ 2195  2020-05-02 14:18  sudo make pre-questionnaire.pdf
+ 2196  2020-05-02 14:18  ls -l resources
+ 2197  2020-05-02 14:18  rm resources/pre-questionnaire.pdf
+ 2198  2020-05-02 14:18  rm resources/pre-questionnaire.tex
+ 2199  2020-05-02 14:18  ls -l resources
+ 2200  2020-05-02 14:18  docker images ls
+ 2201  2020-05-02 14:18  docker images ls --all
+ 2202  2020-05-02 14:18  docker build --tag rstudio-test .
+ 2203  2020-05-02 14:18  make editor-start
+ 2204  2020-05-02 14:18  docker logs 14fe
+ 2205  2020-05-02 14:18  docker logs 1f4e
+ 2206  2020-05-02 14:18  docker exec 1f4e id -u
+ 2207  2020-05-02 14:18  docker exec 1f4e R
+ 2208  2020-05-02 14:18  docker exec 1f4e rsession
+ 2209  2020-05-02 14:18  docker exec 1f4e cat /etc/rstudio/rsession.conf
+ 2210  2020-05-02 14:18  docker exec 1f4e cat /etc/rstudio/rserver.conf
+ 2211  2020-05-02 14:18  docker exec 1f4e ls /usr/local/bin
+ 2212  2020-05-02 14:18  docker exec 1f4e  /usr/local/bin/R
+ 2213  2020-05-02 14:18  docker exec 1f4e cat /etc/rstudio/rserver.conf
+ 2214  2020-05-02 14:18  docker exec 1f4e rsession
+ 2215  2020-05-02 14:18  docker exec 1f4e rstudio-restart
+ 2216  2020-05-02 14:18  docker exec 1f4e systemctl restart rstudio
+ 2217  2020-05-02 14:18  docker exec 1f4e ls /etc/apparmor
+ 2218  2020-05-02 14:18  docker exec 1f4e ls /etc/
+ 2219  2020-05-02 14:18  docker exec 1f4e ls /var/lib
+ 2220  2020-05-02 14:18  docker exec 1f4e ls /usr/local/bin/
+ 2221  2020-05-02 14:18  docker exec 1f4e ls /usr/local/bin/lib64
+ 2222  2020-05-02 14:18  docker exec 1f4e ls /usr/local/bin/lib
+ 2223  2020-05-02 14:18  docker exec 1f4e ls /usr/local/bin/R
+ 2224  2020-05-02 14:18  docker exec 1f4e ls /usr/local/
+ 2225  2020-05-02 14:18  docker exec 1f4e ls /usr/local/lib
+ 2226  2020-05-02 14:18  docker exec 1f4e ls /usr/local/lib/R
+ 2227  2020-05-02 14:18  docker exec 1f4e ls /usr/local/lib/R/lib
+ 2228  2020-05-02 14:18  docker stop 1f4e
+ 2229  2020-05-02 14:18  make editor-start
+ 2230  2020-05-02 14:18  docker logs d7be
+ 2231  2020-05-02 14:18  docker stop d7be
+ 2232  2020-05-02 14:18  make editor-start
+ 2233  2020-05-02 14:18  docker logs 8de0
+ 2234  2020-05-02 14:18  docker exec 8de0 echo LD_LIBRARY_PATH
+ 2235  2020-05-02 14:18  docker exec 8de0 echo $LD_LIBRARY_PATH
+ 2236  2020-05-02 14:18  docker exec 8de0 Rscript -e "ldpaths"
+ 2237  2020-05-02 14:18  docker exec 8de0 Rscript -e "ldpaths()"
+ 2238  2020-05-02 14:18  docker stop 8de0
+ 2239  2020-05-02 14:18  sudo make rmd2pdf
+ 2240  2020-05-02 14:18  sudo make rmd2pdf
+ 2241  2020-05-02 14:18  sudo make pre-q
+ 2242  2020-05-02 14:18  sudo make pre-questionnaire.pdf
+ 2243  2020-05-02 14:18  sudo make pre-questionnaire.pdf
+ 2244  2020-05-02 14:18  ls resources
+ 2245  2020-05-02 14:18  sudo make pre-questionnaire.pdf
+ 2246  2020-05-02 14:18  nvim Dockerfile
+ 2247  2020-05-02 14:18  make pre-questionnaire.pdf
+ 2248  2020-05-02 14:18  make pre-questionnaire.pdf
+ 2249  2020-05-02 14:18  ls -l resources
+ 2250  2020-05-02 14:18  make pre-questionnaire.pdf
+ 2251  2020-05-02 14:18  docker build --tag rstudio-test .
+ 2252  2020-05-02 14:18  make pre-questionnaire.pdf
+ 2253  2020-05-02 14:18  make pre-questionnaire.pdf
+ 2254  2020-05-02 14:18  docker build --tag rstudio-test .
+ 2255  2020-05-02 14:18  docker build --tag rstudio-test .
+ 2256  2020-05-02 14:18  sudo make editor-start
+ 2257  2020-05-02 14:18  sudo docker ps
+ 2258  2020-05-02 14:18  sudo docker stop c7d1
+ 2259  2020-05-02 14:18  sudo make editor-start
+ 2260  2020-05-02 14:18  make editor-start
+ 2261  2020-05-02 14:18  make editor-start
+ 2262  2020-05-02 14:18  make editor-start
+ 2263  2020-05-02 14:18  make editor-start
+ 2264  2020-05-02 14:18  docker exec -it rstudio-shellac /bin/bash
+ 2265  2020-05-02 14:18  make editor-start
+ 2266  2020-05-02 14:18  make editor-start
+ 2267  2020-05-02 14:18  make editor-start rserver --server-daemonize=0
+ 2268  2020-05-02 14:18  make editor-start
+ 2269  2020-05-02 14:18  make editor-start
+ 2270  2020-05-02 14:18  make editor-start
+ 2271  2020-05-02 14:18  make editor-start
+ 2272  2020-05-02 14:18  make editor-start
+ 2273  2020-05-02 14:18  make editor-start
+ 2274  2020-05-02 14:18  docker run --rm rstudio-test -it /bin/bash
+ 2275  2020-05-02 14:18  docker run --rm -it rstudio-test /bin/bash
+ 2276  2020-05-02 14:18  git status
+ 2277  2020-05-02 14:18  ls
+ 2278  2020-05-02 14:18  rm run
+ 2279  2020-05-02 14:18  ls
+ 2280  2020-05-02 14:18  cd ..
+ 2281  2020-05-02 14:18  rsync shellac-study shellac-study.copy
+ 2282  2020-05-02 14:18  cp -a shellac-study shellac-study.copy
+ 2283  2020-05-02 14:18  ls
+ 2284  2020-05-02 14:18  cd shellac-study
+ 2285  2020-05-02 14:18  ls
+ 2286  2020-05-02 14:18  git status
+ 2287  2020-05-02 14:18  git add .gitignore Dockerfile Makefile .idea/ .rstudio/ shellac-study.Rproj
+ 2288  2020-05-02 14:18  git status
+ 2289  2020-05-02 14:18  git reset .rstudio/
+ 2290  2020-05-02 14:18  git status
+ 2291  2020-05-02 14:18  cd ..
+ 2292  2020-05-02 14:18  ls
+ 2293  2020-05-02 14:18  cd shellac-study.copy
+ 2294  2020-05-02 14:18  ls
+ 2295  2020-05-02 14:18  ls proposal
+ 2296  2020-05-02 14:18  ls design
+ 2297  2020-05-02 14:18  cd ..
+ 2298  2020-05-02 14:18  cd shellac-study
+ 2299  2020-05-02 14:18  ls
+ 2300  2020-05-02 14:18  ls analysis
+ 2301  2020-05-02 14:18  nnn
+ 2302  2020-05-02 14:18  git status
+ 2303  2020-05-02 14:18  rm .rstudio
+ 2304  2020-05-02 14:18  rm -rf .rstudio
+ 2305  2020-05-02 14:18  git status
+ 2306  2020-05-02 14:18  git reset
+ 2307  2020-05-02 14:18  git status
+ 2308  2020-05-02 14:18  rm -rf .idea
+ 2309  2020-05-02 14:18  git status
+ 2310  2020-05-02 14:18  rm .gitignore
+ 2311  2020-05-02 14:18  git status
+ 2312  2020-05-02 14:18  rm .R*
+ 2313  2020-05-02 14:18  rm -rf .R*
+ 2314  2020-05-02 14:18  git status
+ 2315  2020-05-02 14:18  nnn
+ 2316  2020-05-02 14:18  git status
+ 2317  2020-05-02 14:18  git add --all
+ 2318  2020-05-02 14:18  git status
+ 2319  2020-05-02 14:18  git commit -m "Reorganize project structure"
+ 2320  2020-05-02 14:18  git push
+ 2321  2020-05-02 14:18  git push
+ 2322  2020-05-02 14:18  git push
+ 2323  2020-05-02 14:18  git push
+ 2324  2020-05-02 14:18  gpg --card-status
+ 2325  2020-05-02 14:18  git push
+ 2326  2020-05-02 14:18  git push
+ 2327  2020-05-02 14:18  exit
+ 2328  2020-05-02 14:18  cd Sync/shellac-study
+ 2329  2020-05-02 14:18  make editor-start
+ 2330  2020-05-02 14:18  nvim resources/pre-questionnaire.md
+ 2331  2020-05-02 14:18  nvim README.md
+ 2332  2020-05-02 14:18  exit
+ 2333  2020-05-02 14:18  cd Downloads
+ 2334  2020-05-02 14:18  nnn
+ 2335  2020-05-02 14:18  exit
+ 2336  2020-05-02 14:18  e Sync/research/phd/proposal/outline.Rmd
+ 2337  2020-05-02 14:18  cd Sync/shellac-study
+ 2338  2020-05-02 14:18  git push
+ 2339  2020-05-02 14:18  git push
+ 2340  2020-05-02 14:18  gpg --card-
+ 2341  2020-05-02 14:18  gpg --card-status
+ 2342  2020-05-02 14:18  gpg --card-
+ 2343  2020-05-02 14:18  git push
+ 2344  2020-05-02 14:18  git push
+ 2345  2020-05-02 14:18  exit
+ 2346  2020-05-02 14:18  cd Sync/research
+ 2347  2020-05-02 14:18  ls
+ 2348  2020-05-02 14:18  cd templates
+ 2349  2020-05-02 14:18  ls
+ 2350  2020-05-02 14:18  ls consent
+ 2351  2020-05-02 14:18  nvim consent/consent.tex
+ 2352  2020-05-02 14:18  exit
+ 2353  2020-05-02 14:18  ls -lFh
+ 2354  2020-05-02 14:18  ls -lFhc
+ 2355  2020-05-02 14:18  ls --help
+ 2356  2020-05-02 14:18  alias L="| less"
+ 2357  2020-05-02 14:18  ls --help L
+ 2358  2020-05-02 14:18  alias
+ 2359  2020-05-02 14:18  ls --help | less
+ 2360  2020-05-02 14:18  ls --help L
+ 2361  2020-05-02 14:18  alias -g L="| less"
+ 2362  2020-05-02 14:18  ls --help L
+ 2363  2020-05-02 14:18  ls -lFhC
+ 2364  2020-05-02 14:18  ls -lFh --color
+ 2365  2020-05-02 14:18  cd Sync/shellac-study
+ 2366  2020-05-02 14:18  ls -tRFh --color
+ 2367  2020-05-02 14:18  tree
+ 2368  2020-05-02 14:18  grep -R -n -H -C 5 --exclude-dir={.git} tex
+ 2369  2020-05-02 14:18  fzf
+ 2370  2020-05-02 14:18  sudo pacman -Syu
+ 2371  2020-05-02 14:18  amixer set Master 10%-
+ 2372  2020-05-02 14:18  amixer set Master 10%+
+ 2373  2020-05-02 14:18  exit
+ 2374  2020-05-02 14:18  e .config/sway/config
+ 2375  2020-05-02 14:18  nvim consent/consent.tex
+ 2376  2020-05-02 14:18  cat Sync/research/templates/consent/consent.tex
+ 2377  2020-05-02 14:18  exit
+ 2378  2020-05-02 14:18  cd Sync/shellac-study
+ 2379  2020-05-02 14:18  git push --set-upstream origin ethics/formative-consent
+ 2380  2020-05-02 14:18  git checkout design
+ 2381  2020-05-02 14:18  git push
+ 2382  2020-05-02 14:18  git status
+ 2383  2020-05-02 14:18  cat design/01-research-questions.Rmd
+ 2384  2020-05-02 14:18  git add design/
+ 2385  2020-05-02 14:18  git commit -m "Add methodology and questionnaire for formative portion of study"
+ 2386  2020-05-02 14:18  git push
+ 2387  2020-05-02 14:18  exit
+ 2388  2020-05-02 14:18  cd Sync/shellac-study.copy
+ 2389  2020-05-02 14:18  ls
+ 2390  2020-05-02 14:18  ls design
+ 2391  2020-05-02 14:18  nvim resources
+ 2392  2020-05-02 14:18  cd ../shellac-study
+ 2393  2020-05-02 14:18  make image
+ 2394  2020-05-02 14:18  make image
+ 2395  2020-05-02 14:18  make image
+ 2396  2020-05-02 14:18  docker run \\n--rm \\n--mount type=bind,source=".",target="/shellac-study" \\nshellac-study-image make design.pdf
+ 2397  2020-05-02 14:18  docker run \\n--rm \\n--mount type=bind,source=".",target="/shellac-study" \\nshellac-study-image make -B design.pdf
+ 2398  2020-05-02 14:18  docker run \\n--rm \\n--mount type=bind,source=".",target="/shellac-study" \\nshellac-study-image make -B design.pdf
+ 2399  2020-05-02 14:18  make image
+ 2400  2020-05-02 14:18  docker run \\n--rm \\n--mount type=bind,source=".",target="/shellac-study" \\nshellac-study-image make -B design.pdf
+ 2401  2020-05-02 14:18  cat ../shellac-study.copy/Dockerfile
+ 2402  2020-05-02 14:18  git status
+ 2403  2020-05-02 14:18  git add --all
+ 2404  2020-05-02 14:18  git status
+ 2405  2020-05-02 14:18  git reset design
+ 2406  2020-05-02 14:18  git reset -- design
+ 2407  2020-05-02 14:18  git status
+ 2408  2020-05-02 14:18  git commit -m "Add tooling to compile basic bookdown document"
+ 2409  2020-05-02 14:18  git status
+ 2410  2020-05-02 14:18  git checkout master
+ 2411  2020-05-02 14:18  git checkout -b ethics/formative-consent
+ 2412  2020-05-02 14:18  mkdir ethics
+ 2413  2020-05-02 14:18  exit
+ 2414  2020-05-02 14:18  chmod +x historage.sh
+ 2415  2020-05-02 14:18  ./historage.sh
+ 2416  2020-05-02 14:18  ./historage.sh
+ 2417  2020-05-02 14:18  ./historage.sh
+ 2418  2020-05-02 14:18  ./historage.sh
+ 2419  2020-05-02 14:18  docker build --target=builder --tab historage-dev
+ 2420  2020-05-02 14:18  docker build --target=builder --tag historage-dev
+ 2421  2020-05-02 14:18  docker build --target=builder --tag historage-dev .
+ 2422  2020-05-02 14:18  docker build --target=Builder --tag historage-dev .
+ 2423  2020-05-02 14:18  history -i
+ 2424  2020-05-02 14:18  exit
+ 2425  2020-05-02 14:18  cd Sync/shellac-study
+ 2426  2020-05-02 14:18  git status
+ 2427  2020-05-02 14:18  git push
+ 2428  2020-05-02 14:18  rm .dockerignore
+ 2429  2020-05-02 14:18  git add --all
+ 2430  2020-05-02 14:18  git commit -amend
+ 2431  2020-05-02 14:18  git commit --amend
+ 2432  2020-05-02 14:18  git push
+ 2433  2020-05-02 14:18  git push --force
+ 2434  2020-05-02 14:18  git checkout -b design
+ 2435  2020-05-02 14:18  git push
+ 2436  2020-05-02 14:18  git push --set-upstream origin desing
+ 2437  2020-05-02 14:18  git push --set-upstream origin design
+ 2438  2020-05-02 14:18  nnn
+ 2439  2020-05-02 14:18  nvim .gitignore
+ 2440  2020-05-02 14:18  git status
+ 2441  2020-05-02 14:18  git add --all
+ 2442  2020-05-02 14:18  git status
+ 2443  2020-05-02 14:18  git reset
+ 2444  2020-05-02 14:18  nnn
+ 2445  2020-05-02 14:18  git status
+ 2446  2020-05-02 14:18  git add --all
+ 2447  2020-05-02 14:18  git status
+ 2448  2020-05-02 14:18  git reset
+ 2449  2020-05-02 14:18  cat design/index.Rmd
+ 2450  2020-05-02 14:18  nnn
+ 2451  2020-05-02 14:18  git add --all
+ 2452  2020-05-02 14:18  git status
+ 2453  2020-05-02 14:18  git commit -m "Start design document"
+ 2454  2020-05-02 14:18  git branch
+ 2455  2020-05-02 14:18  git push
+ 2456  2020-05-02 14:18  nnn
+ 2457  2020-05-02 14:18  nvim design
+ 2458  2020-05-02 14:18  ls design
+ 2459  2020-05-02 14:18  ls
+ 2460  2020-05-02 14:18  nvim design
+ 2461  2020-05-02 14:18  ls
+ 2462  2020-05-02 14:18  ls --color
+ 2463  2020-05-02 14:18  make image
+ 2464  2020-05-02 14:18  ls
+ 2465  2020-05-02 14:18  rm design.pdf
+ 2466  2020-05-02 14:18  cat README.md
+ 2467  2020-05-02 14:18  docker run \\n--rm \\n--mount type=bind,source=".",target="/shellac-study" \\nshellac-study-image make design.pdf
+ 2468  2020-05-02 14:18  ls -lah
+ 2469  2020-05-02 14:18  xdg-open design.pdf
+ 2470  2020-05-02 14:18  git status
+ 2471  2020-05-02 14:18  git branch
+ 2472  2020-05-02 14:18  e design/0
+ 2473  2020-05-02 14:18  e design/0
+ 2474  2020-05-02 14:18  e design/0
+ 2475  2020-05-02 14:18  e design/01-research-questions.Rmd
+ 2476  2020-05-02 14:18  docker run \\n--rm \\n--mount type=bind,source=".",target="/shellac-study" \\nshellac-study-image make design.pdf
+ 2477  2020-05-02 14:18  xdg-open design.pdf
+ 2478  2020-05-02 14:18  e Dockerfile
+ 2479  2020-05-02 14:18  e Dockerfile
+ 2480  2020-05-02 14:18  git staus
+ 2481  2020-05-02 14:18  git status
+ 2482  2020-05-02 14:18  git branch
+ 2483  2020-05-02 14:18  git add ethics
+ 2484  2020-05-02 14:18  git status
+ 2485  2020-05-02 14:18  git commit -m "Initial draft of consent form for formative portion of study"
+ 2486  2020-05-02 14:18  git push --set-upstream origin ethics/formative-consent
+ 2487  2020-05-02 14:18  git push --set-upstream origin ethics/formative-consent
+ 2488  2020-05-02 14:18  git push --set-upstream origin ethics/formative-consent
+ 2489  2020-05-02 14:18  gpg --card-status
+ 2490  2020-05-02 14:18  git push --set-upstream origin ethics/formative-consent
+ 2491  2020-05-02 14:18  git push --set-upstream origin ethics/formative-consent
+ 2492  2020-05-02 14:18  cd ..
+ 2493  2020-05-02 14:18  ls
+ 2494  2020-05-02 14:18  git clone https://github.com/nickbradley/historage.git
+ 2495  2020-05-02 14:18  git clone git@github.com:nickbradley/historage.git
+ 2496  2020-05-02 14:18  echo $ZSH_VERSION
+ 2497  2020-05-02 14:18  history -i
+ 2498  2020-05-02 14:18  history
+ 2499  2020-05-02 14:18  history -R .histfile
+ 2500  2020-05-02 14:18  sudo pacman -Syu
+ 2501  2020-05-02 14:18  sudo pacman -Syu nodejs
+ 2502  2020-05-02 14:18  sudo pacman -Syu yarn
+ 2503  2020-05-02 14:18  nvim ~/.config/sway/config
+ 2504  2020-05-02 14:18  history -i
+ 2505  2020-05-02 14:18  exit
+ 2506  2020-05-02 14:18  bash
+ 2507  2020-05-02 14:18  bash --version
+ 2508  2020-05-02 14:18  zsh --version
+ 2509  2020-05-02 14:18  sh --version
+ 2510  2020-05-02 14:18  cat .bash_history
+ 2511  2020-05-02 14:18  cat .histfile
+ 2512  2020-05-02 14:18  set
+ 2513  2020-05-02 14:18  history --help
+ 2514  2020-05-02 14:18  man history
+ 2515  2020-05-02 14:18  fc -L
+ 2516  2020-05-02 14:18  man history
+ 2517  2020-05-02 14:18  fc -I
+ 2518  2020-05-02 14:18  man history
+ 2519  2020-05-02 14:18  fc -m
+ 2520  2020-05-02 14:18  man history
+ 2521  2020-05-02 14:18  fc -i -e -
+ 2522  2020-05-02 14:18  2020-04-30 15:10  man history
+ 2523  2020-05-02 14:18  fc -i -e
+ 2524  2020-05-02 14:18  fc -i
+ 2525  2020-05-02 14:18  2020-04-30 15:12  fc -i -e
+ 2526  2020-05-02 14:18  fc -li
+ 2527  2020-05-02 14:18  history -i
+ 2528  2020-05-02 14:18  fc -R .histfile
+ 2529  2020-05-02 14:18  fc -liR .histfile
+ 2530  2020-05-02 14:18  history -i
+ 2531  2020-05-02 14:18  exit
+ 2532  2020-05-02 14:18  history -i
+ 2533  2020-05-02 14:19  history
+ 2534  2020-05-02 14:19  whence history
+ 2535  2020-05-02 14:20  history -i 0
+
+#% EOF

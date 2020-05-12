@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Nick C. Bradley",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.0",
+    "module-alias": "^2.2.2",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/fs-extra": "^8.1.0",
+    "@types/multer": "^1.4.3",
+    "@types/supertest": "^2.0.9",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "start": "ts-node -r module-alias/register ./src/main.ts",
+    "build": "tsc",
+    "test:unit": "jest"
+  },
+  "_moduleAliases": {
+    "@common": "../common"
+  },
+  "workspaces": {
+    "nohoist": [
+      "module-alias"
+    ]
+  },
+  "//": "nohoist: https://github.com/ilearnio/module-alias/issues/87"
+}

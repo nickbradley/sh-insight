@@ -1,0 +1,24 @@
+{
+  "history": {
+    "items": [
+      {
+        "args": "-Syu git",
+        "command": "pacman",
+        "id": 1,
+        "timestamp": 1588454280000
+      },
+      {
+        "args": "",
+        "command": "logout",
+        "id": 2,
+        "timestamp": 1588454280000
+      },
+      {
+        "args": "",
+        "command": "",
+        "id": 0,
+        "timestamp": null
+      }
+    ]
+  }
+}
