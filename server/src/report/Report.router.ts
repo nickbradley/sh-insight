@@ -16,7 +16,6 @@ export class ReportRouter {
     this.router.post("/", upload.single("report"), async (req: Request, res: Response) => {
       try {
         const [id, report] = await reportService.create(req.file);
-        console.log(id, report);
         res.status(201).send({ id, report });
       } catch (err) {
         console.error(err);

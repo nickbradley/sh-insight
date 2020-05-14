@@ -15,6 +15,7 @@ export class ReportParser {
 
   parse(buffer: Buffer): Report {
     const text = buffer.toString();
+    console.log(text);
     const lines = text.split("\n");
     this.processLines(lines);
 
@@ -22,6 +23,7 @@ export class ReportParser {
   }
 
   extractSectionName(line: string): string {
+    console.log(line);
     if (!line.startsWith(this.headerDelimiter)) {
       return "";
     }
@@ -36,11 +38,17 @@ export class ReportParser {
     for (const line of lines) {
       const newSection = this.extractSectionName(line);
       if (newSection) {
+        console.log(`new section ${newSection}`)
         section = newSection;
         continue;
       }
 
       switch (section) {
+        case "meta":
+          break;
+        case "setup":
+          // ignore this
+          break;
         case "variables":
           break;
         case "aliases":
@@ -53,6 +61,7 @@ export class ReportParser {
           foundEnd = true;
           break;
         default:
+          console.error(`This section wasn't recognized ${section}`)
           throw new Error("Section not recognized");
       }
     }

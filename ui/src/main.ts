@@ -5,7 +5,7 @@ import vuetify from './plugins/vuetify'
 import { ReportService } from './services/ReportService'
 
 Vue.config.productionTip = false
-Vue.prototype.$reportService = new ReportService(location.host)
+Vue.prototype.$reportService = new ReportService(location.origin)
 
 new Vue({
   router,

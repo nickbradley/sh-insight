@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="packages/uickages/ui/src/assets/logo.png">
-    <Landing msg="Welcome to Your Vue.js App"/>
+    <landing/>
   </div>
 </template>
 

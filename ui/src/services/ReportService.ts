@@ -2,12 +2,12 @@ import axios from 'axios'
 import { Report } from '../../../common/Report'
 
 export class ReportService {
-  public host: string
+  public origin: string
   private _reportId?: string;
   private _report?: Report;
 
-  constructor (host: string) {
-    this.host = host
+  constructor (origin: string) {
+    this.origin = origin
   }
 
   get reportId () {
@@ -27,7 +27,7 @@ export class ReportService {
         'Content-Type': 'text/plain'
       }
     }
-    const res = await axios.post(`http://${this.host}/report`, formData, config)
+    const res = await axios.post(`${this.origin}/report`, formData, config)
     console.log(res.data)
     const reportData = res.data.report
     this._reportId = res.data.id

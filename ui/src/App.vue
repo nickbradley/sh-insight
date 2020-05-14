@@ -6,6 +6,7 @@
       dark
     >
 
+      <router-link :to="{name: 'Home'}">
       <v-img
         alt="Vuetify Name"
         class="shrink mt-1 hidden-sm-and-down"
@@ -14,6 +15,7 @@
         :src="require('./assets/name.png')"
         width="100"
       />
+      </router-link>
 
       <v-spacer></v-spacer>
 
@@ -38,7 +40,7 @@ export default Vue.extend({
   },
 
   data: () => ({
-    //
+
   })
 })
 </script>

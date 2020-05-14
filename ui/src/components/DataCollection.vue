@@ -30,8 +30,19 @@
                 <v-list-item-content>
                   <v-list-item-title>Step 1</v-list-item-title>
                   <v-list-item-subtitle>
-                    <p>Run this command to download a script to collect information about your shell:</p>
-                    <code>curl -L "https://.$(SHELL)" -o shinsight</code>
+                    <p>Download the script corresponding to your primary shell. To get your shell, run <code>echo $SHELL</code>.</p>
+                    <v-chip-group>
+                      <v-chip link href="scripts/insight.bash" download="insight.sh">
+                        <v-icon left>mdi-file-download-outline</v-icon>
+                        BASH
+                      </v-chip>
+                      <v-chip link href="scripts/insight.zsh" download="insight.sh">
+                        <v-icon left>mdi-file-download-outline</v-icon>
+                        ZSH
+                      </v-chip>
+                    </v-chip-group>
+                    <p><b>Alternatively</b>, you can download the script from your shell (be sure to choose the right shell extension):</p>
+                    <code>curl -L "{{origin}}/scripts/insight.{bash|zsh}" -o insight.sh</code>
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
@@ -40,7 +51,7 @@
                   <v-list-item-title>Step 2</v-list-item-title>
                   <v-list-item-subtitle>
                     <p>Apply executable permissions to the script:</p>
-                    <code>chmod +x shinsight</code>
+                    <code>chmod +x insight.sh</code>
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
@@ -48,7 +59,16 @@
                 <v-list-item-content>
                   <v-list-item-title>Step 3</v-list-item-title>
                   <v-list-item-subtitle>
-                    <p>Select the report called <code>shinsight-report.dat</code>:</p>
+                    <p>Generate the report:</p>
+                    <code>./insight.sh > report.dat</code>
+                  </v-list-item-subtitle>
+                </v-list-item-content>
+              </v-list-item>
+              <v-list-item two-line>
+                <v-list-item-content>
+                  <v-list-item-title>Step 4</v-list-item-title>
+                  <v-list-item-subtitle>
+                    <p>Upload the report:</p>
                     <v-file-input show-size :loading="loading" :error-messages="loadError" accept=".dat"
                                   label="File input" @change="load"></v-file-input>
                   </v-list-item-subtitle>
@@ -176,6 +196,7 @@ import Component from 'vue-class-component'
     }
   })
 export default class DataCollection extends Vue {
+    origin = location.origin;
     dialog = false;
     consentDialog = false;
     step = 1;
