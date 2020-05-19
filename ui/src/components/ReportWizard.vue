@@ -30,7 +30,7 @@
           </p>
         </template>
 
-        <template #Upload>
+        <template #Load>
           <report-wizard-upload
             :error-message.sync="fileError"
             @change="loadReport">
@@ -131,7 +131,7 @@
   })
   export default class DataCollection extends Vue {
     // Wizard state
-    steps = ["Welcome", "Upload", "Review", "Summary"];
+    steps = ["Welcome", "Load", "Review", "Summary"];
     currentStep = 1;
     visible = true;
     alert = {
