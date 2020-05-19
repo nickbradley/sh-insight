@@ -4,7 +4,7 @@
   "private": true,
   "author": "Nick C. Bradley",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port 8081",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
@@ -12,6 +12,7 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.19.2",
+    "reflect-metadata": "^0.1.13",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^8.4.1",

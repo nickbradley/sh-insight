@@ -1,13 +1,13 @@
-import axios from 'axios'
 import { Report } from '../../../common/Report'
+import {Api} from "@/Api";
 
 export class ReportService {
-  public origin: string
+  public api: Api
   private _reportId?: string;
   private _report?: Report;
 
-  constructor (origin: string) {
-    this.origin = origin
+  constructor (api: Api) {
+    this.api = api
   }
 
   get reportId () {
@@ -22,13 +22,13 @@ export class ReportService {
     const formData = new FormData()
     formData.append('report', reportFile)
 
-    const config = {
+    const request = {
+      data: formData,
       headers: {
         'Content-Type': 'text/plain'
       }
     }
-    const res = await axios.post(`${this.origin}/report`, formData, config)
-    console.log(res.data)
+    const res = await this.api.execute('post', '/report', request)
     const reportData = res.data.report
     this._reportId = res.data.id
     this._report = Report.fromJson(reportData)

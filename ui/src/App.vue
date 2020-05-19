@@ -30,17 +30,39 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Landing from './components/Landing.vue'
 
 export default Vue.extend({
   name: 'App',
-
   components: {
-    // Landing
   },
-
   data: () => ({
 
-  })
+  }),
+  computed: {
+    cWindowTitle () {
+      // route-name is part of the localisation-key
+      const routeName = this.$route.name
+      const home = routeName === 'home'
+
+      let title = "sh>Insight"
+      if (!home) {
+        // only add title extension if this is not the main/home route
+        title = `${title} - ${routeName}`
+      }
+
+      return title
+    }
+  },
+  watch: {
+    cWindowTitle: 'setWindowTitle'
+  },
+  created () {
+    this.setWindowTitle()
+  },
+  methods: {
+    setWindowTitle () {
+      document.title = this.cWindowTitle
+    }
+  }
 })
 </script>

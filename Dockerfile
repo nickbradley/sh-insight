@@ -15,7 +15,7 @@ RUN yarn install \
  && yarn build
 
 FROM node:12.13.1-alpine
-ARG UPLOAD_DIR=/uploads
+ARG DATA_DIR=/data
 
 WORKDIR /app
 
@@ -29,10 +29,10 @@ COPY --from=Builder /tmp/server/package.json ./server
 
 ENV PORT 80
 ENV PUBLIC_DIR /app/dist
-ENV UPLOAD_DIR "${UPLOAD_DIR}"
+ENV DATA_DIR "${DATA_DIR}"
 
 EXPOSE 80
-VOLUME ${UPLOAD_DIR}
+VOLUME ${DATA_DIR}
 
 WORKDIR /app/server
 

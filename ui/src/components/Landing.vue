@@ -18,8 +18,9 @@
         <p class="subheading font-weight-regular">
           Our goal is to provide useful insights and recommendations to make you more efficient in your shell.
           <v-spacer ></v-spacer>
-<!--          <v-btn color="primary" dark v-on="on">Get started</v-btn>-->
-          <DataCollection/>
+
+          <v-btn color="primary" dark @click="showWizard=true">Get Started</v-btn>
+          <DataCollection v-if="showWizard" v-on:close="showWizard=false" v-on:finish="showDashboard"></DataCollection>
         </p>
 <!--        <p class="subheading font-weight-regular">-->
 <!--          Already uploaded data?  View your-->
@@ -56,7 +57,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import DataCollection from './DataCollection.vue'
+import DataCollection from './ReportWizard.vue'
 
 export default Vue.extend({
   name: 'Landing',
@@ -85,7 +86,15 @@ export default Vue.extend({
         text: 'Articles',
         href: 'https://medium.com/vuetify'
       }
-    ]
-  })
+    ], showWizard: false
+  }),
+  methods: {
+    cancel: function () {
+      console.log("cancel from landing");
+    },
+    showDashboard: function () {
+      this.$router.replace({name: "Dashboard"});
+    }
+  }
 })
 </script>

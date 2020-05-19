@@ -1,21 +1,29 @@
 import express, { Application } from "express";
+import cors from "cors";
 import * as http from "http";
 import {ReportRouter} from "./report/Report.router";
 import * as fs from "fs-extra";
+import {EmailService} from "./email/Email.service";
+import {EmailRouter} from "./email/Email.router";
 
 export class Server {
   public readonly app: Application;
   public readonly staticDir: string;
-  public readonly uploadDir: string;
+  public readonly dataDir: string;
   private server?: http.Server;
 
-  constructor(staticDir: string, uploadDir: string) {
+  constructor(staticDir: string, dataDir: string, allowCORS: boolean = false) {
     this.app = express();
     this.staticDir = staticDir;
-    this.uploadDir = uploadDir;
+    this.dataDir = dataDir;
+
+    if (allowCORS) {
+      this.app.use(cors());
+    }
 
     this.app.use("/", express.static(this.staticDir));
-    this.app.use("/report", ReportRouter.create(this.uploadDir));
+    this.app.use("/report", ReportRouter.create(this.dataDir));
+    this.app.use("/email", new EmailRouter(this.dataDir).router);
 
 // Return aggregate statistics from submitted reports.
     this.app.route("/stats")
@@ -26,7 +34,7 @@ export class Server {
   }
 
   public async start(port: number): Promise<void> {
-    await fs.ensureDir(this.uploadDir);
+    await fs.ensureDir(this.dataDir);
 
     return new Promise<void>((resolve, reject) => {
       this.server = http.createServer(this.app);

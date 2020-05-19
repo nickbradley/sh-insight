@@ -1,6 +1,7 @@
 import {Report} from "@common/Report";
 import {ReportParser} from "./ReportParser";
 import * as fs from "fs-extra";
+import Util from "../Util";
 
 export class ReportService {
   public readonly path: string;
@@ -10,8 +11,8 @@ export class ReportService {
   }
 
   public async create(file: Express.Multer.File): Promise<[string, Report]> {
-    const id = "XXX-YYY";
-    const path = `${this.path}/${id}.txt`;
+    const id = Util.generateShortId();
+    const path = `${this.path}/uploads/${id}.txt`;
     const buffer = file.buffer;
 
     await fs.writeFile(path, buffer);
