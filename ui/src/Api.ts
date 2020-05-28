@@ -7,12 +7,12 @@ export class Api {
     this.client = axios.create(config)
   }
 
-  async execute(method: Method, resource: string, request?: {data?: any; headers?: {[name: string]: string}}) {
+  async execute(method: Method, resource: string, request: {data?: any; headers?: {[name: string]: string}} = {}) {
     return this.client({
       method,
       url: resource,
-      data: request!.data,
-      headers: request!.headers
+      data: request.data,
+      headers: request.headers
     })
   }
 }

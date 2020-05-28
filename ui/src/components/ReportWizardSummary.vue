@@ -1,24 +1,25 @@
 <template>
-  <v-list-item three-line>
-    <v-list-item-content>
-      <div class="overline mb-4">Submission</div>
-      <v-list-item-title class="headline mb-1">{{ submissionId }}</v-list-item-title>
-      <v-list-item-subtitle>
-
-        <p>You'll need this code if you what to look at your data again, or if you need to contact the
-          researchers.</p>
-        <p>If you'd like, we can email it to you.</p>
-        <v-text-field
-          v-model="_email"
-          :rules="[emailRules.email]"
-          label="E-mail"
-          @update:error="updateErrorStatus"
-        ></v-text-field>
-        <v-checkbox v-model="_contact"
-                    label="Researchers may contact me with questions or additional opportunities to participant."></v-checkbox>
-      </v-list-item-subtitle>
-    </v-list-item-content>
-  </v-list-item>
+  <v-card>
+    <v-card-title>Thank You!</v-card-title>
+    <v-card-subtitle>
+      Your submission id <b>{{ submissionId }}</b>.
+      <v-alert type="info" border="left" dense outlined class="mt-5">
+        You'll need this code if you want to look at your data again, or if you need to contact the researchers.
+      </v-alert>
+    </v-card-subtitle>
+    <v-card-text>
+      <p>We can send it to you if you leave you email address.</p>
+      <v-text-field
+        v-model="_email"
+        :rules="[emailRules.email]"
+        label="E-mail"
+        @update:error="updateErrorStatus"
+      ></v-text-field>
+      <v-checkbox v-model="_contact"
+                  label="Researchers may contact me with questions or additional opportunities to participant.">
+      </v-checkbox>
+    </v-card-text>
+  </v-card>
 </template>
 
 <script lang="ts">

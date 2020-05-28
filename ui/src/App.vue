@@ -5,41 +5,35 @@
       color="primary"
       dark
     >
-
-      <router-link :to="{name: 'Home'}">
-      <v-img
-        alt="Vuetify Name"
-        class="shrink mt-1 hidden-sm-and-down"
-        contain
-        min-width="100"
-        :src="require('./assets/name.png')"
-        width="100"
-      />
-      </router-link>
-
-      <v-spacer></v-spacer>
-
+      <v-toolbar-title>
+        <router-link to="/" tag="span" style="cursor: pointer">
+          <v-icon left>mdi-home</v-icon>
+          sh>Insight</router-link>
+      </v-toolbar-title>
     </v-app-bar>
 
     <v-content>
       <router-view></router-view>
-<!--      <Landing/>-->
     </v-content>
+    <v-footer app>
+      <span>
+        Questions or comments about this research? Contact Nick Bradley at <a href="mailto:ncbrad@cs.ubc.ca">ncbrad@cs.ubc.ca</a>.
+        If you have any concerns or complaints about your rights as a research participant and/or your experiences while participating in this study, contact the Research Participant Complaint Line in the UBC Office of Research Ethics at 604-822-8598 or, if long distance, e-mail <a href="mailto:RSIL@ors.ubc.ca">RSIL@ors.ubc.ca</a> or call toll free 1-877-822-8598.
+        You can read our <a href="">data policy</a> for details on how we will use and manage your data.
+      </span>
+    </v-footer>
   </v-app>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+  import {Vue, Component, Watch} from 'vue-property-decorator'
 
-export default Vue.extend({
-  name: 'App',
-  components: {
-  },
-  data: () => ({
 
-  }),
-  computed: {
-    cWindowTitle () {
+  @Component({})
+  export default class App extends Vue {
+    submissionId = this.$reportService.reportId;
+
+    get cWindowTitle() {
       // route-name is part of the localisation-key
       const routeName = this.$route.name
       const home = routeName === 'home'
@@ -52,17 +46,16 @@ export default Vue.extend({
 
       return title
     }
-  },
-  watch: {
-    cWindowTitle: 'setWindowTitle'
-  },
-  created () {
-    this.setWindowTitle()
-  },
-  methods: {
-    setWindowTitle () {
+
+    @Watch("cWindowTitle")
+    setWindowTitle() {
       document.title = this.cWindowTitle
     }
+
+
+    created() {
+      this.setWindowTitle()
+    }
+
   }
-})
 </script>

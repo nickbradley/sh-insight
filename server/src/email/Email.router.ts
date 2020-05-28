@@ -29,11 +29,10 @@ export class EmailRouter {
       const email = new EmailService(emailAddress, contactable);
 
       try {
-        const reqOrigin = `${req.protocol}://${req.get("host")}`;
-        console.log("storing email");
         await email.store(this.dataDir);
-        console.log("sending email");
-        const result = await email.sendWelcome(submissionId, reqOrigin);
+        const origin = req.get("origin");
+        if (!origin) throw new Error("Origin header is not set but is required to send emails.");
+        const result = await email.sendWelcome(submissionId, origin);
         console.log("Email sent", result);
         res.status(201).send();
       } catch (err) {

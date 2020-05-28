@@ -32,5 +32,11 @@ export class ReportService {
     const reportData = res.data.report
     this._reportId = res.data.id
     this._report = Report.fromJson(reportData)
+    console.log(this._report)
+  }
+
+  async get (submissionId: string) {
+    const response = await this.api.execute('get', `/report/${submissionId}`);
+    return Report.fromJson(response.data.report);
   }
 }

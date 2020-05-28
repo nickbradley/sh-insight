@@ -12,12 +12,24 @@ export class ReportService {
 
   public async create(file: Express.Multer.File): Promise<[string, Report]> {
     const id = Util.generateShortId();
-    const path = `${this.path}/uploads/${id}.txt`;
+    const path = `${this.path}/uploads/report-${id}.txt`;
     const buffer = file.buffer;
 
     await fs.writeFile(path, buffer);
     const report = this.parse(buffer);
     return [id, report];
+  }
+
+  public async read(id: string): Promise<Report> {
+    let dir = this.path;
+    if (id === "demo") {
+      dir = ".";
+    }
+
+    const file = `${dir}/report-${id}.json`;
+    const report = await fs.readJson(file);
+
+    return Report.fromJson(report);
   }
 
   public parse(report: Buffer): Report {

@@ -16,7 +16,7 @@ export class EmailService {
   }
 
   async sendWelcome(submissionId: string, linkOrigin: string): Promise<[ClientResponse, {}]> {
-    const surveyLink = `https://qualtrics-link?sid=${submissionId}`;
+    const surveyLink = `https://ubc.ca1.qualtrics.com/jfe/form/SV_578RmtmqxrKrZoV?submission=${submissionId}`;
     const dashboardLink = `${linkOrigin}/dashboard/${submissionId}`;
 
     const subject = `sh>Insight Submission ${submissionId}`;

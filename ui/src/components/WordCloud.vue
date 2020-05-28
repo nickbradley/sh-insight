@@ -19,10 +19,13 @@ export default {
   components: {
     wordcloud
   },
+  props: {
+    report: Object
+  },
   data () {
     return {
       myColors: ['#1f77b4', '#629fc9', '#94bedb', '#c9e0ef'],
-      commandCount: this.$reportService.report.history.getCommandCount()
+      commandCount: this.report.history.getCommandCount()
     }
   },
   computed: {

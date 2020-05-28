@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import Dashboard from '../views/Dashboard.vue'
+import Demo from '../views/Demo.vue'
+import Submit from "@/views/Submit.vue";
 
 Vue.use(VueRouter)
 
@@ -26,12 +28,26 @@ const routes: Array<RouteConfig> = [
     }
   },
   {
-    path: '/dashboard',
+    path: '/dashboard/:submissionId?',
     name: 'Dashboard',
     component: Dashboard,
     meta: {
       title: "Dashboard - SH>Insight"
+    },
+    props: (route) => ({ submissionId: route.params.submissionId })
+  },
+  {
+    path: '/demo',
+    name: 'Demo',
+    component: Demo,
+    meta: {
+      title: "Demo - SH>Insight"
     }
+  },
+  {
+    path: '/submit',
+    name: 'Submit',
+    component: Submit
   }
 ]
 

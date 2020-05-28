@@ -229,7 +229,7 @@
     }
 
     finish() {
-      this.$emit("finish");
+      this.$emit("finish", this.submissionId);
     }
 
     async submitReport() {

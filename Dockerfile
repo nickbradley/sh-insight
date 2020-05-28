@@ -20,6 +20,7 @@ ARG DATA_DIR=/data
 WORKDIR /app
 
 COPY package.json ./
+COPY server/report-demo.json ./server/report-demo.json
 COPY --from=Builder /tmp/node_modules/ ./node_modules/
 COPY --from=Builder /tmp/server/node_modules ./server/node_modules/
 COPY --from=Builder /tmp/dist/ ./dist/
