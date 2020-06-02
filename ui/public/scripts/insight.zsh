@@ -3,7 +3,7 @@
 echo "#% Meta"
 echo "Version=0.0.1"
 echo "Shell=ZSH"
-echo "Date=$(date --iso-8601=seconds)"
+echo "Date=$(date +%Y-%m-%dT%H:%M:%S%z)"
 echo
 
 echo "#% Setup"

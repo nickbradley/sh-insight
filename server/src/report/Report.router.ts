@@ -14,6 +14,7 @@ export class ReportRouter {
     const upload = multer({ storage: multer.memoryStorage() });
     this.reportService = new ReportService(path);
 
+    this.router.get("/command-sequence", this.getCommandSequence.bind(this));
     this.router.get("/:id", this.get.bind(this));
     this.router.post("/", upload.single("report"), this.post.bind(this));
   }
@@ -52,6 +53,30 @@ export class ReportRouter {
     } catch (err) {
       Log.error(err);
       res.status(500).send(err);
+    }
+  }
+
+  async getCommandSequence(req: Request, res: Response) {
+    Log.info(`ReportRouter::getCommandSequence(..) - Request received.`);
+    Log.trace(req);
+
+    let code = 500;
+    let body;
+
+    try {
+      const id = req.query.id as string;
+      if (!id) throw new Error("The query parameter 'id' is required.");
+      const report = await this.reportService.read(id);
+      const sequences = await report.history.getRankedCommandSequences();
+      const historySegment = sequences[0].lastInstance.map((item) => `${item.id} ${item.command} ${item.args}`).join("<br>");
+      code = 200;
+      body = JSON.stringify({segment: historySegment});
+    } catch (err) {
+      code = 500;
+      body = err;
+    } finally {
+      Log.info(`Responding with status ${code} and body: ${body}`)
+      res.status(code).send(body);
     }
   }
 

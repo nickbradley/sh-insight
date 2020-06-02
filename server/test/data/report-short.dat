@@ -1,3 +1,10 @@
+#% Meta
+Version=0.0.1
+Shell=ZSH
+Date=2020-05-12T17:08:53-07:00
+
+#% Setup
+]0;Downloads: precmd_functions=() ]0;Downloads: preexec_functions=() 
 #% Variables
 SHELL=/bin/zsh
 TERM=alacritty
@@ -9,7 +16,6 @@ PS1=$'%F{${prompt_pure_colors[path]}}%~%f\n%{\C-M%}%(12V.%F{$prompt_pure_colors[
 e=/usr/bin/nvim
 nas='TERM=xterm-256color ssh nas'
 run-help=man
-which-command=whence
 
 #% History
     1  2020-05-02 14:18  pacman -Syu git

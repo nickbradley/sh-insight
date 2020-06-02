@@ -1,4 +1,23 @@
 {
+  "meta": {
+    "version": "0.0.1",
+    "shell": "ZSH",
+    "date": "2020-05-13T00:08:53.000Z"
+  },
+  "environment": {
+    "variables": {
+      "SHELL": "/bin/zsh",
+      "TERM": "alacritty",
+      "SAVEHIST": "100000",
+      "HISTSIZE": "10000",
+      "PS1": "$'%F{${prompt_pure_colors[path]}}%~%f\\n%{\\C-M%}%(12V.%F{$prompt_pure_colors[virtualenv]}%12v%f .)%(?.%F{$prompt_pure_colors[prompt:success]}.%F{$prompt_pure_colors[prompt:error]})${prompt_pure_state[prompt]}%f '"
+    },
+    "aliases": {
+      "e": "/usr/bin/nvim",
+      "nas": "'TERM=xterm-256color ssh nas'",
+      "run-help": "man"
+    }
+  },
   "history": {
     "items": [
       {
@@ -12,12 +31,6 @@
         "command": "logout",
         "id": 2,
         "timestamp": 1588454280000
-      },
-      {
-        "args": "",
-        "command": "",
-        "id": 0,
-        "timestamp": null
       }
     ]
   }

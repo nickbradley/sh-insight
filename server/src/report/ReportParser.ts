@@ -2,26 +2,51 @@ import * as stream from "stream";
 import {HistoryItem} from "@common/HistoryItem";
 import {Report} from "@common/Report";
 import {History} from "@common/History";
+import {ReportMeta} from "@common/ReportMeta";
+import {ReportEnvironment} from "@common/ReportEnvironment";
+
+type KeyVal = {[key: string]: string};
 
 export class ReportParser {
-  public readonly history: History;
-
   public readonly headerDelimiter: string = "#%";
-
-  constructor() {
-    this.history = new History();
-
-  }
+  private readonly metaFields: Array<KeyVal> = [];
+  private readonly variableFields: Array<KeyVal> = [];
+  private readonly aliasFields: Array<KeyVal> = [];
+  private readonly historyItems: Array<HistoryItem> = [];
 
   parse(buffer: Buffer): Report {
     const text = buffer.toString();
     const lines = text.split("\n");
     this.processLines(lines);
 
-    return new Report(this.history);
+    const flatten = (list: Array<{[key: string]: string}>) =>
+      list.reduce((obj, elem) => ({ ...obj, ...elem }), {});
+
+    const metaFields = flatten(this.metaFields);
+    const meta = new ReportMeta(metaFields.version, metaFields.shell, new Date(metaFields.date));
+    const env = {
+      aliases: flatten(this.aliasFields),
+      variables: flatten(this.variableFields)
+    };
+    const environment = new ReportEnvironment(env);
+    const history = new History();
+    for (const item of this.historyItems) {
+      history.addItem(item);
+    }
+
+    return new Report(meta, environment, history);
   }
 
-  extractSectionName(line: string): string {
+  private parseKeyValue(keyval: string, lowercaseKey: boolean = false): KeyVal {
+    const splitIndex = keyval.indexOf("=");
+    const keyPart = keyval.substring(0, splitIndex);
+    const valPart = keyval.substring(splitIndex+1);
+    const key = lowercaseKey ? keyPart.toLowerCase() : keyPart;
+
+    return { [key]: valPart };
+  }
+
+  private extractSectionName(line: string): string {
     if (!line.startsWith(this.headerDelimiter)) {
       return "";
     }
@@ -34,28 +59,40 @@ export class ReportParser {
     let foundEnd: boolean = false;
 
     for (const line of lines) {
-      const newSection = this.extractSectionName(line);
-      if (newSection) {
-        section = newSection;
+      if (line.trim() === "") {
         continue;
       }
 
+      const newSection = this.extractSectionName(line);
+      if (newSection) {
+        section = newSection;
+        if (section === "eof") {
+          foundEnd = true;
+        }
+        continue;
+      }
+
+
       switch (section) {
         case "meta":
+          this.metaFields.push(this.parseKeyValue(line, true));
           break;
         case "setup":
-          // ignore this
+          // ignore these lines
           break;
         case "variables":
+          this.variableFields.push(this.parseKeyValue(line));
           break;
         case "aliases":
+          if (line) {
+            this.aliasFields.push(this.parseKeyValue(line));
+          }
           break;
         case "history":
-          const historyItem = HistoryItem.fromLine(line);
-          this.history.addItem(historyItem);
+          this.historyItems.push(HistoryItem.fromLine(line));
           break;
         case "eof":
-          foundEnd = true;
+          // Handle above in case there is no new line at end of file
           break;
         default:
           console.error(`This section wasn't recognized ${section}`)

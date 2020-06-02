@@ -1,27 +1,30 @@
-]0;Downloads: echo "#% Meta"#% Meta
-]0;Downloads: echo "Version=0.0.1"Version=0.0.1
-]0;Downloads: echo "Shell=ZSH"Shell=ZSH
-]0;Downloads: echo "Date=$(date --iso-8601=seconds)"Date=2020-05-12T15:09:14-07:00
-]0;Downloads: echo "#% Variables"#% Variables
-]0;Downloads: echo "OSTYPE=${OSTYPE}"OSTYPE=linux-gnu
-]0;Downloads: echo "SHELL=${SHELL}"SHELL=/bin/zsh
-]0;Downloads: echo "ZSH_VERSION=${ZSH_VERSION}"ZSH_VERSION=5.8
-]0;Downloads: echo "TERM=${TERM}"TERM=alacritty
-]0;Downloads: echo "EDITOR=${EDITOR}"EDITOR=/usr/bin/nvim
-]0;Downloads: echo "VISUAL=${VISUAL}"VISUAL=/usr/bin/nvim
-]0;Downloads: echo "HISTSIZE=${HISTSIZE}"HISTSIZE=10000
-]0;Downloads: echo "SAVEHIST=${SAVEHIST}"SAVEHIST=100000
-]0;Downloads: echo "PS1=${PS1}"PS1=%(12V.%F{$prompt_pure_colors[virtualenv]}%12v%f .)%(?.%F{$prompt_pure_colors[prompt:success]}.%F{$prompt_pure_colors[prompt:error]})${prompt_pure_state[prompt]}%f 
-]0;Downloads: echo "plugins=${plugins}"plugins=
-]0;Downloads: echo
-]0;Downloads: echo "#% Aliases"#% Aliases
-]0;Downloads: aliase=/usr/bin/nvim
+#% Meta
+Version=0.0.1
+Shell=ZSH
+Date=2020-05-12T15:09:14-07:00
+
+#% Setup
+]0;Downloads: precmd_functions=() ]0;Downloads: preexec_functions=() 
+#% Variables
+OSTYPE=linux-gnu
+SHELL=/bin/zsh
+ZSH_VERSION=5.8
+TERM=alacritty
+EDITOR=/usr/bin/nvim
+VISUAL=/usr/bin/nvim
+HISTSIZE=10000
+SAVEHIST=100000
+PS1=%(12V.%F{$prompt_pure_colors[virtualenv]}%12v%f .)%(?.%F{$prompt_pure_colors[prompt:success]}.%F{$prompt_pure_colors[prompt:error]})${prompt_pure_state[prompt]}%f
+plugins=
+
+#% Aliases
+e=/usr/bin/nvim
 nas='TERM=xterm-256color ssh nas'
 run-help=man
 which-command=whence
-]0;Downloads: echo
-]0;Downloads: echo "#% History"#% History
-]0;Downloads: builtin fc -R]0;Downloads: builtin fc -li 0    1  2020-05-12 15:09  pacman -Syu git
+
+#% History
+    1  2020-05-12 15:09  pacman -Syu git
     2  2020-05-12 15:09  logout
     3  2020-05-12 15:09  clear
     4  2020-05-12 15:09  mkdir -p .zsh
@@ -141,7 +144,7 @@ which-command=whence
   118  2020-05-12 15:09  cd i3status-rust
   119  2020-05-12 15:09  makepkg -s
   120  2020-05-12 15:09  makepkg -i
-  121  2020-05-12 15:09  cd ~ 
+  121  2020-05-12 15:09  cd ~
   122  2020-05-12 15:09  vim .config/sway/status.toml
   123  2020-05-12 15:09  vim .config/sway/config
   124  2020-05-12 15:09  vim .config/sway/config
@@ -374,7 +377,7 @@ which-command=whence
   351  2020-05-12 15:09  which wget
   352  2020-05-12 15:09  sudo pacman -S wget
   353  2020-05-12 15:09  wget https://raw.githubusercontent.com/drduh/config/master/gpg.conf
-  354  2020-05-12 15:09  chmod 600 gpg.conf 
+  354  2020-05-12 15:09  chmod 600 gpg.conf
   355  2020-05-12 15:09  gpg --import /mnt/0xD414419F8D3DDFEE-2020-03-25.txt
   356  2020-05-12 15:09  export KEYID=0xD414419F8D3DDFEE
   357  2020-05-12 15:09  gpg --edit-key $KEYID
@@ -383,7 +386,7 @@ which-command=whence
   360  2020-05-12 15:09  pinentry-curses
   361  2020-05-12 15:09  cd ..
   362  2020-05-12 15:09  nvim .zshrc
-  363  2020-05-12 15:09  nvim .zshenv 
+  363  2020-05-12 15:09  nvim .zshenv
   364  2020-05-12 15:09  mv .zshenv .zprofile
   365  2020-05-12 15:09  nvim .zprofile
   366  2020-05-12 15:09  export GPG_TTY="$(tty)"
@@ -498,7 +501,7 @@ which-command=whence
   475  2020-05-12 15:09  make proposal
   476  2020-05-12 15:09  cd proposal
   477  2020-05-12 15:09  ls
-  478  2020-05-12 15:09  rmdir cache 
+  478  2020-05-12 15:09  rmdir cache
   479  2020-05-12 15:09  rm -rf cache proposal.aux proposal.fdb_latexmk proposal.fls proposal.log proposal.pdf
   480  2020-05-12 15:09  ls
   481  2020-05-12 15:09  make proposal
@@ -939,7 +942,7 @@ which-command=whence
   916  2020-05-12 15:09  cd ..
   917  2020-05-12 15:09  git clone https://aur.archlinux.org/ddcutil.git
   918  2020-05-12 15:09  cd ddcutil
-  919  2020-05-12 15:09  makepkg -S 
+  919  2020-05-12 15:09  makepkg -S
   920  2020-05-12 15:09  makepkg -i
   921  2020-05-12 15:09  ddcutil capabilities
   922  2020-05-12 15:09  modprobe i2c-dev
@@ -1092,7 +1095,7 @@ which-command=whence
  1069  2020-05-12 15:09  light -L
  1070  2020-05-12 15:09  sudo journctl -b
  1071  2020-05-12 15:09  sudo journalctl -b
- 1072  2020-05-12 15:09  sudo nvim /etc/modprobe.d/alsa-base.conf 
+ 1072  2020-05-12 15:09  sudo nvim /etc/modprobe.d/alsa-base.conf
  1073  2020-05-12 15:09  reboot
  1074  2020-05-12 15:09  alsamixer
  1075  2020-05-12 15:09  sudo journalctl -b
@@ -1324,7 +1327,7 @@ which-command=whence
  1301  2020-05-12 15:09  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio
  1302  2020-05-12 15:09  docker run -p 8787:8787 -e PASSWORD=234sdre rocker/rstudio R
  1303  2020-05-12 15:09  docker os
- 1304  2020-05-12 15:09  docker ps 
+ 1304  2020-05-12 15:09  docker ps
  1305  2020-05-12 15:09  docker run -p 8787:8787 -e PASSWORD=234sdre --cap-add=ALL rocker/rstudio
  1306  2020-05-12 15:09  docker run -p 8787:8787 -e PASSWORD=234sdre --init=s6 rocker/rstudio
  1307  2020-05-12 15:09  docker run -p 8787:8787 -e PASSWORD=234sdre --init s6 rocker/rstudio
@@ -1382,7 +1385,7 @@ which-command=whence
  1359  2020-05-12 15:09  \tgit add design.md
  1360  2020-05-12 15:09  git commit -m "Use lowercase for doc names"
  1361  2020-05-12 15:09  git push
- 1362  2020-05-12 15:09  ls 
+ 1362  2020-05-12 15:09  ls
  1363  2020-05-12 15:09  git status
  1364  2020-05-12 15:09  git add --all
  1365  2020-05-12 15:09  git reset proposal/proposal.tex
@@ -1504,7 +1507,7 @@ which-command=whence
  1481  2020-05-12 15:09  mv pre-survey.md pre-questionnaire.md
  1482  2020-05-12 15:09  mv post-survey.md post-questionnaire.md
  1483  2020-05-12 15:09  git status
- 1484  2020-05-12 15:09  git add post-survey.md post-questionnaire.md pre-questionnaire.md pre-survey.md 
+ 1484  2020-05-12 15:09  git add post-survey.md post-questionnaire.md pre-questionnaire.md pre-survey.md
  1485  2020-05-12 15:09  git status
  1486  2020-05-12 15:09  cd ..
  1487  2020-05-12 15:09  git add README.md
@@ -1640,7 +1643,7 @@ which-command=whence
  1617  2020-05-12 15:09  sudo /etc/fstab
  1618  2020-05-12 15:09  sudo nvim /etc/fstab
  1619  2020-05-12 15:09  reboot
- 1620  2020-05-12 15:09  ls 
+ 1620  2020-05-12 15:09  ls
  1621  2020-05-12 15:09  ls photos
  1622  2020-05-12 15:09  ls -a photos
  1623  2020-05-12 15:09  mount nas:/photos photos
@@ -1856,8 +1859,8 @@ which-command=whence
  1833  2020-05-12 15:09  ls Pictures/Darktable/20200412_Iona\ Park
  1834  2020-05-12 15:09  echo $XDG_PICTURES_DIR
  1835  2020-05-12 15:09  XDG_PICTURES_DIR="$HOME/Pics"
- 1836  2020-05-12 15:09  ls 
- 1837  2020-05-12 15:09  ls 
+ 1836  2020-05-12 15:09  ls
+ 1837  2020-05-12 15:09  ls
  1838  2020-05-12 15:09  echo $PICTURES_FOLDER
  1839  2020-05-12 15:09  export XDG_PICTURES_DIR="$HOME/Pics"
  1840  2020-05-12 15:09  env
@@ -1898,7 +1901,7 @@ which-command=whence
  1875  2020-05-12 15:09  git status
  1876  2020-05-12 15:09  git add brief.Rmd
  1877  2020-05-12 15:09  git status
- 1878  2020-05-12 15:09  git commit -m "Add design brief" 
+ 1878  2020-05-12 15:09  git commit -m "Add design brief"
  1879  2020-05-12 15:09  git push
  1880  2020-05-12 15:09  exit
  1881  2020-05-12 15:09  shutdown -h now
@@ -1965,7 +1968,7 @@ which-command=whence
  1942  2020-05-12 15:09  exit
  1943  2020-05-12 15:09  docker ps
  1944  2020-05-12 15:09  docker images ls
- 1945  2020-05-12 15:09  docker images 
+ 1945  2020-05-12 15:09  docker images
  1946  2020-05-12 15:09  docker images --all
  1947  2020-05-12 15:09  docker run shellac-study-rtex
  1948  2020-05-12 15:09  cd Sync/shellac-study
@@ -2083,7 +2086,7 @@ which-command=whence
  2060  2020-05-12 15:09  make editor-start
  2061  2020-05-12 15:09  make editor-stop
  2062  2020-05-12 15:09  make editor-start
- 2063  2020-05-12 15:09  ls 
+ 2063  2020-05-12 15:09  ls
  2064  2020-05-12 15:09  ls rstudio
  2065  2020-05-12 15:09  rm kitematic
  2066  2020-05-12 15:09  rmdir kitematic
@@ -2430,7 +2433,7 @@ which-command=whence
  2407  2020-05-12 15:09  git status
  2408  2020-05-12 15:09  git commit -m "Add tooling to compile basic bookdown document"
  2409  2020-05-12 15:09  git status
- 2410  2020-05-12 15:09  git checkout master 
+ 2410  2020-05-12 15:09  git checkout master
  2411  2020-05-12 15:09  git checkout -b ethics/formative-consent
  2412  2020-05-12 15:09  mkdir ethics
  2413  2020-05-12 15:09  exit
@@ -2520,7 +2523,7 @@ which-command=whence
  2497  2020-05-12 15:09  history -i
  2498  2020-05-12 15:09  history
  2499  2020-05-12 15:09  history -R .histfile
- 2500  2020-05-12 15:09  sudo pacman -Syu 
+ 2500  2020-05-12 15:09  sudo pacman -Syu
  2501  2020-05-12 15:09  sudo pacman -Syu nodejs
  2502  2020-05-12 15:09  sudo pacman -Syu yarn
  2503  2020-05-12 15:09  nvim ~/.config/sway/config
@@ -2549,7 +2552,7 @@ which-command=whence
  2526  2020-05-12 15:09  fc -li
  2527  2020-05-12 15:09  history -i
  2528  2020-05-12 15:09  fc -R .histfile
- 2529  2020-05-12 15:09  fc -liR .histfile 
+ 2529  2020-05-12 15:09  fc -liR .histfile
  2530  2020-05-12 15:09  history -i
  2531  2020-05-12 15:09  exit
  2532  2020-05-12 15:09  history -i
@@ -2734,5 +2737,5 @@ which-command=whence
  2711  2020-05-12 15:09  exit
  2712  2020-05-12 15:09  exit
  2713  2020-05-12 15:09  exit
-]0;Downloads: echo
-]0;Downloads: echo "#% EOF"#% EOF
+
+#% EOF
