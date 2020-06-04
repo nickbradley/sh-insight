@@ -39,4 +39,9 @@ export class ReportService {
     const response = await this.api.execute('get', `/report/${submissionId}`);
     return Report.fromJson(response.data.report);
   }
+
+  async getDashboard(submissionId: string) {
+    const response = await this.api.execute('get', `/report/${submissionId}/dashboard`);
+    return response.data
+  }
 }

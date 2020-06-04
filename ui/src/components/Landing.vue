@@ -14,7 +14,7 @@
             Get Started
           </v-btn>
           <DataCollection v-if="showWizard" v-on:close="showWizard=false" v-on:finish="showDashboard"></DataCollection>
-          <router-link :to="{name: 'Demo'}" style="display: block;">See demo</router-link>
+          <router-link :to="{name: 'Dashboard', params: { submissionId: 'demo' }}" style="display: block;">See demo</router-link>
           <router-link :to="{name: 'Dashboard'}" style="display: block">See past submission</router-link>
         </v-card>
         <v-card flat>

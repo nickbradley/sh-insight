@@ -16,6 +16,7 @@ export class ReportRouter {
 
     this.router.get("/command-sequence", this.getCommandSequence.bind(this));
     this.router.get("/:id", this.get.bind(this));
+    this.router.get("/:id/dashboard", this.getDashboard.bind(this));
     this.router.post("/", upload.single("report"), this.post.bind(this));
   }
 
@@ -79,6 +80,34 @@ export class ReportRouter {
       res.status(code).send(body);
     }
   }
+
+  async getDashboard(req: Request, res: Response) {
+    Log.info(`ReportRouter::getDashboard(..) - Request received.`);
+
+    let code = 500;
+    let body;
+
+    try {
+      const id = req.params.id;
+      const report = await this.reportService.read(id);
+      //const dashboard = new DashboardData(report);
+      const dashboard = {
+        aliasUsage: report.computeAliasUsage(),
+        commandUsage: report.computeCommandUsage(),
+        commandPairs: await report.computeCommandPairs(),
+        commandTriplets: await report.computeCommandTriplets()
+      }
+      code = 200;
+      body = JSON.stringify(dashboard);
+    } catch (err) {
+      code = 500;
+      body = err;
+    } finally {
+      Log.info(`Responding with status ${code} and body: ${body.substr(0, 30)}`);
+      res.status(code).send(body);
+    }
+  }
+
 
   static create(reportPath: string) {
     return new ReportRouter(reportPath).router;

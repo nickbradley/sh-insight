@@ -12,10 +12,7 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
-    meta: {
-      title: "Home - SH>Insight"
-    }
+    component: Home
   },
   {
     path: '/about',
@@ -23,27 +20,13 @@ const routes: Array<RouteConfig> = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
-    meta: {
-      title: "About - SH>Insight"
-    }
+    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
     path: '/dashboard/:submissionId?',
     name: 'Dashboard',
     component: Dashboard,
-    meta: {
-      title: "Dashboard - SH>Insight"
-    },
     props: (route) => ({ submissionId: route.params.submissionId })
-  },
-  {
-    path: '/demo',
-    name: 'Demo',
-    component: Demo,
-    meta: {
-      title: "Demo - SH>Insight"
-    }
   },
   {
     path: '/submit',

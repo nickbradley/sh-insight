@@ -1,6 +1,6 @@
 export class ReportEnvironment {
-  private readonly aliases: {[key: string]: string};
-  private readonly variables: {[key: string]: string};
+  public readonly aliases: {[key: string]: string};
+  public readonly variables: {[key: string]: string};
 
   constructor(environment: {aliases?: {[key: string]: string}, variables?: {[key: string]: string}} = {}) {
     this.aliases = environment.aliases || {};

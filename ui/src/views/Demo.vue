@@ -31,44 +31,35 @@
 
   </v-container>
 
-  <v-container v-if="report" fluid>
-    <v-row>
-      <v-col>
-        <word-cloud :report="report"></word-cloud>
-      </v-col>
-    </v-row>
-  </v-container>
 
-  <v-container v-else fluid>
-    <v-skeleton-loader type="card">
 
-    </v-skeleton-loader>
-  </v-container>
 </div>
 </template>
 
 <script lang="ts">
   import {Vue,Component} from "vue-property-decorator";
   import {Report} from "@common/Report";
-  import WordCloud from "@/components/WordCloud.vue";
+  // import WordCloud from "@/components/WordCloud.vue";
+  import DashboardCard from "@/components/DashboardGridCard.vue";
 
   @Component({
     components: {
-      WordCloud
+      DashboardCard
     }
   })
   export default class Demo extends Vue {
+
     report: Report | null = null;
-    isReportLoading = false;
+    isReportLoading = true;
 
     snackbar = false;
     snackbarText = "";
 
     async fetchReport() {
       this.isReportLoading = true;
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 10000));
       try {
-        this.report = await this.$reportService.get("demo");
+        this.report = await this.$reportService.getDashboard("demo");
       } catch (err) {
         this.snackbarText = err;
         this.snackbar = true;

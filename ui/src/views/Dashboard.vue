@@ -1,5 +1,29 @@
 <template>
   <div>
+    <v-banner v-if="submissionId === 'demo'"
+              app
+      single-line
+      sticky
+      elevation="3"
+              color="grey lighten-3"
+    >
+      <template v-slot:icon>
+        <v-icon>mdi-information</v-icon>
+      </template>
+
+      Ready to get insights into your own data?
+
+      <template v-slot:actions>
+        <v-btn
+          color="primary"
+          :to="{name: 'Submit'}"
+        >
+          Get Started
+        </v-btn>
+      </template>
+    </v-banner>
+
+
     <v-snackbar
       v-model="snackbar"
       top
@@ -34,61 +58,34 @@
           <v-btn
             color="primary"
             :loading="isReportLoading"
-            @click="fetchReport"
-            >
+            @click="fetchDashboard"
+          >
             Load
           </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
 
-    <v-container v-if="report" fluid>
-      <v-banner
-        sticky
-      >
-        Once you've had a chance to explore your dashboard, please consider taking our short survey about how you use
-        your shell.
-        <template v-slot:actions>
-          <v-btn
-            color="secondary"
-            :href="'https://ubc.ca1.qualtrics.com/jfe/form/SV_578RmtmqxrKrZoV?submission=' + inputSubmissionId"
-            target="_blank"
-          >
-            Take Survey
-            <v-icon right>mdi-open-in-new</v-icon>
-          </v-btn>
+  <dashboard-grid :dashboard-data="data"></dashboard-grid>
 
-        </template>
-      </v-banner>
-      <v-row>
-        <v-col>
-          <word-cloud :report="report"></word-cloud>
-        </v-col>
-      </v-row>
-    </v-container>
-
-    <v-container v-else fluid>
-      <v-skeleton-loader type="card">
-
-      </v-skeleton-loader>
-    </v-container>
   </div>
 </template>
 
 <script lang="ts">
-  import WordCloud from "../components/WordCloud.vue"
   import {Vue, Component, Prop} from "vue-property-decorator";
-  import {Report} from "@common/Report";
+  import {DashboardData} from "@common/Types";
+  import DashboardGrid from "@/components/DashboardGrid.vue";
 
   @Component({
     components: {
-      WordCloud
+      DashboardGrid
     }
   })
   export default class Dashboard extends Vue {
     @Prop({default: ""}) readonly submissionId!: string;
 
-    report: Report | null = null;
+
+    data: DashboardData | null = null;
     isReportLoading = false;
 
 
@@ -100,12 +97,11 @@
     inputSubmissionId = this.submissionId;
     showSubmissionDialog = false
 
-    async fetchReport() {
+    async fetchDashboard() {
       this.isReportLoading = true;
       this.showSubmissionDialog = false;
-      await new Promise(resolve => setTimeout(resolve, 1000));
       try {
-        this.report = await this.$reportService.get(this.inputSubmissionId);
+        this.data = await this.$reportService.getDashboard(this.inputSubmissionId);
       } catch (err) {
         this.snackbarText = err;
         this.snackbar = true;
@@ -114,10 +110,9 @@
       }
     }
 
-
-    async mounted() {
+    async created() {
       if (this.submissionId) {
-        await this.fetchReport();
+        await this.fetchDashboard();
       } else {
         this.showSubmissionDialog = true;
       }

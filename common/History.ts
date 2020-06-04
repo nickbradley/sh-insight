@@ -1,12 +1,6 @@
 import * as ngrams from "simplengrams";
-import { HistoryItem } from './HistoryItem';
-
-interface CommandSequence {
-  sequence: string[];
-  length: number;
-  instances: number[];
-  occurrences: number;
-}
+import {HistoryItem} from './HistoryItem';
+import {CommandSequence} from "./Types";
 
 export class History {
     public readonly items: Array<HistoryItem>;

@@ -29,6 +29,7 @@ COPY --from=Builder /tmp/build/server/src/ ./server/
 COPY --from=Builder /tmp/server/package.json ./server
 
 ENV PORT 80
+ENV LOG_LEVEL INFO
 ENV PUBLIC_DIR /app/dist
 ENV DATA_DIR "${DATA_DIR}"
 
