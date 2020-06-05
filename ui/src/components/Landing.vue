@@ -3,6 +3,25 @@
     <v-row class="text-center">
       <v-col cols="12">
 
+        <v-img
+          :src="require('../assets/logo.svg')"
+          class="my-3"
+          contain
+          height="100"
+        />
+
+        <!--      <v-col class="mb-4">-->
+                <h2 class="display-1 font-weight-bold mb-3">
+                  Welcome to Shell Insight
+                </h2>
+
+                <p class="subheading font-weight-regular" style="max-width: 500px; display: inline-block;">
+                  This site is part of a research project investigating how developers interact with their tools conducted by the <a href="https://spl.cs.ubc.ca/">Software Practices Lab</a> at <a href="https://www.ubc.ca/">The University of British Columbia</a>.
+                  Our goal is to provide useful insights and recommendations to make you more efficient in your shell.
+                  You can contribute by providing your shell history and completing our short survey.
+
+                </p>
+
         <v-card flat class="ma-8">
           <v-btn
             color="primary"

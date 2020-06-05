@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-banner v-if="submissionId === 'demo'"
+    <v-banner v-if="inputSubmissionId === 'demo'"
               app
       single-line
       sticky
@@ -19,6 +19,31 @@
           :to="{name: 'Submit'}"
         >
           Get Started
+        </v-btn>
+      </template>
+    </v-banner>
+
+    <v-banner v-else-if="inputSubmissionId"
+              app
+              single-line
+              sticky
+              elevation="3"
+              color="grey lighten-3"
+    >
+      <template v-slot:icon>
+        <v-icon>mdi-information</v-icon>
+      </template>
+
+      Once you've examined your dashboard, please consider completing our short survey to provide us with a few extra details about your shell usage.
+
+      <template v-slot:actions>
+        <v-btn
+          color="secondary"
+          :href="'https://ubc.ca1.qualtrics.com/jfe/form/SV_578RmtmqxrKrZoV?submission=' + inputSubmissionId"
+          target="_blank"
+        >
+          Take Survey
+          <v-icon right>mdi-open-in-new</v-icon>
         </v-btn>
       </template>
     </v-banner>

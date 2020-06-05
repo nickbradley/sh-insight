@@ -2,9 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import Dashboard from '../views/Dashboard.vue'
-import Demo from '../views/Demo.vue'
 import Submit from "@/views/Submit.vue";
-import DataPolicy from "@/views/DataPolicy.vue";
 
 Vue.use(VueRouter)
 
@@ -32,11 +30,6 @@ const routes: Array<RouteConfig> = [
     path: '/submit',
     name: 'Submit',
     component: Submit
-  },
-  {
-    path: '/datapolicy',
-    name: 'DataPolicy',
-    component: DataPolicy
   }
 ]
 

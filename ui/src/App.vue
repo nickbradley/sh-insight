@@ -17,10 +17,7 @@
     </v-content>
     <v-footer app>
       <span>
-        Questions or comments about this research? Contact Nick Bradley at <a href="mailto:ncbrad@cs.ubc.ca">ncbrad@cs.ubc.ca</a>.
-        If you have any concerns or complaints about your rights as a research participant and/or your experiences while participating in this study, contact the Research Participant Complaint Line in the UBC Office of Research Ethics at 604-822-8598 or, if long distance, e-mail <a href="mailto:RSIL@ors.ubc.ca">RSIL@ors.ubc.ca</a> or call toll free 1-877-822-8598.
-        You can read our <router-link :to="{name: 'DataPolicy'}">data policy</router-link> for details on how we will use and manage your data.
-        <!--router-link :to="{name: 'Demo'}" style="display: block;">See demo</router-link-->
+You can read the full details of our study on our <router-link :to="{name: 'About'}">About</router-link> page.
       </span>
     </v-footer>
   </v-app>

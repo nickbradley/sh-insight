@@ -103,7 +103,7 @@ export class ReportRouter {
       code = 500;
       body = err;
     } finally {
-      Log.info(`Responding with status ${code} and body: ${body.substr(0, 30)}`);
+      // Log.info(`Responding with status ${code} and body: ${body.substr(0, 30)}`);
       res.status(code).send(body);
     }
   }

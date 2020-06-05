@@ -17,11 +17,12 @@ export class ReportService {
 
     await fs.writeFile(path, buffer);
     const report = this.parse(buffer);
+    await fs.writeJson(`${this.path}/uploads/report-${id}.json`, report);
     return [id, report];
   }
 
   public async read(id: string): Promise<Report> {
-    let dir = this.path;
+    let dir = `${this.path}/uploads`;
     if (id === "demo") {
       dir = ".";
     }

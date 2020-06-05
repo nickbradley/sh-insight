@@ -52,7 +52,7 @@
         <code>./insight.sh >| report.dat</code>
         <v-alert type="info" border="left" dense outlined class="mt-5">
           Edit the report to remove any sensitive or personally identifying information in your favorite text
-          editor.
+          editor. You'll have an opportunity to review your report before submitting it.
         </v-alert>
       </v-card-text>
     </v-card>
